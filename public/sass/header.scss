@@ -1,0 +1,51 @@
+.header{
+    display: flex;
+    align-items: center;
+    padding: 45px 0;
+    margin-bottom: 100px;
+    position: relative;
+    .menu-logo{
+        position: absolute;
+        img{
+            cursor: pointer;
+        }
+    }
+    .brand-logo{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+    .options{
+        position: absolute;
+        right: 0;
+        display: flex;
+        align-items: center;
+        .cart-logo{
+            margin-right: 24px;
+            img{
+                cursor: pointer;
+            }
+        }
+        .login-btn{
+            margin-right: 24px;
+            border: 2px solid #D93638;
+            padding: 13px 25px;
+            color:white;
+            border-radius: 6px;
+            font-weight: bold;
+            &:hover{
+                background-color: #D93638;
+            }
+        }   
+        .signup-btn{
+            border: 2px solid #D93638;
+            padding: 13px 25px;
+            color:white;
+            border-radius: 6px;
+            font-weight: bold;
+            &:hover{
+                background-color: #D93638;
+            }
+        }
+    }
+}
