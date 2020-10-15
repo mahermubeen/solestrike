@@ -7,8 +7,12 @@
 
     <title>Sole Strike</title>
 
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <!--Styles-->
     <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/flickity.css">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -17,10 +21,8 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
-    <!-- Carousal Link -->
-    <link rel="stylesheet" href="../css/flickity.css">
-
-
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 
 <body>
@@ -40,8 +42,34 @@
                         <figure class="cart-logo">
                             <img src="../images/Group 2.png" />
                         </figure>
-                        <a href="#" class="login-btn">Login</a>
-                        <a href="#" class="signup-btn">Signup</a>
+
+                        @guest
+                            <a href="{{ route('login') }}" class="login-btn">Login</a>
+
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}" class="signup-btn">Signup</a>
+
+                            @endif
+                        @else
+                            <li class="nav-item dropdown right-span">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle user-name" href="#" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right logout-p" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+
                     </div>
                 </div>
 
@@ -368,14 +396,14 @@
             <div class="container">
                 <div class="upper-div">
                     <figure>
-                        <img src="../images/solestrike-for-site.png"/>
+                        <img src="../images/solestrike-for-site.png" />
                     </figure>
                     <div class="social-links">
                         <a href="#" class="twitter">
-                            <img src="../images/Group 40.png"/>
+                            <img src="../images/Group 40.png" />
                         </a>
                         <a href="#" class="insta">
-                            <img src="../images/Path 63.png"/>
+                            <img src="../images/Path 63.png" />
                         </a>
                     </div>
                 </div>

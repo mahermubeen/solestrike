@@ -1,49 +1,68 @@
-.header{
+.header {
     display: flex;
     align-items: center;
     padding: 45px 0;
     margin-bottom: 100px;
     position: relative;
-    .menu-logo{
+    .menu-logo {
         position: absolute;
-        img{
+        img {
             cursor: pointer;
         }
     }
-    .brand-logo{
+    .brand-logo {
         flex: 1;
         display: flex;
         justify-content: center;
     }
-    .options{
+    .options {
         position: absolute;
         right: 0;
         display: flex;
         align-items: center;
-        .cart-logo{
+        .right-span {
+            display: flex;
+            .user-name {
+                font-size: 16px;
+                font-weight: bold;
+                color: black;
+                margin-right: 10px;
+                text-transform: uppercase;
+                cursor: text;
+            }
+            .logout-p {
+                a {
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: white;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        .cart-logo {
             margin-right: 24px;
-            img{
+            img {
                 cursor: pointer;
             }
         }
-        .login-btn{
+        .login-btn {
             margin-right: 24px;
             border: 2px solid #D93638;
             padding: 13px 25px;
-            color:white;
+            color: white;
             border-radius: 6px;
             font-weight: bold;
-            &:hover{
+            &:hover {
                 background-color: #D93638;
             }
-        }   
-        .signup-btn{
+        }
+        .signup-btn {
             border: 2px solid #D93638;
             padding: 13px 25px;
-            color:white;
+            color: white;
             border-radius: 6px;
             font-weight: bold;
-            &:hover{
+            &:hover {
                 background-color: #D93638;
             }
         }
