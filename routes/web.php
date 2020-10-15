@@ -16,7 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home)
+
+Route::get('/', function () {
+    return view('home');
+});
 
 Route::get('/shop', function () {
     return view('shop');
@@ -24,4 +28,8 @@ Route::get('/shop', function () {
 
 Route::get('/order', function () {
     return view('order');
+});
+
+Route::get('/admin', function () {
+    return view('layouts/main');
 });

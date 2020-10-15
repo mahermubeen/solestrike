@@ -31,16 +31,16 @@
             <div class="container">
                 <div class="header">
                     <figure class="menu-logo">
-                        <img src="../images/open-menu (1).png" />
+                        <img src="../img/open-menu (1).png" />
                     </figure>
 
                     <figure class="brand-logo">
-                        <img src="../images/solestrike-logo.png" />
+                        <img src="../img/solestrike-logo.png" />
                     </figure>
 
                     <div class="options">
                         <figure class="cart-logo">
-                            <img src="../images/Group 2.png" />
+                            <img src="../img/Group 2.png" />
                         </figure>
 
                         @guest
@@ -82,12 +82,12 @@
                             <a href="#" class="learn-btn">Learn More</a>
                             <a href="#" class="continue-btn">
                                 <span>Continue</span>
-                                <img src="../images/Group 3.png" />
+                                <img src="../img/Group 3.png" />
                             </a>
                         </div>
                     </div>
                     <div class="fig-div">
-                        <img src="../images/Group 224.png" />
+                        <img src="../img/Group 224.png" />
                     </div>
                 </div>
             </div>
@@ -95,7 +95,7 @@
 
         <div class="section2">
             <div class="container">
-                <img class="whtie-circle" src="../images/Group 6.png" />
+                <img class="whtie-circle" src="../img/Group 6.png" />
                 <div class="left-sec">
                     <div class="box-wrapper">
                         <div class="left-box">
@@ -132,14 +132,14 @@
                 </div>
             </div>
 
-            <img class="white-dot" src="../images/Ellipse 18.png" />
+            <img class="white-dot" src="../img/Ellipse 18.png" />
         </div>
 
         <div class="section3">
             <div class="container">
                 <div class="main-div">
                     <figure>
-                        <img src="../images/tick.png" />
+                        <img src="../img/tick.png" />
                     </figure>
                     <p class="p-up">TRIED & TESTED</p>
                     <h4>Our Success</h4>
@@ -154,7 +154,7 @@
             <div class="carousel" data-flickity='{ "groupCells": true }'>
                 <div class="carousel-cell">
                     <figure>
-                        <img src="../images/Group 7.png" />
+                        <img src="../img/Group 7.png" />
                     </figure>
                     <div class="cell-wrapper">
                         <p class="p1">Sneaker Name</p>
@@ -167,7 +167,7 @@
                 </div>
                 <div class="carousel-cell">
                     <figure>
-                        <img src="../images/stussy.png" />
+                        <img src="../img/stussy.png" />
                     </figure>
                     <div class="cell-wrapper">
                         <p class="p1">Sneaker Name</p>
@@ -180,7 +180,7 @@
                 </div>
                 <div class="carousel-cell">
                     <figure>
-                        <img src="../images/yeezy.png" />
+                        <img src="../img/yeezy.png" />
                     </figure>
                     <div class="cell-wrapper">
                         <p class="p1">Sneaker Name</p>
@@ -193,7 +193,7 @@
                 </div>
                 <div class="carousel-cell">
                     <figure>
-                        <img src="../images/Group 7.png" />
+                        <img src="../img/Group 7.png" />
                     </figure>
                     <div class="cell-wrapper">
                         <p class="p1">Sneaker Name</p>
@@ -206,7 +206,7 @@
                 </div>
                 <div class="carousel-cell">
                     <figure>
-                        <img src="../images/Group 7.png" />
+                        <img src="../img/Group 7.png" />
                     </figure>
                     <div class="cell-wrapper">
                         <p class="p1">Sneaker Name</p>
@@ -219,7 +219,7 @@
                 </div>
                 <div class="carousel-cell">
                     <figure>
-                        <img src="../images/Group 7.png" />
+                        <img src="../img/Group 7.png" />
                     </figure>
                     <div class="cell-wrapper">
                         <p class="p1">Sneaker Name</p>
@@ -232,7 +232,7 @@
                 </div>
                 <div class="carousel-cell">
                     <figure>
-                        <img src="../images/Group 7.png" />
+                        <img src="../img/Group 7.png" />
                     </figure>
                     <div class="cell-wrapper">
                         <p class="p1">Sneaker Name</p>
@@ -245,7 +245,7 @@
                 </div>
                 <div class="carousel-cell">
                     <figure>
-                        <img src="../images/Group 7.png" />
+                        <img src="../img/Group 7.png" />
                     </figure>
                     <div class="cell-wrapper">
                         <p class="p1">Sneaker Name</p>
@@ -258,7 +258,7 @@
                 </div>
                 <div class="carousel-cell">
                     <figure>
-                        <img src="../images/Group 7.png" />
+                        <img src="../img/Group 7.png" />
                     </figure>
                     <div class="cell-wrapper">
                         <p class="p1">Sneaker Name</p>
@@ -271,7 +271,7 @@
                 </div>
                 <div class="carousel-cell">
                     <figure>
-                        <img src="../images/Group 7.png" />
+                        <img src="../img/Group 7.png" />
                     </figure>
                     <div class="cell-wrapper">
                         <p class="p1">Sneaker Name</p>
@@ -284,7 +284,7 @@
                 </div>
                 <div class="carousel-cell">
                     <figure>
-                        <img src="../images/Group 7.png" />
+                        <img src="../img/Group 7.png" />
                     </figure>
                     <div class="cell-wrapper">
                         <p class="p1">Sneaker Name</p>
@@ -297,7 +297,7 @@
                 </div>
                 <div class="carousel-cell">
                     <figure>
-                        <img src="../images/Group 7.png" />
+                        <img src="../img/Group 7.png" />
                     </figure>
                     <div class="cell-wrapper">
                         <p class="p1">Sneaker Name</p>
@@ -323,38 +323,38 @@
                 </div>
                 <div class="right-box">
                     <figure>
-                        <img src="../images/Group 27.png" />
+                        <img src="../img/Group 27.png" />
                     </figure>
                     <figure>
-                        <img src="../images/Group 24.png" />
+                        <img src="../img/Group 24.png" />
                     </figure>
                     <figure>
-                        <img src="../images/Group 25.png" />
+                        <img src="../img/Group 25.png" />
                     </figure>
                     <figure>
-                        <img src="../images/Group 23.png" />
+                        <img src="../img/Group 23.png" />
                     </figure>
                     <figure>
-                        <img src="../images/Group 26.png" />
+                        <img src="../img/Group 26.png" />
                     </figure>
                     <figure>
-                        <img src="../images/Group 32.png" />
+                        <img src="../img/Group 32.png" />
                     </figure>
                 </div>
             </div>
         </div>
         <div class="section6">
             <figure class="white-spot">
-                <img src="../images/Ellipse 3.png" />
+                <img src="../img/Ellipse 3.png" />
             </figure>
             <div class="wrapper1">
                 <div class="left-img">
-                    <img src="../images/Group 2205.png" />
+                    <img src="../img/Group 2205.png" />
                 </div>
                 <div class="right-box">
                     <div class="right-wrapper">
                         <figure>
-                            <img src="../images/Path 90.png" />
+                            <img src="../img/Path 90.png" />
                         </figure>
                         <p class="p1">POWERED BY SOLESTRIKE</p>
                         <h4>Strike Access</h4>
@@ -371,7 +371,7 @@
             <div class="container">
                 <div class="sec1">
                     <figure>
-                        <img src="../images/notification.png" />
+                        <img src="../img/notification.png" />
                     </figure>
                     <p>PUSH NOTIFICATIONS</p>
                     <h4>Stay Notified</h4>
@@ -380,14 +380,14 @@
                     <span class="red-spot"></span>
                     <div class="wrap1">
                         <figure>
-                            <img src="../images/SS Logo Mark.png" />
+                            <img src="../img/SS Logo Mark.png" />
                         </figure>
                         <p><span>Travis Scott Jordan 1 "Retro High" </span>limited slots now available! Don't miss out
                             because they will sell out fast!</p>
                     </div>
                 </div>
                 <figure class="home-pic">
-                    <img src="../images/Group 226.png" />
+                    <img src="../img/Group 226.png" />
                 </figure>
             </div>
 
@@ -396,14 +396,14 @@
             <div class="container">
                 <div class="upper-div">
                     <figure>
-                        <img src="../images/solestrike-for-site.png" />
+                        <img src="../img/solestrike-for-site.png" />
                     </figure>
                     <div class="social-links">
                         <a href="#" class="twitter">
-                            <img src="../images/Group 40.png" />
+                            <img src="../img/Group 40.png" />
                         </a>
                         <a href="#" class="insta">
-                            <img src="../images/Path 63.png" />
+                            <img src="../img/Path 63.png" />
                         </a>
                     </div>
                 </div>

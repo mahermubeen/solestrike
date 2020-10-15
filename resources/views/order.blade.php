@@ -29,16 +29,16 @@
             <div class="container">
                 <div class="header">
                     <figure class="menu-logo">
-                        <img src="../images/open-menu (1).png" />
+                        <img src="../img/open-menu (1).png" />
                     </figure>
 
                     <figure class="brand-logo">
-                        <img src="../images/Group 222.png" />
+                        <img src="../img/Group 222.png" />
                     </figure>
 
                     <div class="options">
                         <figure class="cart-logo">
-                            <img src="../images/Group 2.png" />
+                            <img src="../img/Group 2.png" />
                         </figure>
                         <a href="#" class="login-btn">Login</a>
                         <a href="#" class="signup-btn">Signup</a>
@@ -48,7 +48,7 @@
                 <div class="head-content">
                     <div class="head-left">
                         <figure>
-                            <img src="../images/Group 76.png" />
+                            <img src="../img/Group 76.png" />
                         </figure>
                     </div>
                     <div class="head-right">
@@ -58,7 +58,7 @@
                                 <div class="details-box">
                                     <h5>Air Jordan 13 Retro <span>"Flint"</span></h5>
                                     <div class="sale-tag">
-                                        <img src="../images/Path 750.png" />
+                                        <img src="../img/Path 750.png" />
                                         <span>$50</span>
                                     </div>
                                 </div>
@@ -81,7 +81,7 @@
                         <div class="drop-wrapper">
                             <div class="dropdown">
                                 <span>Size 15</span>
-                                <img src="../images/Group 64.png" />
+                                <img src="../img/Group 64.png" />
                             </div>
                         </div>
 
@@ -130,7 +130,7 @@
                         </div>
                         <div class="down-div">
                             <figure>
-                                <img src="../images/Group 229.png"/>
+                                <img src="../img/Group 229.png"/>
                             </figure>
                             <div class="rate-wrapper">
                                 <div class="left">
@@ -146,7 +146,7 @@
                     </div>
 
                     <figure class="stock-img">
-                        <img src="../images/Group 103.png" />
+                        <img src="../img/Group 103.png" />
                     </figure>
                 </div>
                 <div class="right-div">
@@ -221,7 +221,7 @@
 
                         <div class="submit-btns">
                             <a class="link-btn" href="#">
-                                <img src="../images/Path 76.png" />
+                                <img src="../img/Path 76.png" />
                                 <span>@YourTwitter</span>
                             </a>
                             <a class="sub-btn" href="#">Submit</a>
@@ -236,14 +236,14 @@
             <div class="container">
                 <div class="upper-div">
                     <figure>
-                        <img src="../images/solestrike-for-site.png" />
+                        <img src="../img/solestrike-for-site.png" />
                     </figure>
                     <div class="social-links">
                         <a href="#" class="twitter">
-                            <img src="../images/Group 40.png" />
+                            <img src="../img/Group 40.png" />
                         </a>
                         <a href="#" class="insta">
-                            <img src="../images/Path 63.png" />
+                            <img src="../img/Path 63.png" />
                         </a>
                     </div>
                 </div>
