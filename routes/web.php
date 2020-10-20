@@ -17,11 +17,11 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 
-// Route::get('/', function () {
-//     return view('home');
-// });
+Route::get('/', function () {
+    return view('home');
+})->name('home');
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/shop', function () {
     return view('shop');
