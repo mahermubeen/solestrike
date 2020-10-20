@@ -25,4 +25,34 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function admin()
+    {
+        return view('dashboard');
+    }
+
+    public function profileEdit()
+    {
+        return view('profile/edit');
+    }
+
+    public function userIndex()
+    {
+        return view('users/index');
+    }
+
+    public function icons()
+    {
+        return view('pages/icons');
+    }
+
+    public function notifications()
+    {
+        return view('pages/notifications');
+    }
+
+    public function table_list()
+    {
+        return view('pages/table_list');
+    }
 }
