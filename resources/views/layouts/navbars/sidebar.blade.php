@@ -1,8 +1,8 @@
 <div class="sidebar">
     <div class="sidebar-wrapper">
         <div class="logo">
-            <a href="#" class="simple-text logo-mini">{{ __('BD') }}</a>
-            <a href="#" class="simple-text logo-normal">{{ __('Black Dashboard') }}</a>
+            <a href="#" class="simple-text logo-mini">{{ __('SS') }}</a>
+            <a href="#" class="simple-text logo-normal">{{ __('SoleStrike') }}</a>
         </div>
         <ul class="nav">
             <li>
@@ -14,7 +14,7 @@
             <li>
                 <a data-toggle="collapse" href="#laravel-examples" aria-expanded="true">
                     <i class="fab fa-laravel"></i>
-                    <span class="nav-link-text">{{ __('Laravel Examples') }}</span>
+                    <span class="nav-link-text">{{ __('Settings') }}</span>
                     <b class="caret mt-1"></b>
                 </a>
 
@@ -35,18 +35,7 @@
                     </ul>
                 </div>
             </li>
-            <li>
-                <a href="#">
-                    <i class="tim-icons icon-atom"></i>
-                    <p>{{ __('Icons') }}</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="tim-icons icon-pin"></i>
-                    <p>{{ __('Maps') }}</p>
-                </a>
-            </li>
+
             <li>
                 <a href="#">
                     <i class="tim-icons icon-bell-55"></i>
@@ -59,24 +48,7 @@
                     <p>{{ __('Table List') }}</p>
                 </a>
             </li>
-            <li>
-                <a href="#">
-                    <i class="tim-icons icon-align-center"></i>
-                    <p>{{ __('Typography') }}</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="tim-icons icon-world"></i>
-                    <p>{{ __('RTL Support') }}</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="tim-icons icon-spaceship"></i>
-                    <p>{{ __('Upgrade to PRO') }}</p>
-                </a>
-            </li>
+
         </ul>
     </div>
 </div>
