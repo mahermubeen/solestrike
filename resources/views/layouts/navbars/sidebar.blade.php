@@ -22,13 +22,13 @@
                     <div class="collapse show" id="laravel-examples">
                         <ul class="nav pl-4">
                             <li>
-                                <a href="{{ route('profileEdit')  }}">
+                                <a href="{{ route('profile')  }}">
                                     <i class="tim-icons icon-single-02"></i>
                                     <p>{{ __('User Profile') }}</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ route('userIndex')  }}">
+                                <a href="{{ route('users')  }}">
                                     <i class="tim-icons icon-bullet-list-67"></i>
                                     <p>{{ __('User Management') }}</p>
                                 </a>

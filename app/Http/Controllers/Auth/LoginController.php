@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
+use Illuminate\Http\Request;
+use User;
+
 class LoginController extends Controller
 {
     /*
@@ -26,7 +29,15 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    // protected $redirectTo = RouteServiceProvider::HOME;
+    protected function authenticated(Request $request, $user){
+        if($user->is_admin){
+            return redirect('/admin');
+        }
+        else{
+            return redirect('/user/shop');
+        }
+    }
 
     /**
      * Create a new controller instance.
