@@ -37,7 +37,7 @@
                     </div>
                 </div>
             </li>
-            <li>
+            {{-- <li>
                 <a href="{{ route('icons')  }}">
                     <i class="tim-icons icon-atom"></i>
                     <p>{{ __('Icons') }}</p>
@@ -54,7 +54,7 @@
                     <i class="tim-icons icon-puzzle-10"></i>
                     <p>{{ __('Table List') }}</p>
                 </a>
-            </li>
+            </li> --}}
         </ul>
     </div>
 </div>
