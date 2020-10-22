@@ -20,21 +20,30 @@
     <!-- Carousal Link -->
     <link rel="stylesheet" href="../css/flickity.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 
 </head>
 
 <body>
     <div class="wrapper-order">
+        <div id="menu-items" class="menu-items hidden">
+            <img id="cross" class="cross" src="../img/cross.png"/>
+            <a href="/">Home</a>
+            <a href="/user/shop">Shop</a>
+            <a href="/user/order">Order</a>
+        </div>
+
         <div class="section1">
             <div class="container">
                 <div class="header">
-                    <figure class="menu-logo">
+                    <figure id="menu" class="menu-logo">
                         <img src="../img/open-menu (1).png" />
                     </figure>
 
-                    <figure class="brand-logo">
+                <a href="/" class="brand-logo">
                         <img src="../img/Group 222.png" />
-                    </figure>
+                    </a>
 
                     <div class="options">
                         <figure class="cart-logo">
@@ -287,6 +296,8 @@
 
     <!-- Scripts -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="../js/main.js"></script>
+
 </body>
 
 </html>

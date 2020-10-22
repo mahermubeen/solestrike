@@ -1,5 +1,31 @@
 .wrapper-shop {
     background-color: #131314;
+    .menu-items {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        padding-top: 80px;
+        height: 100vh;
+        background-color: #000000eb;
+        z-index: 100;
+        .cross {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+        a {
+            color: #D93638;
+            font-size: 25px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+    }
     .section1 {
         .container {
             .head-content {
@@ -29,20 +55,19 @@
                     display: flex;
                     align-items: center;
                     justify-content: flex-end;
-                    .dropdown {
-                        display: flex;
-                        align-items: center;
-                        background-color: #29292B;
+                    .alternate-select {
+                        margin-right: 20px;
+                        background: #29292B;
+                        padding: 20px;
+                        border: none;
                         border-radius: 6px;
-                        padding: 22px 26px;
-                        cursor: pointer;
-                        span {
-                            margin-right: 70px;
-                            font-size: 15px;
+                        color: white;
+                        font-size: 15px;
+                        font-weight: bold;
+                        outline: none;
+                        &::placeholder {
                             color: white;
-                            font-weight: bold;
                         }
-                        img {}
                     }
                 }
             }

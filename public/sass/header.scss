@@ -47,23 +47,25 @@
         }
         .login-btn {
             margin-right: 24px;
-            border: 2px solid #D93638;
+            border: 2px solid #29292B;
             padding: 13px 25px;
             color: white;
             border-radius: 6px;
             font-weight: bold;
             &:hover {
                 background-color: #D93638;
+                border: 2px solid #D93638;
             }
         }
         .signup-btn {
-            border: 2px solid #D93638;
+            border: 2px solid #29292B;
             padding: 13px 25px;
             color: white;
             border-radius: 6px;
             font-weight: bold;
             &:hover {
                 background-color: #D93638;
+                border: 2px solid #D93638;
             }
         }
     }

@@ -1,6 +1,32 @@
 .wrapper-home {
     background-color: #131314;
     overflow: hidden;
+    .menu-items {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        padding-top: 80px;
+        height: 100vh;
+        background-color: #000000eb;
+        z-index: 100;
+        .cross {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+        a {
+            color: #D93638;
+            font-size: 25px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+    }
     .section1 {
         background-image: url('../img/Path 1.png');
         background-repeat: no-repeat;
@@ -40,7 +66,7 @@
                             padding: 20px 42px;
                             border-radius: 6px;
                             &:hover {
-                                background-color: #D93638;
+                                background-color: #29292B;
                             }
                         }
                         .continue-btn {
@@ -51,7 +77,7 @@
                             align-items: center;
                             border-radius: 6px;
                             &:hover {
-                                background-color: #D93638;
+                                background-color: #29292B;
                             }
                             span {
                                 margin-right: 8px;
@@ -104,6 +130,20 @@
                         padding: 50px 30px 45px;
                         background-color: #29292B;
                         border-radius: 6px;
+                        &:hover {
+                            cursor: pointer;
+                            box-shadow: 0px 0px 73px 0px rgba(223, 52, 54, 0.76);
+                            background: radial-gradient(circle, rgba(236, 46, 48, 1) 0%, rgba(217, 54, 56, 1) 100%);
+                            p {
+                                color: white;
+                            }
+                            span {
+                                background-image: url('../img/Marketing Statics-red.png');
+                                border: 3px solid white;
+                                color: #DB3537;
+                                background-color: white;
+                            }
+                        }
                         span {
                             background-image: url('../img/Marketing Statics-2.png');
                             background-repeat: no-repeat;
@@ -141,6 +181,20 @@
                         padding: 50px 30px 45px;
                         background-color: #29292B;
                         border-radius: 6px;
+                        &:hover {
+                            cursor: pointer;
+                            box-shadow: 0px 0px 73px 0px rgba(223, 52, 54, 0.76);
+                            background: radial-gradient(circle, rgba(236, 46, 48, 1) 0%, rgba(217, 54, 56, 1) 100%);
+                            p {
+                                color: white;
+                            }
+                            span {
+                                background-image: url('../img/Marketing Statics-red-1.png');
+                                border: 3px solid white;
+                                color: #DB3537;
+                                background-color: white;
+                            }
+                        }
                         span {
                             background-image: url('../img/Marketing Statics.png');
                             background-repeat: no-repeat;
@@ -173,19 +227,31 @@
                     .bottom-box {
                         padding: 50px 30px 45px;
                         border-radius: 6px;
-                        background: radial-gradient(circle, rgba(236, 46, 48, 1) 0%, rgba(217, 54, 56, 1) 100%);
-                        box-shadow: 0px 0px 73px 0px rgba(223, 52, 54, 0.76);
+                        background-color: #29292B;
+                        &:hover {
+                            cursor: pointer;
+                            box-shadow: 0px 0px 73px 0px rgba(223, 52, 54, 0.76);
+                            background: radial-gradient(circle, rgba(236, 46, 48, 1) 0%, rgba(217, 54, 56, 1) 100%);
+                            p {
+                                color: white;
+                            }
+                            span {
+                                background-image: url('../img/Marketing Statics-3.png');
+                                border: 3px solid white;
+                                color: #DB3537;
+                                background-color: white;
+                            }
+                        }
                         span {
-                            background-image: url('../img/Marketing Statics-3.png');
+                            background-image: url('../img/Marketing Statics-white.png');
                             background-repeat: no-repeat;
                             background-position: center;
                             width: 65px;
                             height: 65px;
                             font-weight: bold;
                             border-radius: 50%;
-                            border: 3px solid white;
-                            color: #DB3537;
-                            background-color: white;
+                            border: 3px solid #D93638;
+                            color: white;
                             display: flex;
                             justify-content: center;
                             align-items: center;
@@ -201,7 +267,7 @@
                         p {
                             font-size: 15px;
                             font-weight: normal;
-                            color: white;
+                            color: #838383;
                             line-height: 26px;
                         }
                     }
@@ -488,7 +554,6 @@
                     align-items: center;
                     justify-content: center;
                     grid-gap: 35px;
-                    figure {}
                     p {
                         vertical-align: center;
                         font-family: 'Montserrat', sans-serif;

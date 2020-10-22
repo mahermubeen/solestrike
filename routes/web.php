@@ -22,28 +22,6 @@ Route::get('/', function () {
 });
 
 
-// Route::get('/shop', function () {
-//     return view('shop');
-// });
-
-// Route::get('/order', function () {
-//     return view('order');
-// });
-
-// Route::get('/admin', function () {
-//     return view('layouts/main');
-// });
-
-
-// Route::get('/shop', function () {
-//     return view('shop');
-// })->name('shop');
-
-// Route::get('/order', function () {
-//     return view('order');
-// })->name('order');
-
-
 Route::group([
     'prefix' => 'user',
     'namespace' => 'User',
@@ -68,13 +46,3 @@ Route::group([
     Route::get('/notifications', 'HomeController@notifications')->name('notifications');
     Route::get('/table_list', 'HomeController@table_list')->name('table_list');
 });
-
-
-    // Route::get('/admin', [App\Http\Controllers\Admin\HomeController::class, 'admin'])->name('admin');
-
-    // Route::get('/admin/profile', [App\Http\Controllers\Admin\HomeController::class, 'profileEdit'])->name('profileEdit');
-    // Route::get('/admin/users', [App\Http\Controllers\Admin\HomeController::class, 'userIndex'])->name('userIndex');
-    
-    // Route::get('/admin/icons', [App\Http\Controllers\Admin\Admin\HomeController::class, 'icons'])->name('icons');
-    // Route::get('/admin/notifications', [App\Http\Controllers\Admin\HomeController::class, 'notifications'])->name('notifications');
-    // Route::get('/admin/table_list', [App\Http\Controllers\Admin\HomeController::class, 'table_list'])->name('table_list');
