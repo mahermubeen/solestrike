@@ -45,4 +45,6 @@ Route::group([
     Route::get('/icons', 'HomeController@icons')->name('icons');
     Route::get('/notifications', 'HomeController@notifications')->name('notifications');
     Route::get('/table_list', 'HomeController@table_list')->name('table_list');
+    Route::get('/products', 'HomeController@products')->name('products');
+    Route::get('/orders', 'HomeController@orders')->name('orders');
 });

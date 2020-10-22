@@ -12,13 +12,13 @@
                 </a>
             </li>
             <li>
-                <a data-toggle="collapse" href="#laravel-examples" aria-expanded="true">
+                <a data-toggle="collapse" href="#user-settings" aria-expanded="true">
                     <i class="fab fa-laravel"></i>
-                    <span class="nav-link-text">{{ __('Settings') }}</span>
+                    <span class="nav-link-text">{{ __('User Settings') }}</span>
                     <b class="caret mt-1"></b>
                 </a>
 
-                <div class="collapse show" id="laravel-examples">
+                <div class="collapse show" id="user-settings">
                     <div class="collapse show" id="laravel-examples">
                         <ul class="nav pl-4">
                             <li>
@@ -30,12 +30,25 @@
                             <li>
                                 <a href="{{ route('users')  }}">
                                     <i class="tim-icons icon-bullet-list-67"></i>
-                                    <p>{{ __('User Management') }}</p>
+                                    <p>{{ __('All Users') }}</p>
                                 </a>
                             </li>
+                            
                         </ul>
                     </div>
                 </div>
+            </li>
+            <li>
+                <a href="{{ route('products') }}">
+                    <i class="tim-icons icon-chart-pie-36"></i>
+                    <p>{{ __('Products') }}</p>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('orders') }}">
+                    <i class="tim-icons icon-chart-pie-36"></i>
+                    <p>{{ __('Orders') }}</p>
+                </a>
             </li>
             {{-- <li>
                 <a href="{{ route('icons')  }}">

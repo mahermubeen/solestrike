@@ -42,4 +42,14 @@ class HomeController extends Controller
     {
         return view('pages/table_list');
     }
+
+    public function products()
+    {
+        return view('products/index');
+    }
+
+    public function orders()
+    {
+        return view('orders/index');
+    }
 }

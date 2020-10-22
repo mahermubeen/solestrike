@@ -7,10 +7,10 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-8">
-                            <h4 class="card-title">Users</h4>
+                            <h4 class="card-title">Orders</h4>
                         </div>
                         <div class="col-4 text-right">
-                            <a href="#" class="btn btn-sm btn-primary">Add user</a>
+                            <a href="#" class="btn btn-sm btn-primary">Add order</a>
                         </div>
                     </div>
                 </div>
@@ -20,17 +20,19 @@
                         <table class="table tablesorter " id="">
                             <thead class=" text-primary">
                                 <tr>
+                                    <th scope="col">id</th>
                                     <th scope="col">Name</th>
-                                    <th scope="col">Email</th>
+                                    <th scope="col">price</th>
                                     <th scope="col">Creation Date</th>
                                     <th scope="col"></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>admin</td>
+                                    <td>1</td>
+                                    <td>yeezy</td>
                                     <td>
-                                        <a href="mailto:admin@black.com">admin@gmail.com</a>
+                                        $699
                                     </td>
                                     <td>24/02/2020 16:47</td>
                                     <td class="text-right">
