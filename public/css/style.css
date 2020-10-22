@@ -626,9 +626,9 @@ a {
       .wrapper-home .section7 .container .home-pic {
         margin-top: -90px; }
 
-.wrapper-shop {
+.wrapper-shop-order {
   background-color: #131314; }
-  .wrapper-shop .menu-items {
+  .wrapper-shop-order .menu-items {
     position: fixed;
     top: 0;
     left: 0;
@@ -638,44 +638,44 @@ a {
     height: 100vh;
     background-color: #000000eb;
     z-index: 100; }
-    .wrapper-shop .menu-items .cross {
+    .wrapper-shop-order .menu-items .cross {
       position: absolute;
       right: 20px;
       top: 20px;
       width: 40px;
       height: 40px;
       cursor: pointer; }
-    .wrapper-shop .menu-items a {
+    .wrapper-shop-order .menu-items a {
       color: #D93638;
       font-size: 25px;
       font-weight: 600;
       text-align: center;
       margin-bottom: 35px; }
-  .wrapper-shop .section1 .container .head-content {
+  .wrapper-shop-order .section1-shop .container .head-content {
     display: flex;
     justify-content: space-between;
     padding-bottom: 90px;
     border-bottom: 1px solid #838383;
     margin-bottom: 95px; }
-    .wrapper-shop .section1 .container .head-content .head-left {
+    .wrapper-shop-order .section1-shop .container .head-content .head-left {
       flex: 1; }
-      .wrapper-shop .section1 .container .head-content .head-left h4 {
+      .wrapper-shop-order .section1-shop .container .head-content .head-left h4 {
         margin-bottom: 20px;
         font-size: 48px;
         color: white;
         font-weight: 500;
         font-family: 'Montserrat', sans-serif; }
-      .wrapper-shop .section1 .container .head-content .head-left p {
+      .wrapper-shop-order .section1-shop .container .head-content .head-left p {
         font-size: 16px;
         color: white;
         font-weight: normal;
         font-family: 'Montserrat', sans-serif; }
-    .wrapper-shop .section1 .container .head-content .head-right {
+    .wrapper-shop-order .section1-shop .container .head-content .head-right {
       flex: 1;
       display: flex;
       align-items: center;
       justify-content: flex-end; }
-      .wrapper-shop .section1 .container .head-content .head-right .alternate-select {
+      .wrapper-shop-order .section1-shop .container .head-content .head-right .alternate-select {
         margin-right: 20px;
         background: #29292B;
         padding: 20px;
@@ -685,97 +685,97 @@ a {
         font-size: 15px;
         font-weight: bold;
         outline: none; }
-        .wrapper-shop .section1 .container .head-content .head-right .alternate-select::placeholder {
+        .wrapper-shop-order .section1-shop .container .head-content .head-right .alternate-select::placeholder {
           color: white; }
-  .wrapper-shop .section2 .container .product-wrapper {
+  .wrapper-shop-order .section2-shop .container .product-wrapper {
     display: grid;
     grid-template-columns: max-content 1fr 1fr;
     grid-gap: 25px;
     align-items: center;
     margin-bottom: 100px; }
-    .wrapper-shop .section2 .container .product-wrapper .box-2 .p1 {
+    .wrapper-shop-order .section2-shop .container .product-wrapper .box-2 .p1 {
       color: #D93638;
       font-size: 16px;
       font-weight: normal;
       font-family: 'Montserrat', sans-serif;
       margin-bottom: 4px; }
-    .wrapper-shop .section2 .container .product-wrapper .box-2 .details-box {
+    .wrapper-shop-order .section2-shop .container .product-wrapper .box-2 .details-box {
       display: flex;
       align-items: center;
       margin-bottom: 15px; }
-      .wrapper-shop .section2 .container .product-wrapper .box-2 .details-box h5 {
+      .wrapper-shop-order .section2-shop .container .product-wrapper .box-2 .details-box h5 {
         margin-right: 10px;
         color: white;
         font-size: 24px;
         font-weight: 300;
         font-family: 'Montserrat', sans-serif; }
-        .wrapper-shop .section2 .container .product-wrapper .box-2 .details-box h5 span {
+        .wrapper-shop-order .section2-shop .container .product-wrapper .box-2 .details-box h5 span {
           font-weight: 500; }
-      .wrapper-shop .section2 .container .product-wrapper .box-2 .details-box .sale-tag {
+      .wrapper-shop-order .section2-shop .container .product-wrapper .box-2 .details-box .sale-tag {
         position: relative;
         width: 76px;
         height: 43px;
         display: flex;
         align-items: center;
         justify-content: flex-end; }
-        .wrapper-shop .section2 .container .product-wrapper .box-2 .details-box .sale-tag img {
+        .wrapper-shop-order .section2-shop .container .product-wrapper .box-2 .details-box .sale-tag img {
           position: absolute;
           top: 0;
           left: 0;
           z-index: 0; }
-        .wrapper-shop .section2 .container .product-wrapper .box-2 .details-box .sale-tag span {
+        .wrapper-shop-order .section2-shop .container .product-wrapper .box-2 .details-box .sale-tag span {
           color: white;
           font-size: 15px;
           font-weight: bold;
           margin-right: 10px;
           z-index: 0; }
-    .wrapper-shop .section2 .container .product-wrapper .box-2 .p2 {
+    .wrapper-shop-order .section2-shop .container .product-wrapper .box-2 .p2 {
       color: white;
       font-size: 13px;
       font-family: 'Montserrat', sans-serif; }
-    .wrapper-shop .section2 .container .product-wrapper .box-3 {
+    .wrapper-shop-order .section2-shop .container .product-wrapper .box-3 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 25px;
       align-items: center;
       justify-items: center; }
-      .wrapper-shop .section2 .container .product-wrapper .box-3 .span1 {
+      .wrapper-shop-order .section2-shop .container .product-wrapper .box-3 .span1 {
         text-align: center; }
-        .wrapper-shop .section2 .container .product-wrapper .box-3 .span1 .p-1 {
+        .wrapper-shop-order .section2-shop .container .product-wrapper .box-3 .span1 .p-1 {
           margin-bottom: 50px;
           font-size: 15px;
           color: #46464B;
           font-weight: 400; }
-        .wrapper-shop .section2 .container .product-wrapper .box-3 .span1 .p-2 {
+        .wrapper-shop-order .section2-shop .container .product-wrapper .box-3 .span1 .p-2 {
           font-size: 15px;
           color: #2ECC71;
           font-weight: 400; }
-      .wrapper-shop .section2 .container .product-wrapper .box-3 .span2 {
+      .wrapper-shop-order .section2-shop .container .product-wrapper .box-3 .span2 {
         text-align: center; }
-        .wrapper-shop .section2 .container .product-wrapper .box-3 .span2 .p-1 {
+        .wrapper-shop-order .section2-shop .container .product-wrapper .box-3 .span2 .p-1 {
           margin-bottom: 50px;
           font-size: 15px;
           color: #46464B;
           font-weight: 400; }
-        .wrapper-shop .section2 .container .product-wrapper .box-3 .span2 .p-2 {
+        .wrapper-shop-order .section2-shop .container .product-wrapper .box-3 .span2 .p-2 {
           font-size: 15px;
           color: white;
           font-weight: 400; }
-      .wrapper-shop .section2 .container .product-wrapper .box-3 .span3 {
+      .wrapper-shop-order .section2-shop .container .product-wrapper .box-3 .span3 {
         text-align: center; }
-        .wrapper-shop .section2 .container .product-wrapper .box-3 .span3 .p-1 {
+        .wrapper-shop-order .section2-shop .container .product-wrapper .box-3 .span3 .p-1 {
           margin-bottom: 50px;
           font-size: 15px;
           color: #46464B;
           font-weight: 400; }
-        .wrapper-shop .section2 .container .product-wrapper .box-3 .span3 .p-2 {
+        .wrapper-shop-order .section2-shop .container .product-wrapper .box-3 .span3 .p-2 {
           font-size: 15px;
           color: white;
           font-weight: 400; }
 
-.wrapper-order {
+.wrapper-shop-order {
   background-color: #131314; }
-  .wrapper-order .menu-items {
+  .wrapper-shop-order .menu-items {
     position: fixed;
     top: 0;
     left: 0;
@@ -785,222 +785,222 @@ a {
     height: 100vh;
     background-color: #000000eb;
     z-index: 100; }
-    .wrapper-order .menu-items .cross {
+    .wrapper-shop-order .menu-items .cross {
       position: absolute;
       right: 20px;
       top: 20px;
       width: 40px;
       height: 40px;
       cursor: pointer; }
-    .wrapper-order .menu-items a {
+    .wrapper-shop-order .menu-items a {
       color: #D93638;
       font-size: 25px;
       font-weight: 600;
       text-align: center;
       margin-bottom: 35px; }
-  .wrapper-order .section1 .container .head-content {
+  .wrapper-shop-order .section1-order .container .head-content {
     display: flex;
     justify-content: space-between;
     padding: 0 100px 100px; }
-    .wrapper-order .section1 .container .head-content .head-left {
+    .wrapper-shop-order .section1-order .container .head-content .head-left {
       flex: 1; }
-    .wrapper-order .section1 .container .head-content .head-right {
+    .wrapper-shop-order .section1-order .container .head-content .head-right {
       flex: 1; }
-      .wrapper-order .section1 .container .head-content .head-right .up-box {
+      .wrapper-shop-order .section1-order .container .head-content .head-right .up-box {
         padding-bottom: 50px;
         border-bottom: 1px solid #46464B;
         margin-bottom: 50px; }
-        .wrapper-order .section1 .container .head-content .head-right .up-box .box-2 {
+        .wrapper-shop-order .section1-order .container .head-content .head-right .up-box .box-2 {
           margin-bottom: 20px; }
-          .wrapper-order .section1 .container .head-content .head-right .up-box .box-2 .p1 {
+          .wrapper-shop-order .section1-order .container .head-content .head-right .up-box .box-2 .p1 {
             color: #D93638;
             font-size: 28px;
             font-weight: normal;
             font-family: 'Montserrat', sans-serif;
             margin-bottom: 5px; }
-          .wrapper-order .section1 .container .head-content .head-right .up-box .box-2 .details-box {
+          .wrapper-shop-order .section1-order .container .head-content .head-right .up-box .box-2 .details-box {
             display: grid;
             grid-template-columns: 1fr max-content;
             align-items: center;
             margin-bottom: 15px; }
-            .wrapper-order .section1 .container .head-content .head-right .up-box .box-2 .details-box h5 {
+            .wrapper-shop-order .section1-order .container .head-content .head-right .up-box .box-2 .details-box h5 {
               color: white;
               font-size: 48px;
               font-weight: 300;
               font-family: 'Montserrat', sans-serif; }
-              .wrapper-order .section1 .container .head-content .head-right .up-box .box-2 .details-box h5 span {
+              .wrapper-shop-order .section1-order .container .head-content .head-right .up-box .box-2 .details-box h5 span {
                 font-weight: 500; }
-            .wrapper-order .section1 .container .head-content .head-right .up-box .box-2 .details-box .sale-tag {
+            .wrapper-shop-order .section1-order .container .head-content .head-right .up-box .box-2 .details-box .sale-tag {
               position: relative;
               width: 120px;
               height: 68px;
               display: flex;
               align-items: center;
               justify-content: flex-end; }
-              .wrapper-order .section1 .container .head-content .head-right .up-box .box-2 .details-box .sale-tag img {
+              .wrapper-shop-order .section1-order .container .head-content .head-right .up-box .box-2 .details-box .sale-tag img {
                 position: absolute;
                 top: 0;
                 left: 0;
                 z-index: 0; }
-              .wrapper-order .section1 .container .head-content .head-right .up-box .box-2 .details-box .sale-tag span {
+              .wrapper-shop-order .section1-order .container .head-content .head-right .up-box .box-2 .details-box .sale-tag span {
                 color: white;
                 font-size: 24px;
                 font-weight: bold;
                 margin-right: 10px;
                 z-index: 0; }
-        .wrapper-order .section1 .container .head-content .head-right .up-box .box-3 {
+        .wrapper-shop-order .section1-order .container .head-content .head-right .up-box .box-3 {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           grid-gap: 25px;
           align-items: center;
           justify-items: center;
           margin-left: 90px; }
-          .wrapper-order .section1 .container .head-content .head-right .up-box .box-3 .span1 {
+          .wrapper-shop-order .section1-order .container .head-content .head-right .up-box .box-3 .span1 {
             text-align: center; }
-            .wrapper-order .section1 .container .head-content .head-right .up-box .box-3 .span1 .p-1 {
+            .wrapper-shop-order .section1-order .container .head-content .head-right .up-box .box-3 .span1 .p-1 {
               margin-bottom: 50px;
               font-size: 15px;
               color: #46464B;
               font-weight: 400; }
-            .wrapper-order .section1 .container .head-content .head-right .up-box .box-3 .span1 .p-2 {
+            .wrapper-shop-order .section1-order .container .head-content .head-right .up-box .box-3 .span1 .p-2 {
               font-size: 15px;
               color: #2ECC71;
               font-weight: 400; }
-          .wrapper-order .section1 .container .head-content .head-right .up-box .box-3 .span2 {
+          .wrapper-shop-order .section1-order .container .head-content .head-right .up-box .box-3 .span2 {
             text-align: center; }
-            .wrapper-order .section1 .container .head-content .head-right .up-box .box-3 .span2 .p-1 {
+            .wrapper-shop-order .section1-order .container .head-content .head-right .up-box .box-3 .span2 .p-1 {
               margin-bottom: 50px;
               font-size: 15px;
               color: #46464B;
               font-weight: 400; }
-            .wrapper-order .section1 .container .head-content .head-right .up-box .box-3 .span2 .p-2 {
+            .wrapper-shop-order .section1-order .container .head-content .head-right .up-box .box-3 .span2 .p-2 {
               font-size: 15px;
               color: white;
               font-weight: 400; }
-          .wrapper-order .section1 .container .head-content .head-right .up-box .box-3 .span3 {
+          .wrapper-shop-order .section1-order .container .head-content .head-right .up-box .box-3 .span3 {
             text-align: center; }
-            .wrapper-order .section1 .container .head-content .head-right .up-box .box-3 .span3 .p-1 {
+            .wrapper-shop-order .section1-order .container .head-content .head-right .up-box .box-3 .span3 .p-1 {
               margin-bottom: 50px;
               font-size: 15px;
               color: #46464B;
               font-weight: 400; }
-            .wrapper-order .section1 .container .head-content .head-right .up-box .box-3 .span3 .p-2 {
+            .wrapper-shop-order .section1-order .container .head-content .head-right .up-box .box-3 .span3 .p-2 {
               font-size: 15px;
               color: white;
               font-weight: 400; }
-      .wrapper-order .section1 .container .head-content .head-right .drop-wrapper {
+      .wrapper-shop-order .section1-order .container .head-content .head-right .drop-wrapper {
         display: flex;
         justify-content: flex-end; }
-        .wrapper-order .section1 .container .head-content .head-right .drop-wrapper .dropdown {
+        .wrapper-shop-order .section1-order .container .head-content .head-right .drop-wrapper .dropdown {
           display: flex;
           align-items: center;
           background-color: #29292B;
           border-radius: 6px;
           padding: 22px 26px;
           cursor: pointer; }
-          .wrapper-order .section1 .container .head-content .head-right .drop-wrapper .dropdown span {
+          .wrapper-shop-order .section1-order .container .head-content .head-right .drop-wrapper .dropdown span {
             margin-right: 140px;
             font-size: 15px;
             color: white;
             font-weight: bold; }
-  .wrapper-order .section2 {
+  .wrapper-shop-order .section2-order {
     margin-bottom: 180px; }
-    .wrapper-order .section2 .container {
+    .wrapper-shop-order .section2-order .container {
       display: grid;
       grid-template-columns: 1.2fr 1fr;
       grid-gap: 130px;
       padding: 0 100px; }
-      .wrapper-order .section2 .container .left-div .sec1 {
+      .wrapper-shop-order .section2-order .container .left-div .sec1 {
         margin-bottom: 60px; }
-        .wrapper-order .section2 .container .left-div .sec1 .p1 {
+        .wrapper-shop-order .section2-order .container .left-div .sec1 .p1 {
           color: white;
           font-size: 13px;
           font-family: 'Montserrat', sans-serif;
           margin-bottom: 30px; }
-        .wrapper-order .section2 .container .left-div .sec1 .h-1 {
+        .wrapper-shop-order .section2-order .container .left-div .sec1 .h-1 {
           color: white;
           font-size: 13px;
           font-weight: bold;
           font-family: 'Montserrat', sans-serif;
           margin-bottom: 30px; }
-      .wrapper-order .section2 .container .left-div .sec2 {
+      .wrapper-shop-order .section2-order .container .left-div .sec2 {
         border-radius: 6px;
         overflow: hidden;
         background: #202021;
         margin-bottom: 30px; }
-        .wrapper-order .section2 .container .left-div .sec2 .top-div {
+        .wrapper-shop-order .section2-order .container .left-div .sec2 .top-div {
           display: flex;
           background: #29292B;
           padding: 23px 25px;
           border-radius: 6px; }
-          .wrapper-order .section2 .container .left-div .sec2 .top-div .left {
+          .wrapper-shop-order .section2-order .container .left-div .sec2 .top-div .left {
             border-right: 1px solid #4E4E51;
             padding-right: 30px;
             margin-right: 30px; }
-            .wrapper-order .section2 .container .left-div .sec2 .top-div .left p {
+            .wrapper-shop-order .section2-order .container .left-div .sec2 .top-div .left p {
               color: white;
               font-size: 13px;
               font-weight: bold;
               font-family: 'Montserrat', sans-serif;
               margin-bottom: 12px; }
-              .wrapper-order .section2 .container .left-div .sec2 .top-div .left p:last-child {
+              .wrapper-shop-order .section2-order .container .left-div .sec2 .top-div .left p:last-child {
                 margin-bottom: 0; }
-          .wrapper-order .section2 .container .left-div .sec2 .top-div .right p {
+          .wrapper-shop-order .section2-order .container .left-div .sec2 .top-div .right p {
             color: white;
             font-size: 13px;
             font-weight: normal;
             font-family: 'Montserrat', sans-serif;
             margin-bottom: 12px; }
-            .wrapper-order .section2 .container .left-div .sec2 .top-div .right p:last-child {
+            .wrapper-shop-order .section2-order .container .left-div .sec2 .top-div .right p:last-child {
               margin-bottom: 0; }
-        .wrapper-order .section2 .container .left-div .sec2 .down-div {
+        .wrapper-shop-order .section2-order .container .left-div .sec2 .down-div {
           padding: 16px 23px 23px;
           background: #202021; }
-          .wrapper-order .section2 .container .left-div .sec2 .down-div figure {
+          .wrapper-shop-order .section2-order .container .left-div .sec2 .down-div figure {
             margin-bottom: 23px; }
-          .wrapper-order .section2 .container .left-div .sec2 .down-div .rate-wrapper {
+          .wrapper-shop-order .section2-order .container .left-div .sec2 .down-div .rate-wrapper {
             display: flex; }
-            .wrapper-order .section2 .container .left-div .sec2 .down-div .rate-wrapper .left {
+            .wrapper-shop-order .section2-order .container .left-div .sec2 .down-div .rate-wrapper .left {
               margin-right: 55px; }
-              .wrapper-order .section2 .container .left-div .sec2 .down-div .rate-wrapper .left .num {
+              .wrapper-shop-order .section2-order .container .left-div .sec2 .down-div .rate-wrapper .left .num {
                 color: white;
                 font-size: 21px;
                 font-weight: normal;
                 font-family: 'Montserrat', sans-serif;
                 margin-bottom: 8px; }
-              .wrapper-order .section2 .container .left-div .sec2 .down-div .rate-wrapper .left .green {
+              .wrapper-shop-order .section2-order .container .left-div .sec2 .down-div .rate-wrapper .left .green {
                 color: #2ECC71;
                 font-size: 21px;
                 font-weight: normal;
                 font-family: 'Montserrat', sans-serif; }
-            .wrapper-order .section2 .container .left-div .sec2 .down-div .rate-wrapper .right .num {
+            .wrapper-shop-order .section2-order .container .left-div .sec2 .down-div .rate-wrapper .right .num {
               color: white;
               font-size: 21px;
               font-weight: normal;
               font-family: 'Montserrat', sans-serif;
               margin-bottom: 8px; }
-            .wrapper-order .section2 .container .left-div .sec2 .down-div .rate-wrapper .right .red {
+            .wrapper-shop-order .section2-order .container .left-div .sec2 .down-div .rate-wrapper .right .red {
               color: #D93638;
               font-size: 21px;
               font-weight: normal;
               font-family: 'Montserrat', sans-serif; }
-      .wrapper-order .section2 .container .right-div .order-form .sec-1 h3 {
+      .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 h3 {
         color: white;
         font-size: 48px;
         font-weight: normal;
         font-family: 'Montserrat', sans-serif;
         margin-bottom: 15px; }
-      .wrapper-order .section2 .container .right-div .order-form .sec-1 p {
+      .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 p {
         color: #838383;
         font-size: 16px;
         font-weight: normal;
         font-family: 'Montserrat', sans-serif;
         margin-bottom: 30px; }
-      .wrapper-order .section2 .container .right-div .order-form .sec-1 .shipping-form {
+      .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 .shipping-form {
         padding-bottom: 50px;
         border-bottom: 1px solid #838383;
         margin-bottom: 50px; }
-        .wrapper-order .section2 .container .right-div .order-form .sec-1 .shipping-form .email-inpt {
+        .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 .shipping-form .email-inpt {
           background: #29292B;
           padding: 20px;
           border: none;
@@ -1011,12 +1011,12 @@ a {
           margin-bottom: 20px;
           outline: none;
           width: 100%; }
-          .wrapper-order .section2 .container .right-div .order-form .sec-1 .shipping-form .email-inpt::placeholder {
+          .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 .shipping-form .email-inpt::placeholder {
             color: white; }
-        .wrapper-order .section2 .container .right-div .order-form .sec-1 .shipping-form .full-name {
+        .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 .shipping-form .full-name {
           margin-bottom: 20px;
           display: flex; }
-          .wrapper-order .section2 .container .right-div .order-form .sec-1 .shipping-form .full-name .fname-inpt {
+          .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 .shipping-form .full-name .fname-inpt {
             margin-right: 20px;
             background: #29292B;
             padding: 20px;
@@ -1027,9 +1027,9 @@ a {
             font-weight: bold;
             outline: none;
             width: 100%; }
-            .wrapper-order .section2 .container .right-div .order-form .sec-1 .shipping-form .full-name .fname-inpt::placeholder {
+            .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 .shipping-form .full-name .fname-inpt::placeholder {
               color: white; }
-          .wrapper-order .section2 .container .right-div .order-form .sec-1 .shipping-form .full-name .lname-inpt {
+          .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 .shipping-form .full-name .lname-inpt {
             background: #29292B;
             padding: 20px;
             border: none;
@@ -1039,9 +1039,9 @@ a {
             font-weight: bold;
             outline: none;
             width: 100%; }
-            .wrapper-order .section2 .container .right-div .order-form .sec-1 .shipping-form .full-name .lname-inpt::placeholder {
+            .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 .shipping-form .full-name .lname-inpt::placeholder {
               color: white; }
-        .wrapper-order .section2 .container .right-div .order-form .sec-1 .shipping-form .add1-inpt {
+        .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 .shipping-form .add1-inpt {
           margin-bottom: 20px;
           background: #29292B;
           padding: 20px;
@@ -1052,9 +1052,9 @@ a {
           font-weight: bold;
           outline: none;
           width: 100%; }
-          .wrapper-order .section2 .container .right-div .order-form .sec-1 .shipping-form .add1-inpt::placeholder {
+          .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 .shipping-form .add1-inpt::placeholder {
             color: white; }
-        .wrapper-order .section2 .container .right-div .order-form .sec-1 .shipping-form .add2-inpt {
+        .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 .shipping-form .add2-inpt {
           margin-bottom: 20px;
           background: #29292B;
           padding: 20px;
@@ -1065,12 +1065,12 @@ a {
           font-weight: bold;
           outline: none;
           width: 100%; }
-          .wrapper-order .section2 .container .right-div .order-form .sec-1 .shipping-form .add2-inpt::placeholder {
+          .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 .shipping-form .add2-inpt::placeholder {
             color: white; }
-        .wrapper-order .section2 .container .right-div .order-form .sec-1 .shipping-form .phone-city {
+        .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 .shipping-form .phone-city {
           margin-bottom: 20px;
           display: flex; }
-          .wrapper-order .section2 .container .right-div .order-form .sec-1 .shipping-form .phone-city .phone-inpt {
+          .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 .shipping-form .phone-city .phone-inpt {
             margin-right: 20px;
             background: #29292B;
             padding: 20px;
@@ -1081,9 +1081,9 @@ a {
             font-weight: bold;
             outline: none;
             width: 100%; }
-            .wrapper-order .section2 .container .right-div .order-form .sec-1 .shipping-form .phone-city .phone-inpt::placeholder {
+            .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 .shipping-form .phone-city .phone-inpt::placeholder {
               color: white; }
-          .wrapper-order .section2 .container .right-div .order-form .sec-1 .shipping-form .phone-city .city-inpt {
+          .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 .shipping-form .phone-city .city-inpt {
             background: #29292B;
             padding: 20px;
             border: none;
@@ -1093,12 +1093,12 @@ a {
             font-weight: bold;
             outline: none;
             width: 100%; }
-            .wrapper-order .section2 .container .right-div .order-form .sec-1 .shipping-form .phone-city .city-inpt::placeholder {
+            .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 .shipping-form .phone-city .city-inpt::placeholder {
               color: white; }
-        .wrapper-order .section2 .container .right-div .order-form .sec-1 .shipping-form .state-cntry {
+        .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 .shipping-form .state-cntry {
           margin-bottom: 20px;
           display: flex; }
-          .wrapper-order .section2 .container .right-div .order-form .sec-1 .shipping-form .state-cntry .state-select {
+          .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 .shipping-form .state-cntry .state-select {
             margin-right: 20px;
             background: #29292B;
             padding: 20px;
@@ -1109,9 +1109,9 @@ a {
             font-weight: bold;
             outline: none;
             width: 100%; }
-            .wrapper-order .section2 .container .right-div .order-form .sec-1 .shipping-form .state-cntry .state-select::placeholder {
+            .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 .shipping-form .state-cntry .state-select::placeholder {
               color: white; }
-          .wrapper-order .section2 .container .right-div .order-form .sec-1 .shipping-form .state-cntry .country-select {
+          .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 .shipping-form .state-cntry .country-select {
             background: #29292B;
             padding: 20px;
             border: none;
@@ -1121,12 +1121,12 @@ a {
             font-weight: bold;
             outline: none;
             width: 100%; }
-            .wrapper-order .section2 .container .right-div .order-form .sec-1 .shipping-form .state-cntry .country-select::placeholder {
+            .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 .shipping-form .state-cntry .country-select::placeholder {
               color: white; }
-        .wrapper-order .section2 .container .right-div .order-form .sec-1 .shipping-form .zip-wrapper {
+        .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 .shipping-form .zip-wrapper {
           display: flex;
           justify-content: flex-end; }
-          .wrapper-order .section2 .container .right-div .order-form .sec-1 .shipping-form .zip-wrapper .zip-inpt {
+          .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 .shipping-form .zip-wrapper .zip-inpt {
             background: #29292B;
             padding: 20px;
             border: none;
@@ -1136,17 +1136,17 @@ a {
             font-weight: bold;
             outline: none;
             width: 47%; }
-            .wrapper-order .section2 .container .right-div .order-form .sec-1 .shipping-form .zip-wrapper .zip-inpt::placeholder {
+            .wrapper-shop-order .section2-order .container .right-div .order-form .sec-1 .shipping-form .zip-wrapper .zip-inpt::placeholder {
               color: white; }
-      .wrapper-order .section2 .container .right-div .order-form .sec-2 h3 {
+      .wrapper-shop-order .section2-order .container .right-div .order-form .sec-2 h3 {
         color: white;
         font-size: 48px;
         font-weight: normal;
         font-family: 'Montserrat', sans-serif;
         margin-bottom: 15px; }
-      .wrapper-order .section2 .container .right-div .order-form .sec-2 .payment-form {
+      .wrapper-shop-order .section2-order .container .right-div .order-form .sec-2 .payment-form {
         margin-bottom: 90px; }
-        .wrapper-order .section2 .container .right-div .order-form .sec-2 .payment-form .cardType-select {
+        .wrapper-shop-order .section2-order .container .right-div .order-form .sec-2 .payment-form .cardType-select {
           margin-bottom: 20px;
           background: #29292B;
           padding: 20px;
@@ -1158,9 +1158,9 @@ a {
           margin-bottom: 20px;
           outline: none;
           width: 100%; }
-          .wrapper-order .section2 .container .right-div .order-form .sec-2 .payment-form .cardType-select::placeholder {
+          .wrapper-shop-order .section2-order .container .right-div .order-form .sec-2 .payment-form .cardType-select::placeholder {
             color: white; }
-        .wrapper-order .section2 .container .right-div .order-form .sec-2 .payment-form .cardNo-inpt {
+        .wrapper-shop-order .section2-order .container .right-div .order-form .sec-2 .payment-form .cardNo-inpt {
           margin-bottom: 20px;
           background: #29292B;
           padding: 20px;
@@ -1172,12 +1172,12 @@ a {
           margin-bottom: 20px;
           outline: none;
           width: 100%; }
-          .wrapper-order .section2 .container .right-div .order-form .sec-2 .payment-form .cardNo-inpt::placeholder {
+          .wrapper-shop-order .section2-order .container .right-div .order-form .sec-2 .payment-form .cardNo-inpt::placeholder {
             color: white; }
-        .wrapper-order .section2 .container .right-div .order-form .sec-2 .payment-form .month-year {
+        .wrapper-shop-order .section2-order .container .right-div .order-form .sec-2 .payment-form .month-year {
           display: flex;
           margin-bottom: 20px; }
-          .wrapper-order .section2 .container .right-div .order-form .sec-2 .payment-form .month-year .month-select {
+          .wrapper-shop-order .section2-order .container .right-div .order-form .sec-2 .payment-form .month-year .month-select {
             margin-right: 20px;
             background: #29292B;
             padding: 20px;
@@ -1188,9 +1188,9 @@ a {
             font-weight: bold;
             outline: none;
             width: 100%; }
-            .wrapper-order .section2 .container .right-div .order-form .sec-2 .payment-form .month-year .month-select::placeholder {
+            .wrapper-shop-order .section2-order .container .right-div .order-form .sec-2 .payment-form .month-year .month-select::placeholder {
               color: white; }
-          .wrapper-order .section2 .container .right-div .order-form .sec-2 .payment-form .month-year .year-select {
+          .wrapper-shop-order .section2-order .container .right-div .order-form .sec-2 .payment-form .month-year .year-select {
             background: #29292B;
             padding: 20px;
             border: none;
@@ -1200,12 +1200,12 @@ a {
             font-weight: bold;
             outline: none;
             width: 100%; }
-            .wrapper-order .section2 .container .right-div .order-form .sec-2 .payment-form .month-year .year-select::placeholder {
+            .wrapper-shop-order .section2-order .container .right-div .order-form .sec-2 .payment-form .month-year .year-select::placeholder {
               color: white; }
-        .wrapper-order .section2 .container .right-div .order-form .sec-2 .payment-form .cvv-wrapper {
+        .wrapper-shop-order .section2-order .container .right-div .order-form .sec-2 .payment-form .cvv-wrapper {
           display: flex;
           justify-content: flex-end; }
-          .wrapper-order .section2 .container .right-div .order-form .sec-2 .payment-form .cvv-wrapper .cvv-inpt {
+          .wrapper-shop-order .section2-order .container .right-div .order-form .sec-2 .payment-form .cvv-wrapper .cvv-inpt {
             background: #29292B;
             padding: 20px;
             border: none;
@@ -1216,26 +1216,26 @@ a {
             margin-bottom: 20px;
             outline: none;
             width: 47%; }
-            .wrapper-order .section2 .container .right-div .order-form .sec-2 .payment-form .cvv-wrapper .cvv-inpt::placeholder {
+            .wrapper-shop-order .section2-order .container .right-div .order-form .sec-2 .payment-form .cvv-wrapper .cvv-inpt::placeholder {
               color: white; }
-      .wrapper-order .section2 .container .right-div .order-form .submit-btns {
+      .wrapper-shop-order .section2-order .container .right-div .order-form .submit-btns {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 23px; }
-        .wrapper-order .section2 .container .right-div .order-form .submit-btns .link-btn {
+        .wrapper-shop-order .section2-order .container .right-div .order-form .submit-btns .link-btn {
           background: #29292B;
           border-radius: 6px;
           padding: 23px 18px;
           display: flex;
           align-items: center;
           justify-content: center; }
-          .wrapper-order .section2 .container .right-div .order-form .submit-btns .link-btn img {
+          .wrapper-shop-order .section2-order .container .right-div .order-form .submit-btns .link-btn img {
             margin-right: 14px; }
-          .wrapper-order .section2 .container .right-div .order-form .submit-btns .link-btn span {
+          .wrapper-shop-order .section2-order .container .right-div .order-form .submit-btns .link-btn span {
             font-size: 15px;
             font-weight: bold;
             color: white; }
-        .wrapper-order .section2 .container .right-div .order-form .submit-btns .sub-btn {
+        .wrapper-shop-order .section2-order .container .right-div .order-form .submit-btns .sub-btn {
           background: #D93638;
           border-radius: 6px;
           padding: 23px 18px;
@@ -1245,7 +1245,8 @@ a {
           text-align: center; }
 
 .footer {
-  padding-bottom: 100px; }
+  padding-bottom: 100px;
+  background: #131314; }
   .footer .container {
     padding: 45px 0;
     border-top: 1px solid #838383; }

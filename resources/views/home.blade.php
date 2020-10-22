@@ -28,12 +28,7 @@
 
 <body>
     <div class="wrapper-home">
-        <div id="menu-items" class="menu-items hidden">
-            <img id="cross" class="cross" src="../img/cross.png"/>
-            <a href="/">Home</a>
-            <a href="/user/shop">Shop</a>
-            <a href="/user/order">Order</a>
-        </div>
+        @include('layouts.navbars.menu-items')
 
         <div class="section1">
             <div class="container">
@@ -43,14 +38,13 @@
                     </figure>
 
                     <a href="/" class="brand-logo">
-                        <img src="../img/solestrike-logo.png" />
+                        <img src="../img/Group 222.png" />
                     </a>
 
                     <div class="options">
                         <figure class="cart-logo">
                             <img src="../img/Group 2.png" />
                         </figure>
-
                         @guest
                             <a href="{{ route('login') }}" class="login-btn">Login</a>
 
@@ -60,14 +54,14 @@
                             @endif
                         @else
                             <li class="nav-item dropdown right-span">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle user-name text-white" href="#" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle user-name text-white" href="#"
+                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right logout-p" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                                                 document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
@@ -77,7 +71,6 @@
                                 </div>
                             </li>
                         @endguest
-
                     </div>
                 </div>
 
@@ -351,6 +344,7 @@
                 </div>
             </div>
         </div>
+
         <div class="section6">
             <figure class="white-spot">
                 <img src="../img/Ellipse 3.png" />
@@ -375,6 +369,7 @@
             </div>
 
         </div>
+
         <div class="section7">
             <div class="container">
                 <div class="sec1">
@@ -400,33 +395,8 @@
             </div>
 
         </div>
-        <div class="footer">
-            <div class="container">
-                <div class="upper-div">
-                    <figure>
-                        <img src="../img/solestrike-for-site.png" />
-                    </figure>
-                    <div class="social-links">
-                        <a href="#" class="twitter">
-                            <img src="../img/Group 40.png" />
-                        </a>
-                        <a href="#" class="insta">
-                            <img src="../img/Path 63.png" />
-                        </a>
-                    </div>
-                </div>
-                <div class="lower-div">
-                    <pre>Copyright © 2021   Sole Strike</pre>
-                    <div class="right-div">
-                        <a href="#">FAQ</a>
-                        <a href="#">How It Works</a>
-                        <a href="#">Track Order</a>
-                        <a href="#">Terms Of Services</a>
-                        <a href="#">Privacy Policy</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+        @include('layouts.navbars.footer')
     </div>
 
     <!-- Scripts -->
