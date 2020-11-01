@@ -20,6 +20,7 @@
     <!-- CSS -->
     <link href="../css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
     <link href="../css/theme.css" rel="stylesheet" />
+
 </head>
 
 <body class="{{ $class ?? '' }}">
@@ -61,8 +62,6 @@
     <script src="../js/plugins/bootstrap-notify.js"></script>
     <script src="../js/black-dashboard.min.js?v=1.0.0"></script>
     <script src="../js/theme.js"></script>
-
-    @stack('js')
 
     <script>
         $(document).ready(function() {
@@ -163,7 +162,43 @@
 
     </script>
 
-    @stack('js')
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <!--AJAX Script -->
+    <script type='text/javascript'>
+        $(document).ready(function() {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+            // Update status
+            $(document).on("click", "#active-btn", function() {
+                var aa = $(this);
+
+                var user_id = aa[0].attributes[1].nodeValue;
+                var status = aa[0].checked;
+
+                console.log("user_id", user_id);
+                console.log("status", status);
+
+                $.ajax({
+                    url: 'updateStatus/' + user_id,
+                    type: 'post',
+                    data: {
+                        _token: CSRF_TOKEN,
+                        status: status
+                    },
+                    success: function(response) {
+                        console.log("new_status", status);
+                    }
+                });
+            });
+        })
+
+    </script>
 </body>
 
 </html>

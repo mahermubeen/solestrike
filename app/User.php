@@ -36,4 +36,35 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+
+    public function add($data) {
+        $user = User::create($data);
+        return $user->id;
+    }
+
+    public function get_users() {
+        return User::all();
+    }
+
+    public function get_user($id) {
+        return User::find($id);
+    }
+
+    public function find_id($email){
+        return User::where('email', $email)->first()->id;
+    }
+
+    public function edit_users($data, $id) {
+        return User::where('id', $id)->update($data);
+    }
+
+    public function delete_user($id) {
+        User::where('id', $id) -> delete();
+    }
+
+    public function update_avatar($data, $where) {
+        return User::where($where) -> update($data);
+    }
 }

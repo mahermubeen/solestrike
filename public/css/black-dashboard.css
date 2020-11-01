@@ -5413,7 +5413,7 @@ input[type="button"].btn-block {
 
 .alert-danger {
     color: #fd5d93;
-    background-color: #fd77a4;
+    background-color: #dc8400;
     border-color: #fd77a4;
 }
 
@@ -12386,18 +12386,6 @@ fieldset[disabled] .btn-link.active {
     background-color: transparent;
 }
 
-.has-success:after,
-.has-danger:after {
-    font-family: 'nucleo';
-    content: "\ea1b";
-    display: inline-block;
-    position: absolute;
-    right: 20px;
-    top: 13px;
-    color: #00f2c3;
-    font-size: 11px;
-}
-
 .has-success.form-control-lg:after,
 .has-danger.form-control-lg:after {
     font-size: 13px;
@@ -12417,11 +12405,6 @@ fieldset[disabled] .btn-link.active {
 .has-success.form-check .form-check-label,
 .has-danger.form-check .form-check-label {
     color: #00f2c3;
-}
-
-.has-danger:after {
-    content: "\ea48";
-    color: #ec250d;
 }
 
 .has-danger.form-check .form-check-label {

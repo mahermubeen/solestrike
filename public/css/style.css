@@ -211,7 +211,8 @@ a {
         .wrapper-home .section1 .container .head-content .head-left .last-btns {
           display: flex; }
           .wrapper-home .section1 .container .head-content .head-left .last-btns .learn-btn {
-            margin-right: 6px;
+            border: 2px solid #29292B;
+            margin-right: 24px;
             cursor: pointer;
             font-family: "Raleway", sans-serif;
             font-size: 16px;
@@ -223,6 +224,7 @@ a {
               background-color: #29292B; }
           .wrapper-home .section1 .container .head-content .head-left .last-btns .continue-btn {
             cursor: pointer;
+            border: 2px solid #29292B;
             font-family: "Raleway", sans-serif;
             padding: 20px 42px;
             display: flex;

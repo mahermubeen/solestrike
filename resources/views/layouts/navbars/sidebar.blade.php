@@ -12,6 +12,12 @@
                 </a>
             </li>
             <li>
+                <a href="{{ route('profile') }}">
+                    <i class="tim-icons icon-chart-pie-36"></i>
+                    <p>{{ __('Profile') }}</p>
+                </a>
+            </li>
+            <li>
                 <a data-toggle="collapse" href="#user-settings" aria-expanded="true">
                     <i class="fab fa-laravel"></i>
                     <span class="nav-link-text">{{ __('User Settings') }}</span>
@@ -22,18 +28,11 @@
                     <div class="collapse show" id="laravel-examples">
                         <ul class="nav pl-4">
                             <li>
-                                <a href="{{ route('profile')  }}">
-                                    <i class="tim-icons icon-single-02"></i>
-                                    <p>{{ __('User Profile') }}</p>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="{{ route('users')  }}">
                                     <i class="tim-icons icon-bullet-list-67"></i>
                                     <p>{{ __('All Users') }}</p>
                                 </a>
                             </li>
-                            
                         </ul>
                     </div>
                 </div>

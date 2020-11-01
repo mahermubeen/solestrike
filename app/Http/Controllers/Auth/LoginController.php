@@ -35,7 +35,19 @@ class LoginController extends Controller
             return redirect('/admin');
         }
         else{
-            return redirect('/user/shop');
+
+            if ($user->active) {
+                // Send the normal successful login response
+                return redirect('/user/shop');
+            } else {
+                // Increment the failed login attempts and redirect back to the
+                // login form with an error message.
+                $this->incrementLoginAttempts($request);
+                return redirect()
+                    ->back()
+                    ->withInput($request->only($this->username(), 'remember'))
+                    ->withErrors(['active' => 'You must be active to login.']);
+            }
         }
     }
 

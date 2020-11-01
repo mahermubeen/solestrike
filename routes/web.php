@@ -41,7 +41,10 @@ Route::group([
     Route::get('/', 'HomeController@index')->name('admin');
 
     Route::get('/profileEdit', 'HomeController@profile')->name('profile');
+    Route::post('/change-password', 'HomeController@updatePassword')->name('change_password');
+    Route::post('/change-name', 'HomeController@updateName')->name('change_name');
     Route::get('/userIndex', 'HomeController@users')->name('users');
+    Route::post('/updateStatus/{id}', 'HomeController@updateStatus');
     Route::get('/icons', 'HomeController@icons')->name('icons');
     Route::get('/notifications', 'HomeController@notifications')->name('notifications');
     Route::get('/table_list', 'HomeController@table_list')->name('table_list');
