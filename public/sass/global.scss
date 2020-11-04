@@ -1,136 +1,283 @@
-@import "variables";
-//reset style
-*,
-*::after,
-*::before {
-    margin: 0;
-    box-sizing: border-box;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Raleway", sans-serif;
-    // font-family: 'Montserrat', sans-serif;
-}
-
-.container {
-    margin: 0 auto;
-    max-width: 1170px;
-}
-
-.container1 {
-    margin: 0 auto;
-    max-width: 1070px;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-button,
-input,
-textarea,
-select {
-    outline: none;
-}
-
-img {
-    max-width: 100%;
-}
-
-li {
-    list-style: none;
-    display: inline;
-}
-
-a {
-    text-decoration: none;
-}
-
-.hidden {
-    display: none;
-}
-
-.block {
-    display: block;
-}
-
-.flex {
-    display: flex;
-}
-
-.grid {
-    display: grid;
-}
-
-.capitalize {
-    text-transform: capitalize;
-}
-
-//carousal
-.carousel-cell.is-selected {
-    width: 26%;
-    height: 403px;
-    margin-right: 20px;
-    opacity: 1;
-}
-
-.carousel-cell {
-    width: 26%;
-    height: 403px;
-    margin-right: 20px;
-    opacity: 0.5;
-}
-
-.flickity-prev-next-button {
-    svg {
+    @import "variables";
+    //reset style
+    *,
+    *::after,
+    *::before {
+        margin: 0;
+        box-sizing: border-box;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Raleway", sans-serif;
+        // font-family: 'Montserrat', sans-serif;
+    }
+    
+    .container {
+        margin: 0 auto;
+        max-width: 1170px;
+    }
+    
+    .container1 {
+        margin: 0 auto;
+        max-width: 1070px;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    button,
+    input,
+    textarea,
+    select {
+        outline: none;
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    
+    li {
+        list-style: none;
+        display: inline;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .hidden {
         display: none;
     }
-}
-
-.flickity-prev-next-button.previous {
-    background-image: url('../img/left-arrow.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: transparent;
-}
-
-.flickity-prev-next-button.next {
-    background-image: url('../img/right-arrow.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: transparent;
-}
-
-// scrollbar
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-
-/* Track */
-
-::-webkit-scrollbar-track {
-    background: #131314;
-    width: 0px;
-}
-
-
-/* Handle */
-
-::-webkit-scrollbar-thumb {
-    background: #29292b;
-    border-radius: 10px;
-}
-
-.text-white {
-    color: white !important;
-}
+    
+    .block {
+        display: block;
+    }
+    
+    .absolute {
+        position: absolute;
+    }
+    
+    .relative {
+        position: relative;
+    }
+    
+    .flex {
+        display: flex;
+    }
+    
+    .grid {
+        display: grid;
+    }
+    
+    .capitalize {
+        text-transform: capitalize;
+    }
+    
+    //carousal
+    .carousel-cell.is-selected {
+        width: 26%;
+        height: 403px;
+        margin-right: 20px;
+        opacity: 1;
+    }
+    
+    .carousel-cell {
+        width: 26%;
+        height: 403px;
+        margin-right: 20px;
+        opacity: 0.5;
+    }
+    
+    .flickity-prev-next-button {
+        svg {
+            display: none;
+        }
+    }
+    
+    .flickity-prev-next-button.previous {
+        background-image: url('../img/left-arrow.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: transparent;
+    }
+    
+    .flickity-prev-next-button.next {
+        background-image: url('../img/right-arrow.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: transparent;
+    }
+    
+    // scrollbar
+     ::-webkit-scrollbar {
+        width: 10px;
+    }
+    /* Track */
+    
+     ::-webkit-scrollbar-track {
+        background: #131314;
+        width: 0px;
+    }
+    /* Handle */
+    
+     ::-webkit-scrollbar-thumb {
+        background: #29292b;
+        border-radius: 10px;
+    }
+    
+    .text-white {
+        color: white !important;
+    }
+    
+    .main1 {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        left: 0;
+        top: 100px;
+        animation: main1 10s linear infinite;
+        .div1 {
+            animation: div1 20s linear infinite;
+        }
+        .rod {
+            width: 250px;
+            height: 10px;
+            background-color: white;
+            position: absolute;
+            left: 16px;
+            top: 101px;
+            transform: rotate(90deg);
+        }
+        img {
+            width: 200px;
+        }
+    }
+    
+    .main-wrapper {
+        height: 400px;
+        animation: fig-div 20s linear infinite;
+        img {
+            position: absolute;
+            top: -35%;
+            right: -22%;
+            z-index: -1;
+        }
+    }
+    
+    .main2 {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        right: 0;
+        top: 140px;
+        animation: main2 10s linear infinite;
+        .div2 {
+            animation: div2 20s linear infinite;
+        }
+        .rod {
+            width: 280px;
+            height: 10px;
+            background-color: white;
+            position: absolute;
+            left: 137px;
+            transform: rotate(153deg);
+            top: -76px;
+        }
+        img {
+            width: 200px;
+        }
+    }
+    
+    .main3 {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        top: -200px;
+        left: 250px;
+        animation: main3 10s linear infinite;
+        .div3 {
+            animation: div3 20s linear infinite;
+        }
+        .rod {
+            width: 280px;
+            height: 10px;
+            background-color: white;
+            position: absolute;
+            left: -115px;
+            transform: rotate(22deg);
+            top: -66px;
+        }
+        img {
+            width: 200px;
+        }
+    }
+    
+    @keyframes div1 {
+        0% {
+            transform: rotate(360deg);
+        }
+        25% {
+            transform: rotate(270deg);
+        }
+        50% {
+            transform: rotate(180deg);
+        }
+        75% {
+            transform: rotate(90deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+    
+    @keyframes div2 {
+        0% {
+            transform: rotate(360deg);
+        }
+        25% {
+            transform: rotate(270deg);
+        }
+        50% {
+            transform: rotate(180deg);
+        }
+        75% {
+            transform: rotate(90deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+    
+    @keyframes div3 {
+        0% {
+            transform: rotate(360deg);
+        }
+        25% {
+            transform: rotate(270deg);
+        }
+        50% {
+            transform: rotate(180deg);
+        }
+        75% {
+            transform: rotate(90deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+    
+    @keyframes fig-div {
+        100% {
+            transform: rotate(360deg);
+        }
+    }

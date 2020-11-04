@@ -32,8 +32,8 @@
         background-repeat: no-repeat;
         background-size: cover;
         clip-path: polygon(0 0, 100% 0, 100% 94%, 0% 100%);
-        overflow-x: hidden;
         position: relative;
+        overflow: hidden;
         .container {
             .head-content {
                 display: flex;
@@ -93,11 +93,11 @@
                 }
                 .fig-div {
                     flex: 1;
-                    img {
+                    .new1 {
                         position: absolute;
                         top: -35%;
                         right: -22%;
-                        z-index: -1;
+                        z-index: 0;
                     }
                 }
             }

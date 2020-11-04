@@ -60,8 +60,9 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right logout-p" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                 document.getElementById('logout-form').submit();">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                                                 document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
@@ -87,8 +88,26 @@
                             </a>
                         </div>
                     </div>
+
                     <div class="fig-div">
-                        <img src="../img/Group 224.png" />
+                        <img class="new1" src="../img/aabb.png"/>
+                        <div class="main-wrapper">
+                            <div class="main1 relative">
+                                <img class="div1" src="../img/img_0.png" />
+                                <div class="rod"></div>
+                            </div>
+
+                            <div class="main2 relative">
+                                <img class="div2" src="../img/img_1.png" />
+                                <div class="rod"></div>
+                            </div>
+
+                            <div class="main3 relative">
+                                <img class="div3" src="../img/img_2.png" />
+                                <div class="rod"></div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
