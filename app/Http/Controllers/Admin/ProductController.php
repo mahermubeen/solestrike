@@ -30,10 +30,11 @@ class ProductController extends Controller
         $products = $this->product->get_products();
 
         foreach($products as $product){
-            $product->avatar = json_decode($product->avatar, true);
-
-            $product->date = Carbon::parse($product->date)->format('d/m/Y');
+            $img = $product->avatar;
+            $product->avatar = json_decode($img);
         }
+
+        $products = json_decode($products);
        
         return view('products/index')->with(['products' => $products]);
     }

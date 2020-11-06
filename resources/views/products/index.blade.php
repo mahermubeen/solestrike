@@ -42,7 +42,7 @@
                                     <td>{{ $product->release_date }}</td>
                                     <td>${{ $product->deal }}</td>
                                     <td>
-                                        <img src="{{ url('images/' . $product->avatar) }}" width="75" class="product-img"/>
+                                        <img src="{{ url('img/' . $product->avatar) }}" width="75" class="product-img"/>
                                     </td>
                                     <td class="text-right">
                                         <div class="dropdown">
