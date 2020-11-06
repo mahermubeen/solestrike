@@ -20,12 +20,15 @@
     <!-- CSS -->
     <link href="../css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
     <link href="../css/theme.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
 
 </head>
 
 <body class="{{ $class ?? '' }}">
     @auth()
         <div class="wrapper">
+            @include('products.add_product')
+            @include('products.edit_product')
             @include('layouts.navbars.sidebar')
             <div class="main-panel">
                 @include('layouts.navbars.navbar')
@@ -62,6 +65,7 @@
     <script src="../js/plugins/bootstrap-notify.js"></script>
     <script src="../js/black-dashboard.min.js?v=1.0.0"></script>
     <script src="../js/theme.js"></script>
+    <script src="../js/main.js"></script>
 
     <script>
         $(document).ready(function() {
@@ -193,6 +197,32 @@
                     },
                     success: function(response) {
                         console.log("new_status", status);
+                    }
+                });
+            });
+
+             // edit product
+             $(document).on("click", "#edit-btn", function() {
+                var aa = $(this);
+
+                var product_id = aa[0].attributes[1].nodeValue;
+
+                // console.log("product_id", product_id);
+
+                var name = $('#name-inpt')[0].attributes[5].nodeValue);
+                
+                var price = $('#price-inpt')[0].attributes[5].nodeValue);
+                console.log("name", name);
+
+                $.ajax({
+                    url: '/admin/products/show_product/' + product_id,
+                    type: 'get',
+                    data: {
+                        _token: CSRF_TOKEN,
+                    },
+                    success: function(response) {
+                        console.log("response", response);
+                        name="dick";
                     }
                 });
             });

@@ -1,7 +1,9 @@
-@extends('layouts.app', ['page' => __('User Index'), 'pageSlug' => 'users'])
+@extends('layouts.app', ['page' => __('product index'), 'pageSlug' => 'products'])
 
 @section('content')
     <div class="row">
+        @include('alerts.success')
+        @include('alerts.danger_alert')
         <div class="col-md-12">
             <div class="card ">
                 <div class="card-header">
@@ -10,7 +12,7 @@
                             <h4 class="card-title">Products</h4>
                         </div>
                         <div class="col-4 text-right">
-                            <a href="#" class="btn btn-sm btn-primary">Add product</a>
+                            <button id="add-product" class="btn btn-sm btn-primary">Add product</button>
                         </div>
                     </div>
                 </div>
@@ -24,19 +26,24 @@
                                     <th scope="col">quantity</th>
                                     <th scope="col">Name</th>
                                     <th scope="col">price</th>
-                                    <th scope="col">Creation Date</th>
+                                    <th scope="col">Realease Date</th>
+                                    <th scope="col">Deal</th>
+                                    <th scope="col">Avatar</th>
                                     <th scope="col"></th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($products as $product)
                                 <tr>
-                                    <td>1</td>
-                                    <td>4</td>
-                                    <td>yeezy</td>
+                                    <td>{{ $product->id }}</td>
+                                    <td>{{ $product->quantity }}</td>
+                                    <td>{{ $product->name }}</td>
+                                    <td>${{ $product->retail_price }}</td>
+                                    <td>{{ $product->release_date }}</td>
+                                    <td>${{ $product->deal }}</td>
                                     <td>
-                                        $699
+                                        <img src="{{ url('images/' . $product->avatar) }}" width="75" class="product-img"/>
                                     </td>
-                                    <td>24/02/2020 16:47</td>
                                     <td class="text-right">
                                         <div class="dropdown">
                                             <a class="btn btn-sm btn-icon-only text-light" href="#" role="button"
@@ -44,51 +51,12 @@
                                                 <i class="fas fa-ellipsis-v"></i>
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                <a class="dropdown-item" href="#">Edit</a>
+                                            <span id="edit-btn" value="{{ $product->id }}" class="dropdown-item">Edit</span>
                                             </div>
                                         </div>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>7</td>
-                                    <td>nike</td>
-                                    <td>
-                                        $699
-                                    </td>
-                                    <td>24/02/2020 16:47</td>
-                                    <td class="text-right">
-                                        <div class="dropdown">
-                                            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="fas fa-ellipsis-v"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>10</td>
-                                    <td>addidas</td>
-                                    <td>
-                                        $699
-                                    </td>
-                                    <td>24/02/2020 16:47</td>
-                                    <td class="text-right">
-                                        <div class="dropdown">
-                                            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="fas fa-ellipsis-v"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
