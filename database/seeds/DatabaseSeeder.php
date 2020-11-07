@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
         $users = [
             ['name' => 'admin', 'is_admin' => '1', 'email' => 'admin@gmail.com', 'password' => Hash::make('password'), 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')],
             ['name' => 'bunny', 'is_admin' => '0', 'email' => 'bunny@gmail.com', 'password' => Hash::make('password'), 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')],
+            ['name' => 'user', 'is_admin' => '0', 'email' => 'user@gmail.com', 'password' => Hash::make('password'), 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s')],
         ];
 
         User::insert($users);
