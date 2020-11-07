@@ -82,7 +82,7 @@ class ProductController extends Controller
     public function show_product($id){
         $prod = $this->product->get_product($id);
 
-        return response()->json($prod);
+        return Response::JSON($prod);
     }
 
     public function edit_product(Request $request, $id){
@@ -94,25 +94,40 @@ class ProductController extends Controller
             'source'  => 'required',
             'deal'  => 'required',
             'detail'  => 'required',
-            'avatar' => 'required|max:2048'
         ]);
-      
-        $image_file = $request->avatar;
 
-        $name=$image_file->getClientOriginalName();
-        $image_file->move(public_path().'/images/', $name);
-        $img = json_encode($name);
-    
-        $data = array(
-            'quantity'  => $request['quantity'],
-            'name'  => $request['name'],
-            'retail_price'  => $request['retail_price'],
-            'release_date'  => $request['release_date'],
-            'source'  => $request['source'],
-            'deal'  => $request['deal'],
-            'detail'  => $request['detail'],
-            'avatar' => $img
-        );
+
+        
+
+        if(!empty($request->file('avatar'))){
+            $file = $request->file('avatar');
+            $name=$file->getClientOriginalName();
+            $file->move(public_path().'/images/', $name);
+            $img = json_encode($name);
+
+            $data = array(
+                'quantity'  => $request['quantity'],
+                'name'  => $request['name'],
+                'retail_price'  => $request['retail_price'],
+                'release_date'  => $request['release_date'],
+                'source'  => $request['source'],
+                'deal'  => $request['deal'],
+                'detail'  => $request['detail'],
+                'avatar' => $img
+            );
+        }else{
+            $data = array(
+                'quantity'  => $request['quantity'],
+                'name'  => $request['name'],
+                'retail_price'  => $request['retail_price'],
+                'release_date'  => $request['release_date'],
+                'source'  => $request['source'],
+                'deal'  => $request['deal'],
+                'detail'  => $request['detail'],
+            );
+        }
+
+        
 
         $id = $this->product->edit_products($data, $id);
 

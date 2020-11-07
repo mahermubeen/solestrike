@@ -31,7 +31,7 @@ $(document).ready(function() {
     });
 
     //edit product box
-    $('#edit-btn').click(function() {
+    $('.edit-btn').click(function() {
         $('#edit-product-box').removeClass('hidden');
         $('#edit-product-box').addClass('flex');
 

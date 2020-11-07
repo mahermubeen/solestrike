@@ -204,15 +204,9 @@
              // edit product
              $(document).on("click", "#edit-btn", function() {
                 var aa = $(this);
-
                 var product_id = aa[0].attributes[1].nodeValue;
-
                 // console.log("product_id", product_id);
 
-                var name = $('#name-inpt')[0].attributes[5].nodeValue);
-                
-                var price = $('#price-inpt')[0].attributes[5].nodeValue);
-                console.log("name", name);
 
                 $.ajax({
                     url: '/admin/products/show_product/' + product_id,
@@ -222,7 +216,64 @@
                     },
                     success: function(response) {
                         console.log("response", response);
-                        name="dick";
+
+                        var id = response.id;
+                        var name = response.name;
+                        var quantity = response.quantity;
+                        var retail_price = response.retail_price;
+                        var deal = response.deal;
+                        var detail = response.detail;
+                        var release_date = response.release_date;
+                        var source = response.source;
+                        var avatar = response.avatar;
+                    
+
+                        $('#name-inpt')[0].attributes[5].nodeValue = name;
+                        $('#quantity-inpt')[0].attributes[5].nodeValue = quantity;
+                        $('#retail_price-inpt')[0].attributes[5].nodeValue = retail_price;
+                        $('#deal-inpt')[0].attributes[5].nodeValue = deal;
+                        $('#detail-inpt')[0].attributes[5].nodeValue = detail;
+                        $('#release_date-inpt')[0].attributes[5].nodeValue = release_date;
+                        $('#source-inpt')[0].attributes[5].nodeValue = source;
+
+
+                       
+
+                        // slicing img path
+                        var img = $('#avatar-img')[0].attributes[1].nodeValue;
+                        string = img.toString();
+                        img = string.slice(0 , 28);
+
+                        //converting to string and removing comas
+                        var eventstring = new String();
+                        eventstring = avatar.toString().replace(/"/g, "");
+
+                        //adding preview image path
+                        img =   img+'/'+eventstring;
+                        $('#avatar-img')[0].attributes[1].nodeValue = img;
+
+                        //adding img name to input file value
+                        // $('#avatar-inpt')[0].attributes[4].nodeValue = eventstring;
+
+                        // $('input[type="file"]').change(function(e){
+                        //     var fileName = e.target.files[0].name;
+                        //     $('#avatar-inpt')[0].attributes[4].nodeValue = fileName;
+                        // });
+
+
+                        //changing form path
+                        var path = $('#edit-form')[0].attributes[3].nodeValue;
+                        string = path.toString();
+                        path = string.slice(0 , 49);
+
+                        var eventstring1 = new String();
+                        eventstring1 = id.toString().replace(/"/g, "");
+
+                        path = path+'/'+eventstring1;
+
+                        console.log( "path",path);
+
+                        $('#edit-form')[0].attributes[3].nodeValue = path;
                     }
                 });
             });

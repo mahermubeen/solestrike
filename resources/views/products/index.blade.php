@@ -33,7 +33,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($products as $product)
+                                @foreach ($products as $key => $product)
                                 <tr>
                                     <td>{{ $product->id }}</td>
                                     <td>{{ $product->quantity }}</td>
@@ -42,7 +42,7 @@
                                     <td>{{ $product->release_date }}</td>
                                     <td>${{ $product->deal }}</td>
                                     <td>
-                                        <img src="{{ url('img/' . $product->avatar) }}" width="75" class="product-img"/>
+                                        <img src="{{ url('images/' . $product->avatar) }}" width="75" class="product-img"/>
                                     </td>
                                     <td class="text-right">
                                         <div class="dropdown">
@@ -51,7 +51,7 @@
                                                 <i class="fas fa-ellipsis-v"></i>
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                            <span id="edit-btn" value="{{ $product->id }}" class="dropdown-item">Edit</span>
+                                            <a id="edit-btn" data-id="{{ $product->id }}" class="edit-btn dropdown-item">Edit</a>
                                             </div>
                                         </div>
                                     </td>

@@ -33,7 +33,10 @@ class Product extends Model
     public function edit_products($data, $id) {
         return Product::where('id', $id)->update($data);
     }
-
+    public function get_img($id) {
+        return Product::where('id', $id);
+    }
+    
     public function delete_product($id) {
         Product::where('id', $id) -> delete();
     }
