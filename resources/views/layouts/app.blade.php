@@ -274,7 +274,10 @@
                         console.log( "path",path);
 
                         $('#edit-form')[0].attributes[3].nodeValue = path;
-                    }
+                    },
+                    error: (error) => {
+                     console.log(JSON.stringify(error));
+                    }    
                 });
             });
 
