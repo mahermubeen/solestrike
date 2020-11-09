@@ -33,8 +33,10 @@ class ProductController extends Controller
             $img = $product->avatar;
             $img = (string)$img;
             $product->avatar = json_decode($img);
+
+            
         }
-       
+        dd($products);
         return view('products/index')->with(['products' => $products]);
     }
 
