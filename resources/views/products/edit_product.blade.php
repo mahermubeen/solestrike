@@ -23,7 +23,7 @@
 
                 <div class="right">
                     <figure>
-                        <img id="avatar-img" src="{{  url('images/') }}" width="75" class="product-img"/>
+                        <img id="avatar-img" src="../images/" width="75" class="product-img"/>
                     </figure>
 
                     <div id="img-input" class="form-group{{ $errors->has('avatar') ? ' has-danger' : '' }}">
