@@ -28,9 +28,6 @@ class ProductController extends Controller
     public function index()
     {
         $products = $this->product->get_products();
-
-        dd($products);
-
         foreach($products as $product){
             $img = $product->avatar;
             $img = (string)$img;
