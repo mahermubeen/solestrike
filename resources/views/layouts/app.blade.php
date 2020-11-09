@@ -265,7 +265,7 @@
                         //changing form path
                         var path = $('#edit-form')[0].attributes[3].nodeValue;
                         string = path.toString();
-                        path = string.slice(0 , 49);
+                        path = string.slice(0 , 60); //for localhost 49
 
                         var eventstring1 = new String();
                         eventstring1 = id.toString().replace(/"/g, "");
