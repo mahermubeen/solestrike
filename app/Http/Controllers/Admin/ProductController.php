@@ -33,6 +33,7 @@ class ProductController extends Controller
             $img = $product->avatar;
             $img = (string)$img;
             $product->avatar = json_decode($img);
+            $product->avatar = str_replace('"', '', $img);
         }
         
         return view('products/index')->with(['products' => $products]);
@@ -57,7 +58,10 @@ class ProductController extends Controller
         $name=$image_file->getClientOriginalName();
         $image_file->move(public_path().'/images/', $name);
         $img = json_encode($name);
-    
+        $img = str_replace('"', '', $img);
+        
+            dd($img);
+
         $data = array(
             'quantity'  => $request['quantity'],
             'name'  => $request['name'],
@@ -68,8 +72,6 @@ class ProductController extends Controller
             'detail'  => $request['detail'],
             'avatar' => $img
         );
-
-        dd($data['avatar']);
 
         $id = $this->product->add($data);
 
