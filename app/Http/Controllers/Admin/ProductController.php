@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Carbon;
 
-use function GuzzleHttp\json_decode;
 
 class ProductController extends Controller
 {
@@ -30,11 +29,11 @@ class ProductController extends Controller
     {
         $products = $this->product->get_products();
 
-        // foreach($products as $product){
-        //     $img = $product->avatar;
-        //     $product->avatar = json_decode($products, true);
-        // }
-        json_decode($products, true);
+        foreach($products as $product){
+            $img = $product->avatar;
+            $img = (string)$img;
+            $product->avatar = json_decode($img);
+        }
         
         return view('products/index')->with(['products' => $products]);
     }
@@ -57,6 +56,8 @@ class ProductController extends Controller
 
         $name=$image_file->getClientOriginalName();
         $image_file->move(public_path().'/images/', $name);
+        $img = json_encode($name);
+        
 
         $data = array(
             'quantity'  => $request['quantity'],
@@ -66,7 +67,7 @@ class ProductController extends Controller
             'source'  => $request['source'],
             'deal'  => $request['deal'],
             'detail'  => $request['detail'],
-            'avatar' => $name
+            'avatar' => $img
         );
 
         $id = $this->product->add($data);
@@ -83,6 +84,12 @@ class ProductController extends Controller
         $prod = $this->product->get_product($id);
 
         return Response::JSON($prod);
+    }
+
+    public function delete_product($id){
+        $this->product->delete_product($id);
+
+        return redirect()->back()->with('message', 'Product Deleted successfully.');
     }
 
     public function edit_product(Request $request, $id){
@@ -132,7 +139,7 @@ class ProductController extends Controller
         $id = $this->product->edit_products($data, $id);
 
         if ($id > 0)
-            return redirect()->back()->with('message', 'Product edited successfully.');
+            return redirect()->back()->with('message', 'Product Updated successfully.');
         else
             return redirect()->back()->withErrors()->withInput();
     }

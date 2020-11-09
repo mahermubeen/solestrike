@@ -54,6 +54,7 @@ Route::group([
     Route::post('/products/add_product', 'ProductController@add_product')->name('add_product');
     Route::get('/products/show_product/{id}', 'ProductController@show_product')->name('show_product');
     Route::post('/products/edit_product/{id}', 'ProductController@edit_product')->name('edit_product');
+    Route::post('/products/delete_product/{id}', 'ProductController@delete_product')->name('delete_product');
 
     Route::get('/orders', 'HomeController@orders')->name('orders');
 });

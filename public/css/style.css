@@ -1497,6 +1497,24 @@ a {
       .add_product_wrapper .main-div .bottom-div .row4 .add-btn {
         margin-right: 10px; }
 
+.delete_product_wrapper {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center; }
+  .delete_product_wrapper .main-div {
+    border-radius: 15px;
+    background: linear-gradient(to bottom left, #344675, #263148, #2e437b);
+    padding: 30px; }
+    .delete_product_wrapper .main-div .delete-product-form .btns-div {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .delete_product_wrapper .main-div .delete-product-form .btns-div .add-btn {
+        margin-right: 10px; }
+
 .footer {
   padding-bottom: 100px;
   background: #131314; }

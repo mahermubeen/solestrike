@@ -51,7 +51,8 @@
                                                 <i class="fas fa-ellipsis-v"></i>
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                            <a id="edit-btn" data-id="{{ $product->id }}" class="edit-btn dropdown-item">Edit</a>
+                                                <a id="edit-btn" data-id="{{ $product->id }}" class="edit-btn dropdown-item">Edit</a>
+                                                <a id="delete-btn" data-id="{{ $product->id }}" class="delete-btn dropdown-item">Delete</a>
                                             </div>
                                         </div>
                                     </td>

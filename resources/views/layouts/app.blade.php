@@ -29,6 +29,7 @@
         <div class="wrapper">
             @include('products.add_product')
             @include('products.edit_product')
+            @include('products.delete_product')
             @include('layouts.navbars.sidebar')
             <div class="main-panel">
                 @include('layouts.navbars.navbar')
@@ -276,6 +277,28 @@
                         $('#edit-form')[0].attributes[3].nodeValue = path;
                     }
                 });
+            });
+
+
+             //delete product
+             $(document).on("click", "#delete-btn", function() {
+                var aa = $(this);
+                var id = aa[0].attributes[1].nodeValue;
+                // console.log("product_id", id);
+
+                //changing form path
+                var path = $('#delete-form')[0].attributes[3].nodeValue;
+                        string = path.toString();
+                        path = string.slice(0 , 51);
+
+                        var eventstring1 = new String();
+                        eventstring1 = id.toString().replace(/"/g, "");
+
+                        path = path+'/'+eventstring1;
+
+                        console.log( "path",path);
+
+                        $('#delete-form')[0].attributes[3].nodeValue = path;
             });
         })
 
