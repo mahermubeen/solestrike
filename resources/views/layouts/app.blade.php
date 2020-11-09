@@ -208,7 +208,7 @@
                 // console.log("product_id", product_id);
 
                 $.ajax({
-                    url: 'products/show_product/' + product_id,
+                    url: '/products/show_product/' + product_id,
                     type: 'get',
                     dataType: 'JSON',
                     data: {
