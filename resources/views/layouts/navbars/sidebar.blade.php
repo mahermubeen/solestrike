@@ -49,6 +49,12 @@
                     <p>{{ __('Orders') }}</p>
                 </a>
             </li>
+            <li>
+                <a href="{{ route('user') }}">
+                    <i class="tim-icons icon-chart-pie-36"></i>
+                    <p>{{ __('User Dashboard') }}</p>
+                </a>
+            </li>
             {{-- <li>
                 <a href="{{ route('icons')  }}">
                     <i class="tim-icons icon-atom"></i>

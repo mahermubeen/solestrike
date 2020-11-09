@@ -10,10 +10,11 @@
             cursor: pointer;
         }
     }
-    .brand-logo {
+    .brand-logo-wrapper {
         flex: 1;
         display: flex;
         justify-content: center;
+        .brand-logo {}
     }
     .options {
         position: absolute;

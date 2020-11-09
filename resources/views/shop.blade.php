@@ -23,21 +23,21 @@
 
     <div class="section2-shop">
         <div class="container">
-            <div class="product-wrapper">
-                <figure class="box-1">
-                    <img src="../img/Group 66.png" />
-                </figure>
+            @foreach ($products as $key => $product)
+            <div value="{{ $key }}" class="product-wrapper">
+                <a href="{{ route('order_product', ['id' => $product->id]) }}" class="box-1">
+                    <img src="../img/{{ $product->avatar }}" />
+                </a>
                 <div class="box-2">
-                    <p class="p1">Shopify</p>
+                    <p class="p1">{{ $product->source }}</p>
                     <div class="details-box">
-                        <h5>Air Jordan 13 Retro <span>"Flint"</span></h5>
+                        <h5>{{ $product->name }}</h5>
                         <div class="sale-tag">
                             <img src="../img/Path 75.png" />
-                            <span>$50</span>
+                            <span>${{ $product->deal }}</span>
                         </div>
                     </div>
-                    <p class="p2">Having originally supposed to have made a return again in 2017, the Air Jordan 13
-                        ‘Flint’ is back for the fourth time in true original form. </p>
+                    <p class="p2">{{ $product->detail }}</p>
                 </div>
                 <div class="box-3">
                     <div class="span1">
@@ -46,147 +46,16 @@
                     </div>
                     <div class="span2">
                         <p class="p-1">RELEASE DATE</p>
-                        <p class="p-2">04.18.2020</p>
+                        <p class="p-2">{{ $product->release_date }}</p>
                     </div>
                     <div class="span3">
                         <p class="p-1">RETAIL</p>
-                        <p class="p-2">$150</p>
+                        <p class="p-2">${{ $product->retail_price }}</p>
                     </div>
                 </div>
 
             </div>
-
-            <div class="product-wrapper">
-                <figure class="box-1">
-                    <img src="../img/Group 225.png" />
-                </figure>
-                <div class="box-2">
-                    <p class="p1">Shopify</p>
-                    <div class="details-box">
-                        <h5>Air Jordan 13 Retro <span>"Flint"</span></h5>
-                        <div class="sale-tag">
-                            <img src="../img/Path 75.png" />
-                            <span>$50</span>
-                        </div>
-                    </div>
-                    <p class="p2">Having originally supposed to have made a return again in 2017, the Air Jordan 13
-                        ‘Flint’ is back for the fourth time in true original form. </p>
-                </div>
-                <div class="box-3">
-                    <div class="span1">
-                        <p class="p-1">AVAILABILITY</p>
-                        <p class="p-2">IN STOCK</p>
-                    </div>
-                    <div class="span2">
-                        <p class="p-1">RELEASE DATE</p>
-                        <p class="p-2">04.18.2020</p>
-                    </div>
-                    <div class="span3">
-                        <p class="p-1">RETAIL</p>
-                        <p class="p-2">$150</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="product-wrapper">
-                <figure class="box-1">
-                    <img src="../img/Group 227.png" />
-                </figure>
-                <div class="box-2">
-                    <p class="p1">Shopify</p>
-                    <div class="details-box">
-                        <h5>Air Jordan 13 Retro <span>"Flint"</span></h5>
-                        <div class="sale-tag">
-                            <img src="../img/Path 75.png" />
-                            <span>$50</span>
-                        </div>
-                    </div>
-                    <p class="p2">Having originally supposed to have made a return again in 2017, the Air Jordan 13
-                        ‘Flint’ is back for the fourth time in true original form. </p>
-                </div>
-                <div class="box-3">
-                    <div class="span1">
-                        <p class="p-1">AVAILABILITY</p>
-                        <p class="p-2">IN STOCK</p>
-                    </div>
-                    <div class="span2">
-                        <p class="p-1">RELEASE DATE</p>
-                        <p class="p-2">04.18.2020</p>
-                    </div>
-                    <div class="span3">
-                        <p class="p-1">RETAIL</p>
-                        <p class="p-2">$150</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="product-wrapper">
-                <figure class="box-1">
-                    <img src="../img/Group 66.png" />
-                </figure>
-                <div class="box-2">
-                    <p class="p1">Shopify</p>
-                    <div class="details-box">
-                        <h5>Air Jordan 13 Retro <span>"Flint"</span></h5>
-                        <div class="sale-tag">
-                            <img src="../img/Path 75.png" />
-                            <span>$50</span>
-                        </div>
-                    </div>
-                    <p class="p2">Having originally supposed to have made a return again in 2017, the Air Jordan 13
-                        ‘Flint’ is back for the fourth time in true original form. </p>
-                </div>
-                <div class="box-3">
-                    <div class="span1">
-                        <p class="p-1">AVAILABILITY</p>
-                        <p class="p-2">IN STOCK</p>
-                    </div>
-                    <div class="span2">
-                        <p class="p-1">RELEASE DATE</p>
-                        <p class="p-2">04.18.2020</p>
-                    </div>
-                    <div class="span3">
-                        <p class="p-1">RETAIL</p>
-                        <p class="p-2">$150</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="product-wrapper">
-                <figure class="box-1">
-                    <img src="../img/Group 225.png" />
-                </figure>
-                <div class="box-2">
-                    <p class="p1">Shopify</p>
-                    <div class="details-box">
-                        <h5>Air Jordan 13 Retro <span>"Flint"</span></h5>
-                        <div class="sale-tag">
-                            <img src="../img/Path 75.png" />
-                            <span>$50</span>
-                        </div>
-                    </div>
-                    <p class="p2">Having originally supposed to have made a return again in 2017, the Air Jordan 13
-                        ‘Flint’ is back for the fourth time in true original form. </p>
-                </div>
-                <div class="box-3">
-                    <div class="span1">
-                        <p class="p-1">AVAILABILITY</p>
-                        <p class="p-2">IN STOCK</p>
-                    </div>
-                    <div class="span2">
-                        <p class="p-1">RELEASE DATE</p>
-                        <p class="p-2">04.18.2020</p>
-                    </div>
-                    <div class="span3">
-                        <p class="p-1">RETAIL</p>
-                        <p class="p-2">$150</p>
-                    </div>
-                </div>
-
-            </div>
+            @endforeach
         </div>
     </div>
 

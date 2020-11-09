@@ -3,14 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-
 use Illuminate\Http\Request;
-
 use App\Product;
-use Img;
 use Illuminate\Support\Facades\Response;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Carbon;
 
 
 class ProductController extends Controller
@@ -75,7 +70,7 @@ class ProductController extends Controller
         if ($id > 0)
             return redirect()->back()->with('message', 'Product added successfully.');
         else
-            return redirect()->back()->withErrors()->withInput();
+            return redirect()->back()->withInput()->withErrors();
       
     }
 

@@ -17,9 +17,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'HomeController@index');
 
 
 Route::group([
@@ -30,7 +28,8 @@ Route::group([
     Route::get('/', 'HomeController@index')->name('user');
     
     Route::get('/shop', 'ShopController@index')->name('shop');
-    Route::get('/order', 'OrderController@index')->name('order');
+
+    Route::get('/order_product/{id}', 'OrderController@order_product')->name('order_product');
 });
 
 Route::group([
@@ -40,21 +39,21 @@ Route::group([
 ], function () {
     Route::get('/', 'HomeController@index')->name('admin');
 
+    Route::get('/orders', 'HomeController@orders')->name('orders');
+
     Route::get('/profileEdit', 'ProfileController@index')->name('profile');
     Route::post('/change-password', 'ProfileController@updatePassword')->name('change_password');
     Route::post('/change-name', 'ProfileController@updateName')->name('change_name');
     Route::get('/userIndex', 'ProfileController@users')->name('users');
     Route::post('/updateStatus/{id}', 'ProfileController@updateStatus');
 
-    Route::get('/icons', 'HomeController@icons')->name('icons');
-    Route::get('/notifications', 'HomeController@notifications')->name('notifications');
-    Route::get('/table_list', 'HomeController@table_list')->name('table_list');
+    // Route::get('/icons', 'HomeController@icons')->name('icons');
+    // Route::get('/notifications', 'HomeController@notifications')->name('notifications');
+    // Route::get('/table_list', 'HomeController@table_list')->name('table_list');
 
     Route::get('/products', 'ProductController@index')->name('products');
     Route::post('/products/add_product', 'ProductController@add_product')->name('add_product');
     Route::post('/products/show_product/{id}', 'ProductController@show_product')->name('show_product');
     Route::post('/products/edit_product/{id}', 'ProductController@edit_product')->name('edit_product');
     Route::post('/products/delete_product/{id}', 'ProductController@delete_product')->name('delete_product');
-
-    Route::get('/orders', 'HomeController@orders')->name('orders');
 });

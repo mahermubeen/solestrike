@@ -2,14 +2,14 @@
     <div class="container">
         <div class="upper-div">
             <figure>
-                <img src="../img/solestrike-for-site.png" />
+                <img src="{!! asset('img/solestrike-for-site.png') !!}" />
             </figure>
             <div class="social-links">
                 <a href="#" class="twitter">
-                    <img src="../img/Group 40.png" />
+                    <img src="{!! asset('img/Group 40.png') !!}" />
                 </a>
                 <a href="#" class="insta">
-                    <img src="../img/Path 63.png" />
+                    <img src="{!! asset('img/Path 63.png') !!}" />
                 </a>
             </div>
         </div>

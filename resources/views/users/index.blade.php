@@ -34,6 +34,7 @@
                                     <th scope="col">Email</th>
                                     <th scope="col">Creation Date</th>
                                     <th scope="col">Status</th>
+                                    <th scope="col"></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -47,6 +48,18 @@
                                         <td>
                                             <input id="active-btn" data-id="{{ $user->id }}" class="toggle-class"
                                                 name="status" type="checkbox" {{ $user->active ? 'checked' : '' }}>
+                                        </td>
+                                        <td class="text-right">
+                                            <div class="dropdown">
+                                                <a class="btn btn-sm btn-icon-only text-light" href="#" role="button"
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                    <a id="edit-btn" data-id="{{ $user->id }}" class="edit-btn dropdown-item">Edit</a>
+                                                    <a id="delete-btn" data-id="{{ $user->id }}" class="delete-btn dropdown-item">Delete</a>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach

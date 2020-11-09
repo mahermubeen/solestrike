@@ -37,9 +37,11 @@
                         <img src="../img/open-menu (1).png" />
                     </figure>
 
-                    <a href="/" class="brand-logo">
-                        <img src="../img/Group 222.png" />
-                    </a>
+                    <div class="brand-logo-wrapper">
+                        <a href="/" class="brand-logo">
+                            <img src="../img/Group 222.png" />
+                        </a>
+                    </div>
 
                     <div class="options">
                         <figure class="cart-logo">
@@ -172,162 +174,18 @@
 
         <div class="section4">
             <div class="carousel" data-flickity='{ "groupCells": true }'>
+                @foreach ($products as $key => $product)
                 <div class="carousel-cell">
                     <figure>
-                        <img src="../img/Group 7.png" />
+                        <img src="../img/{{ $product->avatar }}" />
                     </figure>
                     <div class="cell-wrapper">
-                        <p class="p1">Sneaker Name</p>
-                        <h4>Name Here</h4>
-                        <p class="p2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi"</p>
+                        <p class="p1">{{ $product->name }}</p>
+                        <h4>{{ $product->source }}</h4>
+                        <p class="p2">"{{ $product->detail }}"</p>
                     </div>
                 </div>
-                <div class="carousel-cell">
-                    <figure>
-                        <img src="../img/stussy.png" />
-                    </figure>
-                    <div class="cell-wrapper">
-                        <p class="p1">Sneaker Name</p>
-                        <h4>Name Here</h4>
-                        <p class="p2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi"</p>
-                    </div>
-                </div>
-                <div class="carousel-cell">
-                    <figure>
-                        <img src="../img/yeezy.png" />
-                    </figure>
-                    <div class="cell-wrapper">
-                        <p class="p1">Sneaker Name</p>
-                        <h4>Name Here</h4>
-                        <p class="p2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi"</p>
-                    </div>
-                </div>
-                <div class="carousel-cell">
-                    <figure>
-                        <img src="../img/Group 7.png" />
-                    </figure>
-                    <div class="cell-wrapper">
-                        <p class="p1">Sneaker Name</p>
-                        <h4>Name Here</h4>
-                        <p class="p2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi"</p>
-                    </div>
-                </div>
-                <div class="carousel-cell">
-                    <figure>
-                        <img src="../img/Group 7.png" />
-                    </figure>
-                    <div class="cell-wrapper">
-                        <p class="p1">Sneaker Name</p>
-                        <h4>Name Here</h4>
-                        <p class="p2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi"</p>
-                    </div>
-                </div>
-                <div class="carousel-cell">
-                    <figure>
-                        <img src="../img/Group 7.png" />
-                    </figure>
-                    <div class="cell-wrapper">
-                        <p class="p1">Sneaker Name</p>
-                        <h4>Name Here</h4>
-                        <p class="p2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi"</p>
-                    </div>
-                </div>
-                <div class="carousel-cell">
-                    <figure>
-                        <img src="../img/Group 7.png" />
-                    </figure>
-                    <div class="cell-wrapper">
-                        <p class="p1">Sneaker Name</p>
-                        <h4>Name Here</h4>
-                        <p class="p2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi"</p>
-                    </div>
-                </div>
-                <div class="carousel-cell">
-                    <figure>
-                        <img src="../img/Group 7.png" />
-                    </figure>
-                    <div class="cell-wrapper">
-                        <p class="p1">Sneaker Name</p>
-                        <h4>Name Here</h4>
-                        <p class="p2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi"</p>
-                    </div>
-                </div>
-                <div class="carousel-cell">
-                    <figure>
-                        <img src="../img/Group 7.png" />
-                    </figure>
-                    <div class="cell-wrapper">
-                        <p class="p1">Sneaker Name</p>
-                        <h4>Name Here</h4>
-                        <p class="p2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi"</p>
-                    </div>
-                </div>
-                <div class="carousel-cell">
-                    <figure>
-                        <img src="../img/Group 7.png" />
-                    </figure>
-                    <div class="cell-wrapper">
-                        <p class="p1">Sneaker Name</p>
-                        <h4>Name Here</h4>
-                        <p class="p2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi"</p>
-                    </div>
-                </div>
-                <div class="carousel-cell">
-                    <figure>
-                        <img src="../img/Group 7.png" />
-                    </figure>
-                    <div class="cell-wrapper">
-                        <p class="p1">Sneaker Name</p>
-                        <h4>Name Here</h4>
-                        <p class="p2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi"</p>
-                    </div>
-                </div>
-                <div class="carousel-cell">
-                    <figure>
-                        <img src="../img/Group 7.png" />
-                    </figure>
-                    <div class="cell-wrapper">
-                        <p class="p1">Sneaker Name</p>
-                        <h4>Name Here</h4>
-                        <p class="p2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi"</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
 

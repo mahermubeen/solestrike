@@ -27,6 +27,9 @@
 html {
   scroll-behavior: smooth; }
 
+.cursor-pointer {
+  cursor: pointer; }
+
 button,
 input,
 textarea,
@@ -228,7 +231,7 @@ a {
     position: absolute; }
     .header .menu-logo img {
       cursor: pointer; }
-  .header .brand-logo {
+  .header .brand-logo-wrapper {
     flex: 1;
     display: flex;
     justify-content: center; }
@@ -808,7 +811,7 @@ a {
           color: white; }
   .wrapper-shop-order .section2-shop .container .product-wrapper {
     display: grid;
-    grid-template-columns: max-content 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 25px;
     align-items: center;
     margin-bottom: 100px; }
@@ -1010,6 +1013,18 @@ a {
       .wrapper-shop-order .section1-order .container .head-content .head-right .drop-wrapper {
         display: flex;
         justify-content: flex-end; }
+        .wrapper-shop-order .section1-order .container .head-content .head-right .drop-wrapper .size-select {
+          margin-right: 20px;
+          background: #29292B;
+          padding: 20px;
+          border: none;
+          border-radius: 6px;
+          color: white;
+          font-size: 15px;
+          font-weight: bold;
+          outline: none; }
+          .wrapper-shop-order .section1-order .container .head-content .head-right .drop-wrapper .size-select::placeholder {
+            color: white; }
         .wrapper-shop-order .section1-order .container .head-content .head-right .drop-wrapper .dropdown {
           display: flex;
           align-items: center;

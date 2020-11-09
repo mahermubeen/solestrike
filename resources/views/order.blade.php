@@ -6,18 +6,18 @@
             <div class="head-content">
                 <div class="head-left">
                     <figure>
-                        <img src="../img/Group 76.png" />
+                        <img src="{!! asset('img/'.$product->avatar) !!}" />
                     </figure>
                 </div>
                 <div class="head-right">
                     <div class="up-box">
                         <div class="box-2">
-                            <p class="p1">Shopify</p>
+                            <p class="p1">{{$product->source}}</p>
                             <div class="details-box">
-                                <h5>Air Jordan 13 Retro <span>"Flint"</span></h5>
+                                <h5>{{$product->name}}</h5>
                                 <div class="sale-tag">
-                                    <img src="../img/Path 750.png" />
-                                    <span>$50</span>
+                                    <img src="{!! asset('img/Path 750.png') !!}" />
+                                    <span>${{$product->deal}}</span>
                                 </div>
                             </div>
                         </div>
@@ -28,19 +28,21 @@
                             </div>
                             <div class="span2">
                                 <p class="p-1">RELEASE DATE</p>
-                                <p class="p-2">04.18.2020</p>
+                                <p class="p-2">{{$product->release_date}}</p>
                             </div>
                             <div class="span3">
                                 <p class="p-1">RETAIL</p>
-                                <p class="p-2">$150</p>
+                                <p class="p-2">${{$product->retail_price}}</p>
                             </div>
                         </div>
                     </div>
                     <div class="drop-wrapper">
-                        <div class="dropdown">
-                            <span>Size 15</span>
-                            <img src="../img/Group 64.png" />
-                        </div>
+                        <select class="size-select">
+                            <option>Size 15</option>
+                            <option>Size 14</option>
+                            <option>Size 11</option>
+                            <option>Size 9</option>
+                        </select>
                     </div>
 
                 </div>
@@ -88,7 +90,7 @@
                     </div>
                     <div class="down-div">
                         <figure>
-                            <img src="../img/Group 229.png" />
+                            <img src="{!! asset('img/Group 229.png') !!}" />
                         </figure>
                         <div class="rate-wrapper">
                             <div class="left">
@@ -104,7 +106,7 @@
                 </div>
 
                 <figure class="stock-img">
-                    <img src="../img/Group 103.png" />
+                    <img src="{!! asset('img/Group 103.png') !!}" />
                 </figure>
             </div>
             <div class="right-div">
@@ -178,7 +180,7 @@
 
                     <div class="submit-btns">
                         <a class="link-btn" href="#">
-                            <img src="../img/Path 76.png" />
+                            <img src="{!! asset('img/Path 76.png') !!}" />
                             <span>@YourTwitter</span>
                         </a>
                         <a class="sub-btn" href="#">Submit</a>

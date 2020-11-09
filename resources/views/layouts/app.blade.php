@@ -176,9 +176,10 @@
 
             $.ajaxSetup({
                 headers: {
-                    'X_CSRF-TOKEN' : $('meta[name="_token"]').attr('content')
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
+            var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
             
             // Update status
             $(document).on("click", "#active-btn", function() {
@@ -193,6 +194,7 @@
                 $.ajax({
                     url: 'updateStatus/' + user_id,
                     type: 'post',
+                    dataType: 'json',
                     data: {
                         _token: CSRF_TOKEN,
                         status: status
@@ -212,7 +214,8 @@
                 $.ajax({
                     url: '/admin/products/show_product/' + product_id,
                     type: 'post',
-                    data: {  _token : <?php Session::token() ?>},
+                    dataType: 'json',
+                    data: CSRF_TOKEN,
                     success: function(response) {
                         console.log("response", response);
 
@@ -263,7 +266,7 @@
                         //changing form path
                         var path = $('#edit-form')[0].attributes[3].nodeValue;
                         string = path.toString();
-                        path = string.slice(0 , 60); //for localhost 49
+                        path = string.slice(0 , 49); //for localhost = 49, for server = 60
 
                         var eventstring1 = new String();
                         eventstring1 = id.toString().replace(/"/g, "");
@@ -290,7 +293,7 @@
                 //changing form path
                 var path = $('#delete-form')[0].attributes[3].nodeValue;
                         string = path.toString();
-                        path = string.slice(0 , 62); // for localhost its 51
+                        path = string.slice(0 , 51); // for localhost=51, for server = 62
 
                         var eventstring1 = new String();
                         eventstring1 = id.toString().replace(/"/g, "");

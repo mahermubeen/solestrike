@@ -2,16 +2,19 @@
     <div class="container">
         <div class="header">
             <figure id="menu" class="menu-logo">
-                <img src="../img/open-menu (1).png" />
+                <img src="{!! asset('img/open-menu (1).png') !!}" />
             </figure>
-        
-            <a href="/" class="brand-logo">
-                <img src="../img/Group 222.png" />
-            </a>
+            
+            <div class="brand-logo-wrapper">
+                <a href="/" class="brand-logo">
+                    <img src="{!! asset('img/Group 222.png') !!}" />
+                </a>
+            </div>
+            
         
             <div class="options">
                 <figure class="cart-logo">
-                    <img src="../img/Group 2.png" />
+                    <img src="{!! asset('img/Group 2.png') !!}" />
                 </figure>
                 @guest
                     <a href="{{ route('login') }}" class="login-btn">Login</a>

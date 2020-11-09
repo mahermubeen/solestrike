@@ -141,6 +141,20 @@
                     .drop-wrapper {
                         display: flex;
                         justify-content: flex-end;
+                        .size-select {
+                            margin-right: 20px;
+                            background: #29292B;
+                            padding: 20px;
+                            border: none;
+                            border-radius: 6px;
+                            color: white;
+                            font-size: 15px;
+                            font-weight: bold;
+                            outline: none;
+                            &::placeholder {
+                                color: white;
+                            }
+                        }
                         .dropdown {
                             display: flex;
                             align-items: center;

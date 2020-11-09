@@ -11,8 +11,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!--Styles-->
-    <link href="../css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/flickity.css">
+    <link href="{!! asset('css/style.css') !!}" rel="stylesheet">
+    <link rel="stylesheet" href="{!! asset('css/flickity.css') !!}">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -22,7 +22,6 @@
         rel="stylesheet">
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
@@ -41,7 +40,9 @@
 
     <!-- Scripts -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="{!! asset('js/main.js') !!}"></script>
+
+   
 </body>
 
 </html>

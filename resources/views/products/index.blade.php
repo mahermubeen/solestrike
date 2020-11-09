@@ -23,10 +23,11 @@
                             <thead class=" text-primary">
                                 <tr>
                                     <th scope="col">ID</th>
-                                    <th scope="col">quantity</th>
                                     <th scope="col">Name</th>
+                                    <th scope="col">quantity</th>
                                     <th scope="col">price</th>
                                     <th scope="col">Realease Date</th>
+                                    <th scope="col">Source</th>
                                     <th scope="col">Deal</th>
                                     <th scope="col">Avatar</th>
                                     <th scope="col"></th>
@@ -35,11 +36,12 @@
                             <tbody>
                                 @foreach ($products as $key => $product)
                                 <tr>
-                                    <td>{{ $product->id }}</td>
-                                    <td>{{ $product->quantity }}</td>
+                                    <td>{{ $key+1 }}</td>
                                     <td>{{ $product->name }}</td>
+                                    <td>{{ $product->quantity }}</td>
                                     <td>${{ $product->retail_price }}</td>
                                     <td>{{ $product->release_date }}</td>
+                                    <td>{{ $product->source }}</td>
                                     <td>${{ $product->deal }}</td>
                                     <td>
                                         <img src="../images/{{$product->avatar}}" width="75" class="product-img"/>

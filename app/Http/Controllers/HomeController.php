@@ -2,57 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Product;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
+    private $product;
+
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->product = new Product();
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
-        return view('home');
+        $products = $this->product->get_products();
+
+        foreach($products as $product){
+            $img = $product->avatar;
+            $img = (string)$img;
+            $product->avatar = json_decode($img);
+        }
+        
+        return view('home')->with(['products' => $products]);
     }
-
-    // public function admin()
-    // {
-    //     return view('dashboard');
-    // }
-
-    // public function profileEdit()
-    // {
-    //     return view('profile/edit');
-    // }
-
-    // public function userIndex()
-    // {
-    //     return view('users/index');
-    // }
-
-    // public function icons()
-    // {
-    //     return view('pages/icons');
-    // }
-
-    // public function notifications()
-    // {
-    //     return view('pages/notifications');
-    // }
-
-    // public function table_list()
-    // {
-    //     return view('pages/table_list');
-    // }
 }
