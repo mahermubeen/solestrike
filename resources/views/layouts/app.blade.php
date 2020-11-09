@@ -207,11 +207,17 @@
                 var aa = $(this);
                 var product_id = aa[0].attributes[1].nodeValue;
                 // console.log("product_id", product_id);
-
+                var token = $('meta[name="csrf-token"]').attr('content');
 
                 $.ajax({
                     url: 'products/show_product/' + product_id,
                     type: 'get',
+                    dataType: 'JSON',
+                    data: {
+                        "_method": 'GET',
+                        "_token": token,
+                        "id": product_id,
+                    },
                     success: function(response) {
                         console.log("response", response);
 
