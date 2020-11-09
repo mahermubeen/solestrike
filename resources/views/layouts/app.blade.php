@@ -212,10 +212,7 @@
                 $.ajax({
                     url: '/admin/products/show_product/' + product_id,
                     type: 'post',
-                    dataType: 'JSON',
-                    data: {
-                        _token: X_CSRF-TOKEN,
-                    },
+                    data: {  _token : <?php Session::token() ?>},
                     success: function(response) {
                         console.log("response", response);
 
