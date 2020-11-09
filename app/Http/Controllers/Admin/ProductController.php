@@ -33,15 +33,14 @@ class ProductController extends Controller
             $img = $product->avatar;
             $img = (string)$img;
             $product->avatar = json_decode($img);
-
-            
         }
-        dd($products);
+        
         return view('products/index')->with(['products' => $products]);
     }
 
     public function add_product(Request $request)
     {
+        
         $this->validate($request, [
             'quantity'  => 'required',
             'name'  => 'required',
@@ -69,6 +68,8 @@ class ProductController extends Controller
             'detail'  => $request['detail'],
             'avatar' => $img
         );
+
+        dd($data['avatar']);
 
         $id = $this->product->add($data);
 
