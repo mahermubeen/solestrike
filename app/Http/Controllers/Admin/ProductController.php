@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Carbon;
 
+use function GuzzleHttp\json_decode;
 
 class ProductController extends Controller
 {
@@ -28,6 +29,12 @@ class ProductController extends Controller
     public function index()
     {
         $products = $this->product->get_products();
+
+        // foreach($products as $product){
+        //     $img = $product->avatar;
+        //     $product->avatar = json_decode($products, true);
+        // }
+        json_decode($products, true);
         
         return view('products/index')->with(['products' => $products]);
     }
