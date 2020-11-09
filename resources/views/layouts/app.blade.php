@@ -173,12 +173,7 @@
     <!--AJAX Script -->
     <script type='text/javascript'>
         $(document).ready(function() {
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-            var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+            
             // Update status
             $(document).on("click", "#active-btn", function() {
                 var aa = $(this);
@@ -204,19 +199,20 @@
 
              // edit product
              $(document).on("click", "#edit-btn", function() {
+                $.ajaxSetup({ headers: { 'csrftoken' : '{{ csrf_token() }}' } });
+                var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+
+
                 var aa = $(this);
                 var product_id = aa[0].attributes[1].nodeValue;
                 // console.log("product_id", product_id);
-                var token = $('meta[name="csrf-token"]').attr('content');
 
                 $.ajax({
                     url: 'products/show_product/' + product_id,
                     type: 'get',
                     dataType: 'JSON',
                     data: {
-                        "_method": 'GET',
-                        "_token": token,
-                        "id": product_id,
+                        _token: CSRF_TOKEN,
                     },
                     success: function(response) {
                         console.log("response", response);
