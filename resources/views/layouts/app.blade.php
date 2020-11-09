@@ -210,7 +210,7 @@
 
 
                 $.ajax({
-                    url: '/admin/products/show_product/' + product_id,
+                    url: 'products/show_product/' + product_id,
                     type: 'get',
                     data: {
                         _token: CSRF_TOKEN,
