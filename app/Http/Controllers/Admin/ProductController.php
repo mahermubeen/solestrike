@@ -59,8 +59,6 @@ class ProductController extends Controller
         $image_file->move(public_path().'/images/', $name);
         $img = json_encode($name);
         $img = str_replace('"', '', $img);
-        
-            dd($img);
 
         $data = array(
             'quantity'  => $request['quantity'],
