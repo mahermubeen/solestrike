@@ -289,7 +289,7 @@
                 //changing form path
                 var path = $('#delete-form')[0].attributes[3].nodeValue;
                         string = path.toString();
-                        path = string.slice(0 , 51);
+                        path = string.slice(0 , 62); // for localhost its 51
 
                         var eventstring1 = new String();
                         eventstring1 = id.toString().replace(/"/g, "");
