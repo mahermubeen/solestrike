@@ -212,9 +212,6 @@
                 $.ajax({
                     url: 'products/show_product/' + product_id,
                     type: 'get',
-                    data: {
-                        _token: CSRF_TOKEN,
-                    },
                     success: function(response) {
                         console.log("response", response);
 
