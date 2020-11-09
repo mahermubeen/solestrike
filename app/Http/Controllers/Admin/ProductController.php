@@ -28,12 +28,6 @@ class ProductController extends Controller
     public function index()
     {
         $products = $this->product->get_products();
-        foreach($products as $product){
-            $img = $product->avatar;
-            $img = (string)$img;
-            $product->avatar = json_decode($img);
-            $product->avatar = str_replace('"', '', $img);
-        }
         
         return view('products/index')->with(['products' => $products]);
     }
@@ -56,8 +50,6 @@ class ProductController extends Controller
 
         $name=$image_file->getClientOriginalName();
         $image_file->move(public_path().'/images/', $name);
-        $img = json_encode($name);
-        $img = str_replace('"', '', $img);
 
         $data = array(
             'quantity'  => $request['quantity'],
@@ -67,7 +59,7 @@ class ProductController extends Controller
             'source'  => $request['source'],
             'deal'  => $request['deal'],
             'detail'  => $request['detail'],
-            'avatar' => $img
+            'avatar' => $name
         );
 
         $id = $this->product->add($data);
