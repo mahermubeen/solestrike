@@ -32,7 +32,7 @@ class ProductController extends Controller
         foreach($products as $product){
             $img = $product->avatar;
             $img = (string)$img;
-            $product->avatar = json_decode($img, true);
+            $product->avatar = json_decode($img);
         }
        
         return view('products/index')->with(['products' => $products]);
