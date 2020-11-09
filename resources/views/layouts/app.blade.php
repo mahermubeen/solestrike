@@ -266,7 +266,7 @@
                         //changing form path
                         var path = $('#edit-form')[0].attributes[3].nodeValue;
                         string = path.toString();
-                        path = string.slice(0 , 49); //for localhost = 49, for server = 60
+                        path = string.slice(0 , 60); //for localhost = 49, for server = 60
 
                         var eventstring1 = new String();
                         eventstring1 = id.toString().replace(/"/g, "");
@@ -293,7 +293,7 @@
                 //changing form path
                 var path = $('#delete-form')[0].attributes[3].nodeValue;
                         string = path.toString();
-                        path = string.slice(0 , 51); // for localhost=51, for server = 62
+                        path = string.slice(0 , 62); // for localhost=51, for server = 62
 
                         var eventstring1 = new String();
                         eventstring1 = id.toString().replace(/"/g, "");
