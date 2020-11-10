@@ -177,7 +177,7 @@
                 @foreach ($products as $key => $product)
                 <div class="carousel-cell">
                     <figure>
-                        <img src="{{ asset('images/'.$product['avatar']) }}" />
+                        <img src="{{ asset('images/'.$product['avatar']) }}" alt="{{ $product->name }}" />
                     </figure>
                     <div class="cell-wrapper">
                         <p class="p1">{{ $product->source }}</p>
