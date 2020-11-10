@@ -50,8 +50,7 @@ class ProductController extends Controller
         $image_file = $request->avatar;
 
         $name = time() . '.' . $image_file->getClientOriginalExtension();
-        $image_file->move(public_path().'/images/', $name);
-        $img = json_encode($name);
+        Image::make($image_file)->resize(300, 300)->save( storage_path('/images/' . $name ) );
         
 
         $data = array(
@@ -62,7 +61,7 @@ class ProductController extends Controller
             'source'  => $request['source'],
             'deal'  => $request['deal'],
             'detail'  => $request['detail'],
-            'avatar' => $img
+            'avatar' => $name
         );
 
         $id = $this->product->add($data);
