@@ -18,6 +18,12 @@
                 </a>
             </li>
             <li>
+                <a href="{{ route('users') }}">
+                    <i class="tim-icons icon-chart-pie-36"></i>
+                    <p>{{ __('Users') }}</p>
+                </a>
+            </li>
+            {{-- <li>
                 <a data-toggle="collapse" href="#user-settings" aria-expanded="true">
                     <i class="fab fa-laravel"></i>
                     <span class="nav-link-text">{{ __('User Settings') }}</span>
@@ -36,7 +42,7 @@
                         </ul>
                     </div>
                 </div>
-            </li>
+            </li> --}}
             <li>
                 <a href="{{ route('products') }}">
                     <i class="tim-icons icon-chart-pie-36"></i>

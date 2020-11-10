@@ -41,10 +41,10 @@ Route::group([
 
     Route::get('/orders', 'HomeController@orders')->name('orders');
 
-    Route::get('/profileEdit', 'ProfileController@index')->name('profile');
+    Route::get('/profile', 'ProfileController@index')->name('profile');
     Route::post('/change-password', 'ProfileController@updatePassword')->name('change_password');
     Route::post('/change-name', 'ProfileController@updateName')->name('change_name');
-    Route::get('/userIndex', 'ProfileController@users')->name('users');
+    Route::get('/users', 'ProfileController@users')->name('users');
     Route::put('/updateStatus/{id}', 'ProfileController@updateStatus');
     Route::post('/users/show_user/{id}', 'ProfileController@show_user')->name('show_user');
     Route::post('/users/edit_user/{id}', 'ProfileController@edit_user')->name('edit_user');

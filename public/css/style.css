@@ -281,6 +281,10 @@ a {
   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/checkmark-switcher.svg);
   background-size: 14px 14px; }
 
+.remember-btn input {
+  opacity: 1 !important;
+  visibility: visible !important; }
+
 .header {
   display: flex;
   align-items: center;
