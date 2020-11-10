@@ -26,7 +26,6 @@ class ProductController extends Controller
 
         foreach($products as $product){
             $img = $product->avatar;
-            $img = (string)$img;
             $product->avatar = json_decode($img);
         }
         
@@ -81,12 +80,14 @@ class ProductController extends Controller
         return Response::JSON($prod);
     }
 
+
     public function delete_product($id){
         $this->product->delete_product($id);
 
         return redirect()->back()->with('message', 'Product Deleted successfully.');
     }
 
+    
     public function edit_product(Request $request, $id){
         $this->validate($request, [
             'quantity'  => 'required',
