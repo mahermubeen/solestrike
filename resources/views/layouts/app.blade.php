@@ -63,14 +63,14 @@
     @endauth
 
 
-    <script src="../js/core/jquery.min.js"></script>
-    <script src="../js/core/popper.min.js"></script>
-    <script src="../js/core/bootstrap.min.js"></script>
-    <script src="../js/plugins/perfect-scrollbar.jquery.min.js"></script>
-    <script src="../js/plugins/bootstrap-notify.js"></script>
-    <script src="../js/black-dashboard.min.js?v=1.0.0"></script>
-    <script src="../js/theme.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="{!! asset('js/core/jquery.min.js') !!}"></script>
+    <script src="{!! asset('js/core/popper.min.js') !!}"></script>
+    <script src="{!! asset('js/core/bootstrap.min.js') !!}"></script>
+    <script src="{!! asset('js/plugins/perfect-scrollbar.jquery.min.js') !!}"></script>
+    <script src="{!! asset('js/plugins/bootstrap-notify.js') !!}"></script>
+    <script src="{!! asset('js/black-dashboard.min.js?v=1.0.0') !!}"></script>
+    <script src="{!! asset('js/theme.js') !!}"></script>
+    <script src="{!! asset('js/main.js') !!}"></script>
 
     <script>
         $(document).ready(function() {

@@ -26,14 +26,14 @@
             @foreach ($products as $key => $product)
             <div value="{{ $key }}" class="product-wrapper">
                 <a href="{{ route('order_product', ['id' => $product->id]) }}" class="box-1">
-                    <img src="../img/{{ $product->avatar }}" />
+                    <img src="{!! asset('img/{{ $product->avatar }}') !!}" />
                 </a>
                 <div class="box-2">
                     <p class="p1">{{ $product->source }}</p>
                     <div class="details-box">
                         <h5>{{ $product->name }}</h5>
                         <div class="sale-tag">
-                            <img src="../img/Path 75.png" />
+                            <img src="{!! asset('img/Path 75.png') !!}" />
                             <span>${{ $product->deal }}</span>
                         </div>
                     </div>

@@ -34,18 +34,18 @@
             <div class="container">
                 <div class="header">
                     <figure id="menu" class="menu-logo">
-                        <img src="../img/open-menu (1).png" />
+                        <img src="{!! asset('img/open-menu (1).png') !!}" />
                     </figure>
 
                     <div class="brand-logo-wrapper">
                         <a href="/" class="brand-logo">
-                            <img src="../img/Group 222.png" />
+                            <img src="{!! asset('img/Group 222.png') !!}" />
                         </a>
                     </div>
 
                     <div class="options">
                         <figure class="cart-logo">
-                            <img src="../img/Group 2.png" />
+                            <img src="{!! asset('img/Group 2.png') !!}" />
                         </figure>
                         @guest
                             <a href="{{ route('login') }}" class="login-btn">Login</a>
@@ -86,26 +86,26 @@
                             <a href="#" class="learn-btn">Learn More</a>
                             <a href="#" class="continue-btn">
                                 <span>Continue</span>
-                                <img src="../img/Group 3.png" />
+                                <img src="{!! asset('img/Group 3.png') !!}" />
                             </a>
                         </div>
                     </div>
 
                     <div class="fig-div">
-                        <img class="new1" src="../img/aabb.png"/>
+                        <img class="new1" src="{!! asset('img/aabb.png') !!}"/>
                         <div class="main-wrapper">
                             <div class="main1 relative">
-                                <img class="div1" src="../img/img_0.png" />
+                                <img class="div1" src="{!! asset('img/img_0.png') !!}" />
                                 <div class="rod"></div>
                             </div>
 
                             <div class="main2 relative">
-                                <img class="div2" src="../img/img_1.png" />
+                                <img class="div2" src="{!! asset('img/img_1.png') !!}" />
                                 <div class="rod"></div>
                             </div>
 
                             <div class="main3 relative">
-                                <img class="div3" src="../img/img_2.png" />
+                                <img class="div3" src="{!! asset('img/img_2.png') !!}" />
                                 <div class="rod"></div>
                             </div>
                         </div>
@@ -117,7 +117,7 @@
 
         <div class="section2">
             <div class="container">
-                <img class="whtie-circle" src="../img/Group 6.png" />
+                <img class="whtie-circle" src="{!! asset('img/Group 6.png') !!}" />
                 <div class="left-sec">
                     <div class="box-wrapper">
                         <div class="left-box">
@@ -154,14 +154,14 @@
                 </div>
             </div>
 
-            <img class="white-dot" src="../img/Ellipse 18.png" />
+            <img class="white-dot" src="{!! asset('img/Ellipse 18.png') !!}" />
         </div>
 
         <div class="section3">
             <div class="container">
                 <div class="main-div">
                     <figure>
-                        <img src="../img/tick.png" />
+                        <img src="{!! asset('img/tick.png') !!}" />
                     </figure>
                     <p class="p-up">TRIED & TESTED</p>
                     <h4>Our Success</h4>
@@ -177,7 +177,7 @@
                 @foreach ($products as $key => $product)
                 <div class="carousel-cell">
                     <figure>
-                        <img src="../img/{{ $product->avatar }}" />
+                        <img src="{!! asset('img/{{ $product->avatar }}') !!}" />
                     </figure>
                     <div class="cell-wrapper">
                         <p class="p1">{{ $product->name }}</p>
@@ -201,22 +201,22 @@
                 </div>
                 <div class="right-box">
                     <figure>
-                        <img src="../img/Group 27.png" />
+                        <img src="{!! asset('img/Group 27.png') !!}" />
                     </figure>
                     <figure>
-                        <img src="../img/Group 24.png" />
+                        <img src="{!! asset('img/Group 24.png') !!}" />
                     </figure>
                     <figure>
-                        <img src="../img/Group 25.png" />
+                        <img src="{!! asset('img/Group 25.png') !!}" />
                     </figure>
                     <figure>
-                        <img src="../img/Group 23.png" />
+                        <img src="{!! asset('img/Group 23.png') !!}" />
                     </figure>
                     <figure>
-                        <img src="../img/Group 26.png" />
+                        <img src="{!! asset('img/Group 26.png') !!}" />
                     </figure>
                     <figure>
-                        <img src="../img/Group 32.png" />
+                        <img src="{!! asset('img/Group 32.png') !!}" />
                     </figure>
                 </div>
             </div>
@@ -224,16 +224,16 @@
 
         <div class="section6">
             <figure class="white-spot">
-                <img src="../img/Ellipse 3.png" />
+                <img src="{!! asset('img/Ellipse 3.png') !!}" />
             </figure>
             <div class="wrapper1">
                 <div class="left-img">
-                    <img src="../img/Group 2205.png" />
+                    <img src="{!! asset('img/Group 2205.png') !!}" />
                 </div>
                 <div class="right-box">
                     <div class="right-wrapper">
                         <figure>
-                            <img src="../img/Path 90.png" />
+                            <img src="{!! asset('img/Path 90.png') !!}" />
                         </figure>
                         <p class="p1">POWERED BY SOLESTRIKE</p>
                         <h4>Strike Access</h4>
@@ -251,7 +251,7 @@
             <div class="container">
                 <div class="sec1">
                     <figure>
-                        <img src="../img/notification.png" />
+                        <img src="{!! asset('img/notification.png') !!}" />
                     </figure>
                     <p>PUSH NOTIFICATIONS</p>
                     <h4>Stay Notified</h4>
@@ -260,14 +260,14 @@
                     <span class="red-spot"></span>
                     <div class="wrap1">
                         <figure>
-                            <img src="../img/SS Logo Mark.png" />
+                            <img src="{!! asset('img/SS Logo Mark.png') !!}" />
                         </figure>
                         <p><span>Travis Scott Jordan 1 "Retro High" </span>limited slots now available! Don't miss out
                             because they will sell out fast!</p>
                     </div>
                 </div>
                 <figure class="home-pic">
-                    <img src="../img/Group 226.png" />
+                    <img src="{!! asset('img/Group 226.png') !!}" />
                 </figure>
             </div>
 
@@ -278,7 +278,7 @@
 
     <!-- Scripts -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="{!! asset('js/main.js') !!}"></script>
 </body>
 
 </html>

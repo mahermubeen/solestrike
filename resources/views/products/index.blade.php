@@ -44,7 +44,7 @@
                                     <td>{{ $product->source }}</td>
                                     <td>${{ $product->deal }}</td>
                                     <td>
-                                        <img src="../images/{{$product->avatar}}" width="75" class="product-img"/>
+                                        <img src="{!! asset('images/{{$product->avatar}}') !!}" width="75" class="product-img"/>
                                     </td>
                                     <td class="text-right">
                                         <div class="dropdown">
