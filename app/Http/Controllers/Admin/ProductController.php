@@ -49,7 +49,7 @@ class ProductController extends Controller
       
         $image_file = $request->avatar;
 
-        $name=$image_file->getClientOriginalName();
+        $name = time() . '.' . $image_file->getClientOriginalExtension();
         $image_file->move(public_path().'/images/', $name);
         $img = json_encode($name);
         
