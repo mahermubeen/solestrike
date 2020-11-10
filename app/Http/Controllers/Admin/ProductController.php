@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Product;
 use Illuminate\Support\Facades\Response;
-use Image;
 
 
 class ProductController extends Controller
@@ -27,8 +26,8 @@ class ProductController extends Controller
 
         foreach($products as $product){
             $img = $product->avatar;
-            $img = str_replace('"', '', $img);
-            $product->avatar = $img;
+            $img = (string)$img;
+            $product->avatar = json_decode($img);
         }
         
         return view('products/index')->with(['products' => $products]);
@@ -50,9 +49,9 @@ class ProductController extends Controller
       
         $image_file = $request->avatar;
 
-        $name = time() . '.' . $image_file->getClientOriginalExtension();
-        $path = 'images/' . $name;
-        Image::make($image_file)->resize(300, 300)->save($path);
+        $name=$image_file->getClientOriginalName();
+        $image_file->move(public_path().'/images/', $name);
+        $img = json_encode($name);
         
 
         $data = array(
@@ -63,7 +62,7 @@ class ProductController extends Controller
             'source'  => $request['source'],
             'deal'  => $request['deal'],
             'detail'  => $request['detail'],
-            'avatar' => $name
+            'avatar' => $img
         );
 
         $id = $this->product->add($data);
