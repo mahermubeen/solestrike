@@ -180,8 +180,8 @@
                         <img src="{!! asset('img/{{ $product->avatar }}') !!}" />
                     </figure>
                     <div class="cell-wrapper">
-                        <p class="p1">{{ $product->name }}</p>
-                        <h4>{{ $product->source }}</h4>
+                        <p class="p1">{{ $product->source }}</p>
+                        <h4>{{ $product->name }}</h4>
                         <p class="p2">"{{ $product->detail }}"</p>
                     </div>
                 </div>

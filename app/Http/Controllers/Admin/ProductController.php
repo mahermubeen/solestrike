@@ -26,7 +26,8 @@ class ProductController extends Controller
 
         foreach($products as $product){
             $img = $product->avatar;
-            $product->avatar = json_decode($img);
+            $img = (string)$img;
+            $product->avatar = json_decode($img, true);
         }
         
         return view('products/index')->with(['products' => $products]);
