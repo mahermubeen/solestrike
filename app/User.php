@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'status'
     ];
 
     /**
@@ -49,7 +49,7 @@ class User extends Authenticatable
     }
 
     public function get_user($id) {
-        return User::find($id);
+        return User::where('id', $id);
     }
 
     public function find_id($email){
@@ -57,7 +57,7 @@ class User extends Authenticatable
     }
 
     public function edit_users($data, $id) {
-        return User::where('id', $id)->update($data);
+        return User::where('id',$id)->update($data);
     }
 
     public function delete_user($id) {

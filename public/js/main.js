@@ -64,4 +64,57 @@ $(document).ready(function() {
         $('.sidebar').removeClass('blur1');
     });
 
+
+
+     //edit user box
+     $('.edit-user-btn').click(function() {
+        $('#edit-user-box').removeClass('hidden');
+        $('#edit-user-box').addClass('flex');
+
+        $('.main-panel').addClass('blur1');
+        $('.sidebar').addClass('blur1');
+    });
+
+    $('#edit-user-cancel').click(function() {
+        $('#edit-user-box').removeClass('flex');
+        $('#edit-user-box').addClass('hidden');
+
+        $('.main-panel').removeClass('blur1');
+        $('.sidebar').removeClass('blur1');
+    });
+
+    //delete user box
+    $('.delete-user-btn').click(function() {
+        $('#delete-user-box').removeClass('hidden');
+        $('#delete-user-box').addClass('flex');
+
+        $('.main-panel').addClass('blur1');
+        $('.sidebar').addClass('blur1');
+    });
+
+    $('#delete-user-cancel').click(function() {
+        $('#delete-user-box').removeClass('flex');
+        $('#delete-user-box').addClass('hidden');
+
+        $('.main-panel').removeClass('blur1');
+        $('.sidebar').removeClass('blur1');
+    });
+
+     //add user box
+     $('#add-user-btn').click(function() {
+        $('#add-user-box').removeClass('hidden');
+        $('#add-user-box').addClass('flex');
+
+        $('.main-panel').addClass('blur1');
+        $('.sidebar').addClass('blur1');
+    });
+
+    $('#add-user-cancel').click(function() {
+        $('#add-user-box').removeClass('flex');
+        $('#add-user-box').addClass('hidden');
+
+        $('.main-panel').removeClass('blur1');
+        $('.sidebar').removeClass('blur1');
+    });
+
 });

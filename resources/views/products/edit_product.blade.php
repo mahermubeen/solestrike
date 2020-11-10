@@ -6,6 +6,8 @@
             <div class="top-div">
                 <div class="left">
                     <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
+                    <label for="name-inpt" class="col-form-label">{{ __('Name') }}</label>
+
                         <input id="name-inpt" type="text" name="name"
                             class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"
                             placeholder="Name" value="">
@@ -13,6 +15,8 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('retail_price') ? ' has-danger' : '' }}">
+                        <label for="retail_price-inpt" class="col-form-label">{{ __('Retail Price') }}</label>
+
                         <input id="retail_price-inpt" type="number" name="retail_price"
                             class="form-control{{ $errors->has('retail_price') ? ' is-invalid' : '' }}"
                             placeholder="Price" value="">
@@ -23,10 +27,12 @@
 
                 <div class="right">
                     <figure>
-                        <img id="avatar-img" src="../images" width="75" class="product-img"/>
+                        <img id="avatar-img" src="{{ asset('images/') }}" width="75" class="product-img"/>
                     </figure>
 
                     <div id="img-input" class="form-group{{ $errors->has('avatar') ? ' has-danger' : '' }}">
+                        <label for="avatar-inpt" class="col-form-label">{{ __('Change Avatar') }}</label>
+
                         <input id="avatar-inpt" type="file" name="avatar"
                             class="form-control{{ $errors->has('avatar') ? ' is-invalid' : '' }}" value="{{ old('avatar') }}">
                         @include('alerts.feedback', ['field' => 'avatar'])
@@ -38,13 +44,18 @@
             <div class="bottom-div">
                 <div class="row1">
                     <div class="form-group{{ $errors->has('detail') ? ' has-danger' : '' }}">
+                        <label for="detail-inpt" class="col-form-label">{{ __('Detail') }}</label>
+
                         <input id="detail-inpt" type="text" name="detail"
                             class="form-control{{ $errors->has('detail') ? ' is-invalid' : '' }}"
                             placeholder="Detail" value="">
+                            
                         @include('alerts.feedback', ['field' => 'detail'])
                     </div>
 
                     <div class="form-group{{ $errors->has('source') ? ' has-danger' : '' }}">
+                        <label for="source-inpt" class="col-form-label">{{ __('Source') }}</label>
+
                         <input id="source-inpt" type="text" name="source"
                             class="form-control{{ $errors->has('source') ? ' is-invalid' : '' }}"
                             placeholder="Source" value="">
@@ -54,6 +65,8 @@
 
                 <div class="row2">
                     <div class="form-group{{ $errors->has('deal') ? ' has-danger' : '' }}">
+                        <label for="deal-inpt" class="col-form-label">{{ __('Deal') }}</label>
+
                         <input id="deal-inpt" type="number" name="deal"
                             class="form-control{{ $errors->has('deal') ? ' is-invalid' : '' }}"
                             placeholder="Deal" value="">
@@ -61,6 +74,8 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('quantity') ? ' has-danger' : '' }}">
+                        <label for="quantity-inpt" class="col-form-label">{{ __('Quantity') }}</label>
+
                         <input id="quantity-inpt" type="number" name="quantity"
                             class="form-control{{ $errors->has('quantity') ? ' is-invalid' : '' }}"
                             placeholder="Quantity" value="">
@@ -71,6 +86,8 @@
                 
                 <div class="row3">
                     <div class="form-group{{ $errors->has('release_date') ? ' has-danger' : '' }}">
+                        <label for="release_date-inpt" class="col-form-label">{{ __('Release Date') }}</label>
+
                         <input id="release_date-inpt" type="date" name="release_date"
                             class="form-control{{ $errors->has('release_date') ? ' is-invalid' : '' }}"
                             placeholder="Release Date" value="">

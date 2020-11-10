@@ -45,7 +45,12 @@ Route::group([
     Route::post('/change-password', 'ProfileController@updatePassword')->name('change_password');
     Route::post('/change-name', 'ProfileController@updateName')->name('change_name');
     Route::get('/userIndex', 'ProfileController@users')->name('users');
-    Route::post('/updateStatus/{id}', 'ProfileController@updateStatus');
+    Route::put('/updateStatus/{id}', 'ProfileController@updateStatus');
+    Route::post('/users/show_user/{id}', 'ProfileController@show_user')->name('show_user');
+    Route::post('/users/edit_user/{id}', 'ProfileController@edit_user')->name('edit_user');
+    Route::post('/users/delete_user/{id}', 'ProfileController@delete_user')->name('delete_user');
+    Route::post('/users/add_user', 'ProfileController@add_user')->name('add_user');
+
 
     // Route::get('/icons', 'HomeController@icons')->name('icons');
     // Route::get('/notifications', 'HomeController@notifications')->name('notifications');

@@ -30,6 +30,10 @@
             @include('products.add_product')
             @include('products.edit_product')
             @include('products.delete_product')
+             @include('users.edit_user')
+            @include('users.delete_user')
+            @include('users.add_user')
+
             @include('layouts.navbars.sidebar')
             <div class="main-panel">
                 @include('layouts.navbars.navbar')
@@ -179,25 +183,28 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
-            var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+            
             
             // Update status
-            $(document).on("click", "#active-btn", function() {
+            $(document).on("click", ".active-btn", function() {
                 var aa = $(this);
 
                 var user_id = aa[0].attributes[1].nodeValue;
                 var status = aa[0].checked;
 
-                console.log("user_id", user_id);
+                console.log("user_id",user_id);
                 console.log("status", status);
+
+                var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
 
                 $.ajax({
                     url: 'updateStatus/' + user_id,
-                    type: 'post',
-                    dataType: 'json',
+                     type: 'put',
+                    dataType: "JSON",
                     data: {
-                        _token: CSRF_TOKEN,
-                        status: status
+                         "status": status,
+                        "_method": 'put',
+                        "_token": CSRF_TOKEN,
                     },
                     success: function(response) {
                         console.log("new_status", status);
@@ -210,7 +217,7 @@
                 var aa = $(this);
                 var product_id = aa[0].attributes[1].nodeValue;
                 // console.log("product_id", product_id);
-
+                var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
                 $.ajax({
                     url: '/admin/products/show_product/' + product_id,
                     type: 'post',
@@ -249,10 +256,13 @@
                         //converting to string and removing comas
                         var eventstring = new String();
                         eventstring = avatar.toString().replace(/"/g, "");
+                        // console.log("avatar", eventstring);
+
 
                         //adding preview image path
                         img =   img+'/'+eventstring;
                         $('#avatar-img')[0].attributes[1].nodeValue = img;
+                        // console.log("avatar final path", $('#avatar-img')[0].attributes[1].nodeValue);
 
                         //adding img name to input file value
                         // $('#avatar-inpt')[0].attributes[4].nodeValue = eventstring;
@@ -273,13 +283,8 @@
 
                         path = path+'/'+eventstring1;
 
-                        console.log( "path",path);
-
                         $('#edit-form')[0].attributes[3].nodeValue = path;
-                    },
-                    error: (error) => {
-                     console.log(JSON.stringify(error));
-                    }    
+                    }
                 });
             });
 
@@ -303,6 +308,77 @@
                         console.log( "path",path);
 
                         $('#delete-form')[0].attributes[3].nodeValue = path;
+            });
+
+
+
+
+
+            // edit user
+             $(document).on("click", "#edit-user-btnn", function() {
+                var aa = $(this);
+                var user_id = aa[0].attributes[1].nodeValue;
+                console.log("user_id", user_id);
+
+                var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+
+                $.ajax({
+                    url: '/admin/users/show_user/' + user_id,
+                    type: 'post',
+                    dataType: 'json',
+                    data: CSRF_TOKEN,
+                    success: function(response) {
+                        // console.log("response user", response);
+
+                        var id = response.id;
+                        var name = response.name;
+                        var email = response.email;
+
+                        $('#user-name-inpt')[0].attributes[5].nodeValue = name;
+                        $('#user-email-inpt')[0].attributes[5].nodeValue = email;
+
+                        //changing form path
+                        var path = $('#edit-user-formm')[0].attributes[3].nodeValue;
+                        // console.log("path", path);
+                        string = path.toString();
+                        path = string.slice(0 , 43); //for localhost = 43, for server = 60
+
+                        // var eventstring1 = new String();
+                        // eventstring1 = id.toString().replace(/"/g, "");
+
+                        path = path+'/'+id;
+
+                        $('#edit-user-formm')[0].attributes[3].nodeValue = path;
+
+                        // console.log( "final path user form", $('#edit-user-formm')[0].attributes[3].nodeValue);
+
+                    },
+                    error: (error) => {
+                     console.log(JSON.stringify(error));
+                    }    
+                });
+            });
+
+
+             //delete user
+             $(document).on("click", "#delete-user-btn", function() {
+                var aa = $(this);
+                var id = aa[0].attributes[1].nodeValue;
+                // console.log("product_id", id);
+
+                //changing form path
+                var path = $('#delete-user-form')[0].attributes[3].nodeValue;
+                        string = path.toString();
+                        path = string.slice(0 , 62); // for localhost=51, for server = 62
+
+                        var eventstring1 = new String();
+                        eventstring1 = id.toString().replace(/"/g, "");
+
+                        path = path+'/'+eventstring1;
+
+                        console.log( "path",path);
+
+                        $('#delete-user-form')[0].attributes[3].nodeValue = path;
             });
         })
 

@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-use App\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\User as ModelsUser;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use DateTime;
+use DateTimeZone;
 
 use App\Rules\MatchOldPassword;
 use Illuminate\Support\Facades\Hash;
@@ -59,6 +60,14 @@ class ProfileController extends Controller
     {
         $users = DB::table('users')->get();
 
+        foreach($users as $user){
+
+            $dateTime = new DateTime($user->created_at, new DateTimeZone('Asia/Karachi')); 
+            $user->created_at = $dateTime->format("d.m.y");
+            //format("d.m.y  h:i A")
+        }
+
+
         return view('users/index')->with(['users' => $users]);
     }
 
@@ -66,14 +75,87 @@ class ProfileController extends Controller
     {
 
             $status = $request->input('status');
-            $data['active'] = (int) $status;
+            
+            
 
-            // dd($data['active']);
-            $id = $this->user->edit_users($data, $id);
+            if($status === true){
+                $data['active'] = 1;
 
-            if ($id > 0)
-                return redirect()->back()->with('message', 'Product added successfully.');
-            else
-                return redirect()->back()->with('error', 'Error! Please try again.')->withInput();
+            }else{
+                $data['active'] = 0;
+
+            }
+            
+
+           
+            $this->user->edit_users($data, $id);
+
+            return response()->json(['message'=>'Status changed successfully.']);
+    }
+
+
+
+
+
+    public function add_user(Request $request)
+    {
+        
+        $this->validate($request, [
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ]);
+        
+
+        $data = array(
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+        );
+
+        $id = $this->user->add($data);
+
+        if ($id > 0)
+            return redirect()->back()->with('message', 'User added successfully.');
+        else
+            return redirect()->back()->withInput()->withErrors();
+      
+    }
+
+
+
+    public function delete_user($id){
+        $this->user->delete_user($id);
+
+        return redirect()->back()->with('message', 'User Deleted successfully.');
+    }
+
+    public function show_user($id){
+
+        $users =  DB::table('users')->find($id);
+
+        return response()->json($users);
+    }
+
+    public function edit_user(Request $request, $id){
+        $this->validate($request, [
+            'name'  => 'required|min:3',
+            'email'  => 'required|email'
+        ]);
+
+
+        $data = array(
+            'name'  => $request['name'],
+            'email'  => $request['email'],
+        );
+
+        
+
+        $id = $this->user->edit_users($data, $id);
+
+        if ($id > 0)
+            return redirect()->back()->with('message', 'User Updated successfully.');
+        else
+            return redirect()->back()->withErrors()->withInput();
     }
 }

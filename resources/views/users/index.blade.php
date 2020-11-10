@@ -10,21 +10,13 @@
                             <h4 class="card-title">Users</h4>
                         </div>
                         <div class="col-4 text-right">
-                            <a href="#" class="btn btn-sm btn-primary">Add user</a>
+                            <span id="add-user-btn" class="btn cursor-pointer btn-sm btn-primary">Add user</span>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
-                    @if (session()->has('abc'))
-                        <div class="alert alert-success">
-                            <span>
-                                <b>{{ session()->get('abc') }}</b>
-                            </span>
-                            <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close">
-                                <i class="tim-icons icon-simple-remove"></i>
-                            </button>
-                        </div>
-                    @endif
+                    @include('alerts.success')
+                    @include('alerts.danger_alert')
                     
                     <div class="">
                         <table class="table tablesorter " id="">
@@ -38,7 +30,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($users as $user)
+                                @foreach ($users as $key=>$user)
                                     <tr>
                                         <td>{{ $user->name }}</td>
                                         <td>
@@ -46,8 +38,17 @@
                                         </td>
                                         <td>{{ $user->created_at }}</td>
                                         <td>
-                                            <input id="active-btn" data-id="{{ $user->id }}" class="toggle-class"
+                                            
+                                            <div class="switches">
+                                                <li>
+                                                    <input id="{{ $key }}" data-id="{{ $user->id }}" class="hidden active-btn toggle-class"
                                                 name="status" type="checkbox" {{ $user->active ? 'checked' : '' }}>
+                                                    <label for="{{ $key }}">
+                                                      <span class="cursor-pointer"></span>
+                                                    </label>
+                                                  </li>
+                                            </div>
+                                               
                                         </td>
                                         <td class="text-right">
                                             <div class="dropdown">
@@ -56,8 +57,8 @@
                                                     <i class="fas fa-ellipsis-v"></i>
                                                 </a>
                                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                    <a id="edit-btn" data-id="{{ $user->id }}" class="edit-btn dropdown-item">Edit</a>
-                                                    <a id="delete-btn" data-id="{{ $user->id }}" class="delete-btn dropdown-item">Delete</a>
+                                                    <a id="edit-user-btnn" data-id="{{ $user->id }}" class="edit-user-btn dropdown-item">Edit</a>
+                                                    <a id="delete-user-btn" data-id="{{ $user->id }}" class="delete-user-btn dropdown-item">Delete</a>
                                                 </div>
                                             </div>
                                         </td>
