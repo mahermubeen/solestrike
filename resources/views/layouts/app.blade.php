@@ -341,7 +341,7 @@
                         var path = $('#edit-user-formm')[0].attributes[3].nodeValue;
                         // console.log("path", path);
                         string = path.toString();
-                        path = string.slice(0 , 43); //for localhost = 43, for server = 60
+                        path = string.slice(0 , 60); //for localhost = 43, for server = 60
 
                         // var eventstring1 = new String();
                         // eventstring1 = id.toString().replace(/"/g, "");
