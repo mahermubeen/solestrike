@@ -25,4 +25,14 @@ class HomeController extends Controller
         
         return view('home')->with(['products' => $products]);
     }
+
+    public function cart()
+    {
+        return view('pages/cart');
+    }
+
+    public function checkout()
+    {
+        return view('pages/checkout');
+    }
 }

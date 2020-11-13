@@ -18,6 +18,8 @@ Auth::routes();
 
 
 Route::get('/', 'HomeController@index');
+Route::get('/cart', 'HomeController@cart')->name('cart');
+Route::get('/checkout', 'HomeController@checkout')->name('checkout');
 
 
 Route::group([
@@ -26,10 +28,12 @@ Route::group([
     'middleware' => ['auth']
 ], function () {
     Route::get('/', 'HomeController@index')->name('user');
+
     Route::get('/shop', 'ShopController@index')->name('shop');
     
     Route::get('/order_product/{id}', 'OrderController@order_product')->name('order_product');
-    Route::get('/cart', 'OrderController@cart')->name('cart');
+
+    
 
 });
 

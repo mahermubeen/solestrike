@@ -25,11 +25,8 @@ class OrderController extends Controller
         $img = (string)$img;
         $product->avatar = json_decode($img);
         
-        return view('order')->with(['product' => $product]);
+        return view('pages/order')->with(['product' => $product]);
     }
 
-    public function cart()
-    {
-        return view('cart');
-    }
+   
 }
