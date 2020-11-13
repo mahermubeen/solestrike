@@ -13,7 +13,7 @@
             
         
             <div class="options">
-                <figure class="cart-logo">
+                <a href="{{ route('cart') }}" class="cart-logo">
                     <img src="{!! asset('img/Group 2.png') !!}" />
                 </figure>
                 @guest

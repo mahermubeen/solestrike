@@ -26,7 +26,7 @@
             @foreach ($products as $key => $product)
             <div value="{{ $key }}" class="product-wrapper">
                 <a href="{{ route('order_product', ['id' => $product->id]) }}" class="box-1">
-                    <img src="{!! asset('img/{{ $product->avatar }}') !!}" />
+                    <img src="{!! asset('images/'.$product->avatar) !!}" />
                 </a>
                 <div class="box-2">
                     <p class="p1">{{ $product->source }}</p>

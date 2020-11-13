@@ -26,10 +26,11 @@ Route::group([
     'middleware' => ['auth']
 ], function () {
     Route::get('/', 'HomeController@index')->name('user');
-    
     Route::get('/shop', 'ShopController@index')->name('shop');
-
+    
     Route::get('/order_product/{id}', 'OrderController@order_product')->name('order_product');
+    Route::get('/cart', 'OrderController@cart')->name('cart');
+
 });
 
 Route::group([

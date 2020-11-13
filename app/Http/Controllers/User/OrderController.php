@@ -27,4 +27,9 @@ class OrderController extends Controller
         
         return view('order')->with(['product' => $product]);
     }
+
+    public function cart()
+    {
+        return view('cart');
+    }
 }
