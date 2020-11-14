@@ -48,7 +48,7 @@
                     <div class="head">
                         <h4>Shipping Information</h4>
                         <figure>
-                            <img src="{{ asset('img/edit-btn.png')}}"/>
+                            <img id="shipping-btn" src="{{ asset('img/edit-btn.png')}}"/>
                         </figure>
                     </div>
                     <p>Hayden Carter</p>
@@ -59,7 +59,7 @@
                     <div class="head">
                         <h4>Payment</h4>
                         <figure>
-                            <img src="{{ asset('img/edit-btn.png')}}"/>
+                            <img id="payment-btn" src="{{ asset('img/edit-btn.png')}}"/>
                         </figure>
                     </div>
                     <div class="card-details">
@@ -83,7 +83,7 @@
                     </div>
                 </div>
                 <div class="row-4">
-                    <button id="place-order-btn">Place Order</button>
+                    <button type="submit">Place Order</button>
                 </div>
             </div>
         </div>

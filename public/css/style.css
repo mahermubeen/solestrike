@@ -2091,6 +2091,19 @@ a {
         color: white;
         font-weight: 600;
         margin-right: 25px; }
+      .checkout_payment_popup .payment-wrapper .payment-form .billing-wrapper .checkbox-inpt .img-wrapper {
+        cursor: pointer;
+        width: 22px;
+        height: 22px;
+        background: #424246;
+        border-radius: 6px;
+        border: 1px solid #646469;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px;
+        margin-right: 10px; }
       .checkout_payment_popup .payment-wrapper .payment-form .billing-wrapper .inpt-side {
         font-size: 12px;
         color: #6b6b71; }
@@ -2175,6 +2188,192 @@ a {
     .checkout_payment_popup .payment-wrapper .payment-form .last-row {
       display: flex;
       justify-content: flex-end; }
+      .checkout_payment_popup .payment-wrapper .payment-form .last-row button {
+        background: #D93638;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-family: "Raleway", sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        padding: 15px 35px; }
+
+.shipping_info_popup {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10; }
+  .shipping_info_popup .shipping-wrapper {
+    width: 450px;
+    border-radius: 7px;
+    background: #383838;
+    padding: 20px; }
+    .shipping_info_popup .shipping-wrapper .head {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px; }
+      .shipping_info_popup .shipping-wrapper .head h4 {
+        color: white; }
+      .shipping_info_popup .shipping-wrapper .head .cross {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: #676767;
+        cursor: pointer;
+        padding: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .shipping_info_popup .shipping-wrapper .head .cross .box {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          position: relative; }
+          .shipping_info_popup .shipping-wrapper .head .cross .box .line1 {
+            width: 100%;
+            height: 2px;
+            background: white;
+            position: absolute;
+            transform: rotate(45deg); }
+          .shipping_info_popup .shipping-wrapper .head .cross .box .line2 {
+            width: 100%;
+            height: 2px;
+            background: white;
+            position: absolute;
+            transform: rotate(-45deg); }
+    .shipping_info_popup .shipping-wrapper .shipping-form .full_name-inpt {
+      display: flex;
+      flex-direction: column;
+      padding: 6px 10px;
+      border: 1px solid #646469;
+      border-radius: 5px;
+      background: #424246;
+      margin-bottom: 10px; }
+      .shipping_info_popup .shipping-wrapper .shipping-form .full_name-inpt label {
+        color: #737382;
+        margin-bottom: 5px;
+        font-size: 12px; }
+      .shipping_info_popup .shipping-wrapper .shipping-form .full_name-inpt input {
+        background: none;
+        border: none;
+        color: white;
+        font-weight: 500;
+        font-size: 15px; }
+    .shipping_info_popup .shipping-wrapper .shipping-form .inputs-wrapper .address-zip-inpts {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px; }
+      .shipping_info_popup .shipping-wrapper .shipping-form .inputs-wrapper .address-zip-inpts .address-inpt {
+        display: flex;
+        flex-direction: column;
+        padding: 6px 10px;
+        border: 1px solid #646469;
+        border-radius: 5px;
+        background: #424246;
+        margin-right: 10px; }
+        .shipping_info_popup .shipping-wrapper .shipping-form .inputs-wrapper .address-zip-inpts .address-inpt label {
+          color: #737382;
+          margin-bottom: 5px;
+          font-size: 12px; }
+        .shipping_info_popup .shipping-wrapper .shipping-form .inputs-wrapper .address-zip-inpts .address-inpt input {
+          background: none;
+          border: none;
+          color: white;
+          font-weight: 500;
+          font-size: 15px; }
+      .shipping_info_popup .shipping-wrapper .shipping-form .inputs-wrapper .address-zip-inpts .zip-inpt {
+        display: flex;
+        flex-direction: column;
+        padding: 6px 10px;
+        border: 1px solid #646469;
+        border-radius: 5px;
+        background: #424246; }
+        .shipping_info_popup .shipping-wrapper .shipping-form .inputs-wrapper .address-zip-inpts .zip-inpt label {
+          color: #737382;
+          margin-bottom: 5px;
+          font-size: 12px; }
+        .shipping_info_popup .shipping-wrapper .shipping-form .inputs-wrapper .address-zip-inpts .zip-inpt input {
+          background: none;
+          border: none;
+          color: white;
+          font-weight: 500;
+          font-size: 15px; }
+    .shipping_info_popup .shipping-wrapper .shipping-form .inputs-wrapper .city-state-inpts {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px; }
+      .shipping_info_popup .shipping-wrapper .shipping-form .inputs-wrapper .city-state-inpts .city-inpt {
+        display: flex;
+        flex-direction: column;
+        padding: 6px 10px;
+        border: 1px solid #646469;
+        border-radius: 5px;
+        background: #424246;
+        margin-right: 10px; }
+        .shipping_info_popup .shipping-wrapper .shipping-form .inputs-wrapper .city-state-inpts .city-inpt label {
+          color: #737382;
+          margin-bottom: 5px;
+          font-size: 12px; }
+        .shipping_info_popup .shipping-wrapper .shipping-form .inputs-wrapper .city-state-inpts .city-inpt input {
+          background: none;
+          border: none;
+          color: white;
+          font-weight: 500;
+          font-size: 15px; }
+      .shipping_info_popup .shipping-wrapper .shipping-form .inputs-wrapper .city-state-inpts .state-inpt {
+        display: flex;
+        flex-direction: column;
+        padding: 6px 10px;
+        border: 1px solid #646469;
+        border-radius: 5px;
+        background: #424246; }
+        .shipping_info_popup .shipping-wrapper .shipping-form .inputs-wrapper .city-state-inpts .state-inpt label {
+          color: #737382;
+          margin-bottom: 5px;
+          font-size: 12px; }
+        .shipping_info_popup .shipping-wrapper .shipping-form .inputs-wrapper .city-state-inpts .state-inpt input {
+          background: none;
+          border: none;
+          color: white;
+          font-weight: 500;
+          font-size: 15px; }
+    .shipping_info_popup .shipping-wrapper .shipping-form .phone-inpt {
+      display: flex;
+      flex-direction: column;
+      padding: 6px 10px;
+      border: 1px solid #646469;
+      border-radius: 5px;
+      background: #424246;
+      margin-bottom: 10px; }
+      .shipping_info_popup .shipping-wrapper .shipping-form .phone-inpt label {
+        color: #737382;
+        margin-bottom: 5px;
+        font-size: 12px; }
+      .shipping_info_popup .shipping-wrapper .shipping-form .phone-inpt input {
+        background: none;
+        border: none;
+        color: white;
+        font-weight: 500;
+        font-size: 15px; }
+    .shipping_info_popup .shipping-wrapper .shipping-form .last-row {
+      display: flex;
+      justify-content: flex-end; }
+      .shipping_info_popup .shipping-wrapper .shipping-form .last-row button {
+        background: #D93638;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-family: "Raleway", sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        padding: 15px 35px; }
 
 .footer {
   padding-bottom: 100px;

@@ -1,8 +1,8 @@
-<div id="payment-box" class="checkout_payment_popup hidden">
-    <div class="payment-wrapper">
+<div id="shipping-box" class="shipping_info_popup hidden">
+    <div class="shipping-wrapper">
         <div class="head">
-            <h4>Payment</h4>
-            <div class="cross" id="payment-cancel-btn">
+            <h4>Shipping Information</h4>
+            <div class="cross" id="shipping-cancel-btn">
                 <div class="box">
                     <span class="line1"></span>
                     <span class="line2"></span>
@@ -11,33 +11,10 @@
             </div>
         </div>
 
-        <form class="payment-form">
-            <div class="card-name-inpt ">
-                <label for="card-name">Name on Card</label>
-                <input id="card-name" type="text" name="name" value="" />
-            </div>
-
-            <div class="expiry-cvv-inpts">
-                <div class="expiry-inpt">
-                    <label for="expiry_date">Expiry</label>
-                    <input id="expiry_date" type="text" name="expiry_date" value="" />
-                </div>
-
-                <div class="cvv-inpt">
-                    <label for="cvv">CVV</label>
-                    <input id="cvv" type="text" name="cvv" value="" />
-                </div>
-            </div>
-
-            <div class="billing-wrapper">
-                <span class="bill-span">Billing</span>
-                <div class="checkbox-inpt">
-                    <input id="billing" class="hidden" type="checkbox" name="same_billing" />
-                    <div for="billing" id="img-btn" class="img-wrapper">
-                        <img class="hidden" src="{{ asset('img/check-tick.png') }}"/>
-                    </div>
-                </div>
-                <span class="inpt-side">Same as Shipping</span>
+        <form class="shipping-form">
+            <div class="full_name-inpt ">
+                <label for="full_name">Full Name</label>
+                <input id="full_name" type="text" name="full_name" value="" />
             </div>
 
             <div class="inputs-wrapper">
@@ -64,6 +41,11 @@
                         <input id="state" type="text" name="state" value="" />
                     </div>
                 </div>
+            </div>
+
+            <div class="phone-inpt">
+                <label for="phone">Phone Number</label>
+                <input id="phone" type="text" name="phone" value="" />
             </div>
 
             <div class="last-row">

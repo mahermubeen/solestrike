@@ -118,20 +118,45 @@ $(document).ready(function() {
     });
 
     //checkout payment box
-    $('#place-order-btn').click(function() {
+    $('#payment-btn').click(function() {
         $('#payment-box').removeClass('hidden');
         $('#payment-box').addClass('flex');
 
         $('.user_main').addClass('blur1');
         $('.user_header_black').addClass('blur1');
         $('.footer').addClass('blur1');
-        $('body').scrollTop();
-        // $('body').addClass('overflow-none');
     });
 
     $('#payment-cancel-btn').click(function() {
         $('#payment-box').removeClass('flex');
         $('#payment-box').addClass('hidden');
+
+        $('.user_main').removeClass('blur1');
+        $('.user_header_black').removeClass('blur1');
+        $('.footer').removeClass('blur1');
+    });
+
+
+    //img show btn
+    
+    $('#img-btn').click(function() {
+        $('#img-btn img').toggleClass('hidden');
+    });
+
+
+    //shipping info box
+    $('#shipping-btn').click(function() {
+        $('#shipping-box').removeClass('hidden');
+        $('#shipping-box').addClass('flex');
+
+        $('.user_main').addClass('blur1');
+        $('.user_header_black').addClass('blur1');
+        $('.footer').addClass('blur1');
+    });
+
+    $('#shipping-cancel-btn').click(function() {
+        $('#shipping-box').removeClass('flex');
+        $('#shipping-box').addClass('hidden');
 
         $('.user_main').removeClass('blur1');
         $('.user_header_black').removeClass('blur1');

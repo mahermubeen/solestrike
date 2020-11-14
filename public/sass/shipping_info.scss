@@ -1,4 +1,4 @@
-.checkout_payment_popup {
+.shipping_info_popup {
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -7,7 +7,7 @@
     top: 0;
     left: 0;
     z-index: 10;
-    .payment-wrapper {
+    .shipping-wrapper {
         width: 450px;
         border-radius: 7px;
         background: #383838;
@@ -52,8 +52,8 @@
                 }
             }
         }
-        .payment-form {
-            .card-name-inpt {
+        .shipping-form {
+            .full_name-inpt {
                 display: flex;
                 flex-direction: column;
                 padding: 6px 10px;
@@ -74,82 +74,7 @@
                     font-size: 15px;
                 }
             }
-            .expiry-cvv-inpts {
-                display: flex;
-                justify-content: space-between;
-                margin-bottom: 35px;
-                .expiry-inpt {
-                    display: flex;
-                    flex-direction: column;
-                    padding: 6px 10px;
-                    border: 1px solid #646469;
-                    border-radius: 5px;
-                    background: #424246;
-                    margin-right: 10px;
-                    label {
-                        color: #737382;
-                        margin-bottom: 5px;
-                        font-size: 12px;
-                    }
-                    input {
-                        background: none;
-                        border: none;
-                        color: white;
-                        font-weight: 500;
-                        font-size: 15px;
-                    }
-                }
-                .cvv-inpt {
-                    display: flex;
-                    flex-direction: column;
-                    padding: 6px 10px;
-                    border: 1px solid #646469;
-                    border-radius: 5px;
-                    background: #424246;
-                    label {
-                        color: #737382;
-                        margin-bottom: 5px;
-                        font-size: 12px;
-                    }
-                    input {
-                        background: none;
-                        border: none;
-                        color: white;
-                        font-weight: 500;
-                        font-size: 15px;
-                    }
-                }
-            }
-            .billing-wrapper {
-                margin-bottom: 25px;
-                display: flex;
-                align-items: center;
-                .bill-span {
-                    color: white;
-                    font-weight: 600;
-                    margin-right: 25px;
-                }
-                .checkbox-inpt {
-                    .img-wrapper {
-                        cursor:pointer;
-                        width: 22px;
-                        height: 22px;
-                        background: #424246;
-                        border-radius: 6px;
-                        border: 1px solid #646469;
-                        position: relative;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        padding: 4px;
-                        margin-right: 10px;
-                    }
-                }
-                .inpt-side {
-                    font-size: 12px;
-                    color: #6b6b71;
-                }
-            }
+           
             .inputs-wrapper {
                 .address-zip-inpts {
                     display: flex;
@@ -244,6 +169,29 @@
                     }
                 }
             }
+
+            .phone-inpt {
+                display: flex;
+                flex-direction: column;
+                padding: 6px 10px;
+                border: 1px solid #646469;
+                border-radius: 5px;
+                background: #424246;
+                margin-bottom: 10px;
+                label {
+                    color: #737382;
+                    margin-bottom: 5px;
+                    font-size: 12px;
+                }
+                input {
+                    background: none;
+                    border: none;
+                    color: white;
+                    font-weight: 500;
+                    font-size: 15px;
+                }
+            }
+
             .last-row {
                 display: flex;
                 justify-content: flex-end;

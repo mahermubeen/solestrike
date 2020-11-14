@@ -29,6 +29,7 @@
     <div class="wrapper-shop-order">
         @include('layouts.navbars.menu-items')
         @include('user.popups.checkout_payment')
+        @include('user.popups.shipping_info')
 
         @include('layouts.headers.user-header')
 
