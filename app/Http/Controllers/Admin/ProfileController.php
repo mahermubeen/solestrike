@@ -28,7 +28,7 @@ class ProfileController extends Controller
 
     public function index()
     {
-        return view('profile/edit');
+        return view('admin/profile/edit');
     }
 
     public function updatePassword(Request $request)
@@ -68,7 +68,7 @@ class ProfileController extends Controller
         }
 
 
-        return view('users/index')->with(['users' => $users]);
+        return view('admin/users/index')->with(['users' => $users]);
     }
 
     public function updateStatus(Request $request, $id)

@@ -1,4 +1,4 @@
-<div class="section1">
+<div class="section1 user_header_black">
     <div class="container">
         <div class="header">
             <figure id="menu" class="menu-logo">

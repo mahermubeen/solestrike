@@ -28,12 +28,12 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('dashboard');
+        return view('admin/dashboard');
     }
 
     public function orders()
     {
-        return view('orders/index');
+        return view('/admin/orders/index');
     }
 
     // public function icons()

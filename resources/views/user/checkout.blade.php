@@ -1,4 +1,4 @@
-@extends('layouts.app_org', ['page' => __('/user/checkout'), 'pageSlug' => 'checkout'])
+@extends('layouts.app_user', ['page' => __('/user/checkout'), 'pageSlug' => 'checkout'])
 
 @section('content')
     <div class="section1-checkout">
@@ -83,7 +83,7 @@
                     </div>
                 </div>
                 <div class="row-4">
-                    <button>Place Order</button>
+                    <button id="place-order-btn">Place Order</button>
                 </div>
             </div>
         </div>

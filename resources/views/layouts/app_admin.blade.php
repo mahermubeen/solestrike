@@ -27,12 +27,12 @@
 <body class="{{ $class ?? '' }}">
     @auth()
         <div class="wrapper">
-            @include('products.add_product')
-            @include('products.edit_product')
-            @include('products.delete_product')
-             @include('users.edit_user')
-            @include('users.delete_user')
-            @include('users.add_user')
+            @include('admin.products.add_product')
+            @include('admin.products.edit_product')
+            @include('admin.products.delete_product')
+             @include('admin.users.edit_user')
+            @include('admin.users.delete_user')
+            @include('admin.users.add_user')
 
             @include('layouts.navbars.sidebar')
             <div class="main-panel">
@@ -42,7 +42,7 @@
                     @yield('content')
                 </div>
 
-                @include('layouts.footer')
+                @include('layouts.footers.admin-footer')
             </div>
         </div>
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -57,7 +57,7 @@
                         @yield('content')
                     </div>
                 </div>
-                @include('layouts.footer')
+                @include('layouts.footers.admin-footer')
             </div>
         </div>
     @endauth

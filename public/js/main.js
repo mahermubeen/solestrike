@@ -66,8 +66,8 @@ $(document).ready(function() {
 
 
 
-     //edit user box
-     $('.edit-user-btn').click(function() {
+    //edit user box
+    $('.edit-user-btn').click(function() {
         $('#edit-user-box').removeClass('hidden');
         $('#edit-user-box').addClass('flex');
 
@@ -100,8 +100,8 @@ $(document).ready(function() {
         $('.sidebar').removeClass('blur1');
     });
 
-     //add user box
-     $('#add-user-btn').click(function() {
+    //add user box
+    $('#add-user-btn').click(function() {
         $('#add-user-box').removeClass('hidden');
         $('#add-user-box').addClass('flex');
 
@@ -117,4 +117,24 @@ $(document).ready(function() {
         $('.sidebar').removeClass('blur1');
     });
 
+    //checkout payment box
+    $('#place-order-btn').click(function() {
+        $('#payment-box').removeClass('hidden');
+        $('#payment-box').addClass('flex');
+
+        $('.user_main').addClass('blur1');
+        $('.user_header_black').addClass('blur1');
+        $('.footer').addClass('blur1');
+        $('body').scrollTop();
+        // $('body').addClass('overflow-none');
+    });
+
+    $('#payment-cancel-btn').click(function() {
+        $('#payment-box').removeClass('flex');
+        $('#payment-box').addClass('hidden');
+
+        $('.user_main').removeClass('blur1');
+        $('.user_header_black').removeClass('blur1');
+        $('.footer').removeClass('blur1');
+    });
 });

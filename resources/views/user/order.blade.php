@@ -1,4 +1,4 @@
-@extends('layouts.app_org', ['page' => __('/user/order'), 'pageSlug' => 'order'])
+@extends('layouts.app_user', ['page' => __('/user/order'), 'pageSlug' => 'order'])
 
 @section('content')
     <div class="section1-order">

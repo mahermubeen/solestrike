@@ -30,7 +30,7 @@ class ProductController extends Controller
             $product->avatar = json_decode($img);
         }
         
-        return view('products/index')->with(['products' => $products]);
+        return view('admin/products/index')->with(['products' => $products]);
     }
 
     public function add_product(Request $request)

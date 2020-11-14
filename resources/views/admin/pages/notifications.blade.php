@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => __('Notifications'), 'pageSlug' => 'notifications'])
+@extends('layouts.app_admin', ['page' => __('Notifications'), 'pageSlug' => 'notifications'])
 
 @section('content')
   <div class="row">

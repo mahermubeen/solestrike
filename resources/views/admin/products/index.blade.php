@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => __('product index'), 'pageSlug' => 'products'])
+@extends('layouts.app_admin', ['page' => __('product index'), 'pageSlug' => 'products'])
 
 @section('content')
     <div class="row">

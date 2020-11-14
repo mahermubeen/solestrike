@@ -28,6 +28,6 @@ class ShopController extends Controller
             $product->avatar = json_decode($img);
         }
         
-        return view('pages/shop')->with(['products' => $products]);
+        return view('user/shop')->with(['products' => $products]);
     }
 }

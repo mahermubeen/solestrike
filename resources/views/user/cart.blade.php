@@ -1,4 +1,4 @@
-@extends('layouts.app_org', ['page' => __('/user/cart'), 'pageSlug' => 'cart'])
+@extends('layouts.app_user', ['page' => __('/user/cart'), 'pageSlug' => 'cart'])
 
 @section('content')
     <div class="section1-cart">

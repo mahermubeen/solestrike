@@ -154,6 +154,13 @@
             animation: div1 20s linear infinite;
         }
         .rod {
+            // width: 250px;
+            // height: 10px;
+            // background-color: white;
+            // position: absolute;
+            // left: 16px;
+            // top: 101px;
+            // transform: rotate(90deg);
             width: 250px;
             height: 10px;
             background-color: white;
@@ -189,13 +196,20 @@
             animation: div2 20s linear infinite;
         }
         .rod {
-            width: 280px;
+            // width: 280px;
+            // height: 10px;
+            // background-color: white;
+            // position: absolute;
+            // left: 137px;
+            // transform: rotate(153deg);
+            // top: -76px;
+            width: 309px;
             height: 10px;
             background-color: white;
             position: absolute;
-            left: 137px;
+            left: 121px;
             transform: rotate(153deg);
-            top: -76px;
+            top: -81px;
         }
         img {
             width: 200px;
@@ -213,13 +227,20 @@
             animation: div3 20s linear infinite;
         }
         .rod {
-            width: 280px;
+            // width: 280px;
+            // height: 10px;
+            // background-color: white;
+            // position: absolute;
+            // left: -115px;
+            // transform: rotate(22deg);
+            // top: -66px;
+            width: 286px;
             height: 10px;
             background-color: white;
             position: absolute;
-            left: -115px;
+            left: -116px;
             transform: rotate(22deg);
-            top: -66px;
+            top: -65px;
         }
         img {
             width: 200px;
@@ -287,7 +308,7 @@
     }
     
     .blur1 {
-        filter: blur(1px);
+        filter: blur(3px);
     }
     
     .w-full {
@@ -364,10 +385,14 @@
         background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/checkmark-switcher.svg);
         background-size: 14px 14px;
     }
-
-    .remember-btn{
-        input{
+    
+    .remember-btn {
+        input {
             opacity: 1 !important;
             visibility: visible !important;
         }
+    }
+    
+    .overflow-none {
+        overflow: hidden;
     }

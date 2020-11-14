@@ -28,17 +28,19 @@
 <body>
     <div class="wrapper-shop-order">
         @include('layouts.navbars.menu-items')
+        @include('user.popups.checkout_payment')
 
-        @include('layouts.navbars.header')
+        @include('layouts.headers.user-header')
 
-        <main>
+        <main class="user_main">
             @yield('content')
         </main>
 
-        @include('layouts.navbars.footer')
+        @include('layouts.footers.user-footer')
     </div>
 
     <!-- Scripts -->
+    <script src="{!! asset('js/core/jquery.min.js') !!}"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="{!! asset('js/main.js') !!}"></script>
 

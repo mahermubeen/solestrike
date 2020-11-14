@@ -149,13 +149,13 @@ a {
   .main2 .div2 {
     animation: div2 20s linear infinite; }
   .main2 .rod {
-    width: 280px;
+    width: 309px;
     height: 10px;
     background-color: white;
     position: absolute;
-    left: 137px;
+    left: 121px;
     transform: rotate(153deg);
-    top: -76px; }
+    top: -81px; }
   .main2 img {
     width: 200px; }
 
@@ -169,13 +169,13 @@ a {
   .main3 .div3 {
     animation: div3 20s linear infinite; }
   .main3 .rod {
-    width: 280px;
+    width: 286px;
     height: 10px;
     background-color: white;
     position: absolute;
-    left: -115px;
+    left: -116px;
     transform: rotate(22deg);
-    top: -66px; }
+    top: -65px; }
   .main3 img {
     width: 200px; }
 
@@ -216,7 +216,7 @@ a {
   100% {
     transform: rotate(360deg); } }
 .blur1 {
-  filter: blur(1px); }
+  filter: blur(3px); }
 
 .w-full {
   width: 100%; }
@@ -284,6 +284,9 @@ a {
 .remember-btn input {
   opacity: 1 !important;
   visibility: visible !important; }
+
+.overflow-none {
+  overflow: hidden; }
 
 .header {
   display: flex;
@@ -1974,6 +1977,204 @@ a {
         font-weight: bold;
         color: white;
         padding: 20px 42px; }
+
+.checkout_payment_popup {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10; }
+  .checkout_payment_popup .payment-wrapper {
+    width: 450px;
+    border-radius: 7px;
+    background: #383838;
+    padding: 20px; }
+    .checkout_payment_popup .payment-wrapper .head {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px; }
+      .checkout_payment_popup .payment-wrapper .head h4 {
+        color: white; }
+      .checkout_payment_popup .payment-wrapper .head .cross {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: #676767;
+        cursor: pointer;
+        padding: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .checkout_payment_popup .payment-wrapper .head .cross .box {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          position: relative; }
+          .checkout_payment_popup .payment-wrapper .head .cross .box .line1 {
+            width: 100%;
+            height: 2px;
+            background: white;
+            position: absolute;
+            transform: rotate(45deg); }
+          .checkout_payment_popup .payment-wrapper .head .cross .box .line2 {
+            width: 100%;
+            height: 2px;
+            background: white;
+            position: absolute;
+            transform: rotate(-45deg); }
+    .checkout_payment_popup .payment-wrapper .payment-form .card-name-inpt {
+      display: flex;
+      flex-direction: column;
+      padding: 6px 10px;
+      border: 1px solid #646469;
+      border-radius: 5px;
+      background: #424246;
+      margin-bottom: 10px; }
+      .checkout_payment_popup .payment-wrapper .payment-form .card-name-inpt label {
+        color: #737382;
+        margin-bottom: 5px;
+        font-size: 12px; }
+      .checkout_payment_popup .payment-wrapper .payment-form .card-name-inpt input {
+        background: none;
+        border: none;
+        color: white;
+        font-weight: 500;
+        font-size: 15px; }
+    .checkout_payment_popup .payment-wrapper .payment-form .expiry-cvv-inpts {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 35px; }
+      .checkout_payment_popup .payment-wrapper .payment-form .expiry-cvv-inpts .expiry-inpt {
+        display: flex;
+        flex-direction: column;
+        padding: 6px 10px;
+        border: 1px solid #646469;
+        border-radius: 5px;
+        background: #424246;
+        margin-right: 10px; }
+        .checkout_payment_popup .payment-wrapper .payment-form .expiry-cvv-inpts .expiry-inpt label {
+          color: #737382;
+          margin-bottom: 5px;
+          font-size: 12px; }
+        .checkout_payment_popup .payment-wrapper .payment-form .expiry-cvv-inpts .expiry-inpt input {
+          background: none;
+          border: none;
+          color: white;
+          font-weight: 500;
+          font-size: 15px; }
+      .checkout_payment_popup .payment-wrapper .payment-form .expiry-cvv-inpts .cvv-inpt {
+        display: flex;
+        flex-direction: column;
+        padding: 6px 10px;
+        border: 1px solid #646469;
+        border-radius: 5px;
+        background: #424246; }
+        .checkout_payment_popup .payment-wrapper .payment-form .expiry-cvv-inpts .cvv-inpt label {
+          color: #737382;
+          margin-bottom: 5px;
+          font-size: 12px; }
+        .checkout_payment_popup .payment-wrapper .payment-form .expiry-cvv-inpts .cvv-inpt input {
+          background: none;
+          border: none;
+          color: white;
+          font-weight: 500;
+          font-size: 15px; }
+    .checkout_payment_popup .payment-wrapper .payment-form .billing-wrapper {
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center; }
+      .checkout_payment_popup .payment-wrapper .payment-form .billing-wrapper .bill-span {
+        color: white;
+        font-weight: 600;
+        margin-right: 25px; }
+      .checkout_payment_popup .payment-wrapper .payment-form .billing-wrapper .inpt-side {
+        font-size: 12px;
+        color: #6b6b71; }
+    .checkout_payment_popup .payment-wrapper .payment-form .inputs-wrapper .address-zip-inpts {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px; }
+      .checkout_payment_popup .payment-wrapper .payment-form .inputs-wrapper .address-zip-inpts .address-inpt {
+        display: flex;
+        flex-direction: column;
+        padding: 6px 10px;
+        border: 1px solid #646469;
+        border-radius: 5px;
+        background: #424246;
+        margin-right: 10px; }
+        .checkout_payment_popup .payment-wrapper .payment-form .inputs-wrapper .address-zip-inpts .address-inpt label {
+          color: #737382;
+          margin-bottom: 5px;
+          font-size: 12px; }
+        .checkout_payment_popup .payment-wrapper .payment-form .inputs-wrapper .address-zip-inpts .address-inpt input {
+          background: none;
+          border: none;
+          color: white;
+          font-weight: 500;
+          font-size: 15px; }
+      .checkout_payment_popup .payment-wrapper .payment-form .inputs-wrapper .address-zip-inpts .zip-inpt {
+        display: flex;
+        flex-direction: column;
+        padding: 6px 10px;
+        border: 1px solid #646469;
+        border-radius: 5px;
+        background: #424246; }
+        .checkout_payment_popup .payment-wrapper .payment-form .inputs-wrapper .address-zip-inpts .zip-inpt label {
+          color: #737382;
+          margin-bottom: 5px;
+          font-size: 12px; }
+        .checkout_payment_popup .payment-wrapper .payment-form .inputs-wrapper .address-zip-inpts .zip-inpt input {
+          background: none;
+          border: none;
+          color: white;
+          font-weight: 500;
+          font-size: 15px; }
+    .checkout_payment_popup .payment-wrapper .payment-form .inputs-wrapper .city-state-inpts {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px; }
+      .checkout_payment_popup .payment-wrapper .payment-form .inputs-wrapper .city-state-inpts .city-inpt {
+        display: flex;
+        flex-direction: column;
+        padding: 6px 10px;
+        border: 1px solid #646469;
+        border-radius: 5px;
+        background: #424246;
+        margin-right: 10px; }
+        .checkout_payment_popup .payment-wrapper .payment-form .inputs-wrapper .city-state-inpts .city-inpt label {
+          color: #737382;
+          margin-bottom: 5px;
+          font-size: 12px; }
+        .checkout_payment_popup .payment-wrapper .payment-form .inputs-wrapper .city-state-inpts .city-inpt input {
+          background: none;
+          border: none;
+          color: white;
+          font-weight: 500;
+          font-size: 15px; }
+      .checkout_payment_popup .payment-wrapper .payment-form .inputs-wrapper .city-state-inpts .state-inpt {
+        display: flex;
+        flex-direction: column;
+        padding: 6px 10px;
+        border: 1px solid #646469;
+        border-radius: 5px;
+        background: #424246; }
+        .checkout_payment_popup .payment-wrapper .payment-form .inputs-wrapper .city-state-inpts .state-inpt label {
+          color: #737382;
+          margin-bottom: 5px;
+          font-size: 12px; }
+        .checkout_payment_popup .payment-wrapper .payment-form .inputs-wrapper .city-state-inpts .state-inpt input {
+          background: none;
+          border: none;
+          color: white;
+          font-weight: 500;
+          font-size: 15px; }
+    .checkout_payment_popup .payment-wrapper .payment-form .last-row {
+      display: flex;
+      justify-content: flex-end; }
 
 .footer {
   padding-bottom: 100px;

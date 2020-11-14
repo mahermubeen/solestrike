@@ -273,7 +273,7 @@
 
         </div>
 
-        @include('layouts.navbars.footer')
+        @include('layouts.footers.user-footer')
     </div>
 
     <!-- Scripts -->

@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => __('Orders Index'), 'pageSlug' => 'orders'])
+@extends('layouts.app_admin', ['page' => __('Orders Index'), 'pageSlug' => 'orders'])
 
 @section('content')
     <div class="row">

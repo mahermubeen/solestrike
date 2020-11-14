@@ -28,11 +28,11 @@ class HomeController extends Controller
 
     public function cart()
     {
-        return view('pages/cart');
+        return view('user/cart');
     }
 
     public function checkout()
     {
-        return view('pages/checkout');
+        return view('user/checkout');
     }
 }

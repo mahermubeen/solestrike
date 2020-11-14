@@ -25,7 +25,7 @@ class OrderController extends Controller
         $img = (string)$img;
         $product->avatar = json_decode($img);
         
-        return view('pages/order')->with(['product' => $product]);
+        return view('user/order')->with(['product' => $product]);
     }
 
    
