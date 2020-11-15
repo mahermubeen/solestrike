@@ -26,10 +26,10 @@ class HomeController extends Controller
         $products = Product::count();
 
         if($products == 0){
-            $orders = $this->order->count('id');
+            $prod = $this->order->count('id');
 
             $vars = [
-                'orders'   => $orders
+                'prod'   => $prod
             ];
 
             return view('home')->with($vars);
@@ -43,12 +43,12 @@ class HomeController extends Controller
                 $product->avatar = json_decode($img);
             }
     
-            $orders = $this->order->count('id');
+            $prod = $this->order->count('id');
             
     
             $vars = [
                 'products'  => $products,
-                'orders'   => $orders
+                'prod'   => $prod
             ];
             
             return view('home')->with($vars);

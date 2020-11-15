@@ -12,20 +12,20 @@ class HomeController extends Controller
     private $product;
     private $order;
 
-    public function group_by($key, $data)
-    {
-        $result = array();
+    // public function group_by($key, $data)
+    // {
+    //     $result = array();
 
-        foreach ($data as $val) {
-            if (array_key_exists($key, $val)) {
-                $result[$val[$key]][] = $val;
-            } else {
-                $result[""][] = $val;
-            }
-        }
+    //     foreach ($data as $val) {
+    //         if (array_key_exists($key, $val)) {
+    //             $result[$val[$key]][] = $val;
+    //         } else {
+    //             $result[""][] = $val;
+    //         }
+    //     }
 
-        return $result;
-    }
+    //     return $result;
+    // }
 
     public function __construct()
     {
@@ -43,11 +43,11 @@ class HomeController extends Controller
             $product->avatar = json_decode($img);
         }
         
-        $orders = $this->order->count('id');
+        $prod = $this->order->count('id');
 
         $vars = [
             'products'  => $products,
-            'orders'   => $orders
+            'prod'   => $prod
         ];
 
         return view('home')->with($vars);
@@ -55,7 +55,7 @@ class HomeController extends Controller
 
     public function cart()
     {
-        $orders = $this->order->count('id');
+        $prod = $this->order->count('id');
 
         $product_id = DB::table('orders')->pluck('product_id');
         $products = Product::find($product_id);
@@ -66,7 +66,7 @@ class HomeController extends Controller
         }
 
         $vars = [
-            'orders'   => $orders,
+            'prod'   => $prod,
             'products' => $products
         ];
 

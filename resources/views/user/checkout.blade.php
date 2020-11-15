@@ -6,7 +6,7 @@
             <div class="left-div">
                 <div class="row1">
                     <h1>Confirm & Pay</h1>
-                    <p>{{$orders}} Items</p>
+                    <p>{{$prod}} Items</p>
                 </div>
                 <div class="row2">
 

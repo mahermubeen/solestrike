@@ -77,7 +77,7 @@
         .container {
             .product-wrapper {
                 display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-columns: .65fr .5fr 1fr;
                 grid-gap: 25px;
                 align-items: center;
                 margin-bottom: 100px;
@@ -92,6 +92,7 @@
                     .details-box {
                         display: flex;
                         align-items: center;
+                        justify-content: space-between;
                         margin-bottom: 15px;
                         h5 {
                             margin-right: 10px;

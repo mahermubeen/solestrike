@@ -21,6 +21,23 @@
         right: 0;
         display: flex;
         align-items: center;
+        .nav-item {
+            .nav-link {
+                cursor: pointer !important;
+            }
+            .dropdown-menu-new {
+                background: #29292B !important;
+                &::before {
+                    color: #29292B !important;
+                }
+                .drop-item1 {
+                    &:hover {
+                        color: #D93638 !important;
+                        background: none !important;
+                    }
+                }
+            }
+        }
         .right-span {
             display: flex;
             .user-name {
@@ -43,7 +60,7 @@
         .cart-logo {
             margin-right: 24px;
             position: relative;
-            .orders-notif{
+            .orders-notif {
                 position: absolute;
                 bottom: 10px;
                 left: 10px;
@@ -62,10 +79,10 @@
                 cursor: pointer;
             }
         }
-        .cart-logo-home{
+        .cart-logo-home {
             margin-right: 24px;
             position: relative;
-            .orders-notif{
+            .orders-notif {
                 position: absolute;
                 bottom: 10px;
                 left: 10px;

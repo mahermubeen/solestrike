@@ -13,10 +13,6 @@
             
         
             <div class="options">
-                <a href="{{ route('cart') }}" class="cart-logo">
-                    <span class="orders-notif">{{$orders}}</span>
-                    <img src="{!! asset('img/Group 2.png') !!}" />
-                </figure>
                 @guest
                     <a href="{{ route('login') }}" class="login-btn">Login</a>
         
@@ -25,14 +21,18 @@
         
                     @endif
                 @else
+                    <a href="{{ route('cart') }}" class="cart-logo">
+                        <span class="orders-notif">{{$prod}}</span>
+                        <img src="{!! asset('img/Group 2.png') !!}" />
+                    </a>
                     <li class="nav-item dropdown right-span">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle user-name text-white" href="#"
                             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }}
                         </a>
         
-                        <div class="dropdown-menu dropdown-menu-right logout-p" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                        <div class="dropdown-menu dropdown-menu-new dropdown-menu-right logout-p" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item drop-item1" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>

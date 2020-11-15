@@ -31,11 +31,11 @@ class ShopController extends Controller
             $product->avatar = json_decode($img);
         }
 
-        $orders = $this->order->count('id');
+        $prod = $this->order->count('id');
 
         $vars = [
             'products'  => $products,
-            'orders'   => $orders
+            'prod'   => $prod
         ];
         
         return view('user/shop')->with($vars);

@@ -28,11 +28,11 @@ class OrderController extends Controller
         $img = (string)$img;
         $product->avatar = json_decode($img);
 
-        $orders = $this->order->count('id');
+        $prod = $this->order->count('id');
 
         $vars = [
             'product'  => $product,
-            'orders'   => $orders
+            'prod'   => $prod
         ];
         
         return view('user/order')->with($vars);
