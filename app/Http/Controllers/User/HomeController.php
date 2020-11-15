@@ -17,26 +17,45 @@ class HomeController extends Controller
     {
         $this->middleware('auth');
         $this->order = new Order();
+        $this->product = new Product();
     }
 
 
     public function index()
     {
-        $products = $this->product->get_products();
+        $products = Product::count();
 
-        foreach($products as $product){
-            $img = $product->avatar;
-            $img = (string)$img;
-            $product->avatar = json_decode($img);
+        if($products == 0){
+            $orders = $this->order->count('id');
+
+            $vars = [
+                'orders'   => $orders
+            ];
+
+            return view('home')->with($vars);
+        }
+        else{
+            $products = $this->product->get_products();
+
+            foreach($products as $product){
+                $img = $product->avatar;
+                $img = (string)$img;
+                $product->avatar = json_decode($img);
+            }
+    
+            $orders = $this->order->count('id');
+            
+    
+            $vars = [
+                'products'  => $products,
+                'orders'   => $orders
+            ];
+            
+            return view('home')->with($vars);
         }
 
-        $orders = $this->order->count('id');
-
-        $vars = [
-            'products'  => $products,
-            'orders'   => $orders
-        ];
         
-        return view('home')->with($vars);
+
+        
     }
 }

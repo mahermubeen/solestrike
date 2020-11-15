@@ -44,4 +44,10 @@ class Product extends Model
     public function update_pic($data, $where) {
         return Product::where($where) -> update($data);
     }
+
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
 }

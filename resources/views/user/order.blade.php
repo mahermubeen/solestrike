@@ -42,7 +42,7 @@
                     </div>
                     <div class="drop-wrapper">
                         <select id="shoe-size" class="size-select" name="shoe_size">
-                            <option selected>Size 15</option>
+                            <option value="15">Size 15</option>
                             <option value="14">Size 14</option>
                             <option value="11">Size 11</option>
                             <option value="9">Size 9</option>
@@ -120,6 +120,7 @@
                     @csrf
 
                     <input class="hidden" id="shoe-size_input" type="text" value="" name="shoe_size" />
+                    <input class="hidden" type="number" value="{{ $product->id }}" name="product_id" />
 
 
                     <div class="sec-1">

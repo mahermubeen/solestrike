@@ -1866,7 +1866,7 @@ a {
 .section1-checkout .container {
   font-family: 'Montserrat', sans-serif;
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1.3fr 1fr;
   margin-bottom: 150px; }
   .section1-checkout .container .left-div {
     border-right: 1px solid #838383;

@@ -31,7 +31,11 @@ class CreateOrdersTable extends Migration
             $table->string('month')->nullable();
             $table->string('year')->nullable();
             $table->string('cvv')->nullable();
+            $table->unsignedBigInteger('product_id')->nullable();
             $table->timestamps();
+
+            $table->foreign('product_id')
+            ->references('id')->on('products')->onDelete('cascade');
         });
     }
 

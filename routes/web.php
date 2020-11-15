@@ -33,6 +33,7 @@ Route::group([
     
     Route::get('/order_product/{id}', 'OrderController@order_product')->name('order_product');
     Route::post('/add_order', 'OrderController@add_order')->name('add_order');
+    Route::post('/delete_order/{id}', 'OrderController@delete_order')->name('delete_order');
 
 });
 

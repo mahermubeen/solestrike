@@ -56,7 +56,8 @@ class OrderController extends Controller
             'card_number' => 'required',
             'month' => 'required',
             'year' => 'required',
-            'cvv' => 'required|min:3'
+            'cvv' => 'required|min:3',
+            'product_id' => 'required'
         ]);
 
         $data = array(
@@ -76,6 +77,7 @@ class OrderController extends Controller
             'month' => $request['month'],
             'year' => $request['year'],
             'cvv' => $request['cvv'],
+            'product_id' => $request['product_id'],
         );
 
         $id = $this->order->add($data);
@@ -83,9 +85,13 @@ class OrderController extends Controller
         if ($id > 0)
             return redirect()->route('shop')->with('message', 'Order Added to Cart successfully.');
         else
-            return redirect()->back()->withInput()->withErrors();
+            return redirect()->back()->withInputs()->withErrors();
       
     }
 
-   
+    public function delete_order($id){
+        $this->order->delete_order($id);
+
+        return response()->json(['message'=>'Status changed successfully.']);
+    }
 }

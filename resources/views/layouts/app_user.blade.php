@@ -65,7 +65,6 @@
     $(document).ready(function() {
 
          // adding value of shoe size in form input
-
          $(document).on("click", "#shoe-size", function() {
             var aa = $(this);
 
@@ -81,6 +80,30 @@
 
         });
 
+
+        //delete order
+        $(document).on("click", "#delete-order-btn", function() {
+            var aa = $(this);
+            var order_id = aa[0].attributes[1].nodeValue;
+
+            console.log("order_id", order_id);
+
+            var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+
+            $.ajax({
+                url: 'delete_order/' + order_id,
+                type: 'post',
+                dataType: "JSON",
+                data: {
+                    "_method": 'post',
+                    "_token": CSRF_TOKEN,
+                },
+                success: function(response) {
+                    console.log("response order", respone);
+                    console.log("deleted order", order_id);
+                }
+            });
+        });
 
     })
 

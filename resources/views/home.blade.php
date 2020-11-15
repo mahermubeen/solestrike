@@ -44,10 +44,6 @@
                     </div>
 
                     <div class="options">
-                        <a href="{{ route('cart')}}" class="cart-logo-home">
-                        <span class="orders-notif">{{$orders}}</span>
-                            <img src="{!! asset('img/Group 2.png') !!}" />
-                        </a>
                         @guest
                             <a href="{{ route('login') }}" class="login-btn">Login</a>
 
@@ -57,6 +53,10 @@
                             @endif
                         @else
                             <li class="nav-item dropdown right-span">
+                                <a href="{{ route('cart')}}" class="cart-logo-home">
+                                    <span class="orders-notif">{{$orders}}</span>
+                                    <img src="{!! asset('img/Group 2.png') !!}" />
+                                </a>
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle user-name text-white" href="#"
                                     role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
@@ -175,6 +175,7 @@
 
         <div class="section4">
             <div class="carousel" data-flickity='{ "groupCells": true }'>
+                @if(!empty($products))
                 @foreach ($products as $key => $product)
                 <div class="carousel-cell">
                     <figure>
@@ -189,6 +190,7 @@
                     </div>
                 </div>
                 @endforeach
+                @endif
             </div>
         </div>
 

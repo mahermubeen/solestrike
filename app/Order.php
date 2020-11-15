@@ -10,7 +10,7 @@ class Order extends Model
     use HasFactory;
 
     protected $fillable = [
-        'shoe_size', 'email', 'first_name', 'last_name', 'address_1', 'address_2', 'phone', 'city', 'state', 'country', 'zip', 'card_type', 'card_number', 'month', 'year', 'cvv'
+        'shoe_size', 'email', 'first_name', 'last_name', 'address_1', 'address_2', 'phone', 'city', 'state', 'country', 'zip', 'card_type', 'card_number', 'month', 'year', 'cvv', 'product_id'
     ];
 
     public function add($data) {
@@ -36,6 +36,12 @@ class Order extends Model
     
     public function delete_order($id) {
         Order::where('id', $id) -> delete();
+    }
+
+
+    public function products()
+    {
+        return $this->belongsTo(Product::class, 'product_id', 'id');
     }
 
 }
