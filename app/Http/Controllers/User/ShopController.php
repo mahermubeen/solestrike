@@ -5,7 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Product;
-use App\order;
+use App\Order;
 use Illuminate\Support\Facades\Response;
 
 class ShopController extends Controller
@@ -18,7 +18,7 @@ class ShopController extends Controller
     {
         $this->middleware('auth');
         $this->product = new Product();
-        $this->order = new order();
+        $this->order = new Order();
     }
 
     public function index()
