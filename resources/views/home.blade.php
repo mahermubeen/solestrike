@@ -54,7 +54,7 @@
                         @else
                             <li class="nav-item dropdown right-span">
                                 <a href="{{ route('cart')}}" class="cart-logo-home">
-                                    <span class="orders-notif">{{$orders}}</span>
+                                    <span class="orders-notif">{{$prod}}</span>
                                     <img src="{!! asset('img/Group 2.png') !!}" />
                                 </a>
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle user-name text-white" href="#"
