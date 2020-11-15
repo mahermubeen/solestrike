@@ -15,7 +15,7 @@
         .row2 {
             display: grid;
             grid-template-columns: 1fr 1fr max-content;
-            grid-gap: 70px;
+            grid-gap: 50px;
             align-items: center;
             padding-bottom: 50px;
             border-bottom: 1px solid #838383;
@@ -140,7 +140,7 @@
             display: flex;
             justify-content: flex-end;
             margin-bottom: 150px;
-            button {
+            a {
                 background: #D93638;
                 border: none;
                 border-radius: 6px;

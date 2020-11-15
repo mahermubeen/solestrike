@@ -3,6 +3,10 @@
 @section('content')
     <div class="section1-order">
         <div class="container">
+
+            @include('alerts.success')
+            @include('alerts.danger_alert')
+
             <div class="head-content">
                 <div class="head-left">
                     <figure>
@@ -37,12 +41,14 @@
                         </div>
                     </div>
                     <div class="drop-wrapper">
-                        <select class="size-select">
-                            <option>Size 15</option>
-                            <option>Size 14</option>
-                            <option>Size 11</option>
-                            <option>Size 9</option>
+                        <select id="shoe-size" class="size-select" name="shoe_size">
+                            <option selected>Size 15</option>
+                            <option value="14">Size 14</option>
+                            <option value="11">Size 11</option>
+                            <option value="9">Size 9</option>
                         </select>
+                        @include('alerts.feedback', ['field' => 'shoe_size'])
+
                     </div>
 
                 </div>
@@ -110,39 +116,54 @@
                 </figure>
             </div>
             <div class="right-div">
-                <form class="order-form">
+                <form class="order-form" method="POST" action="{{ route('add_order') }}" autocomplete="off">
+                    @csrf
+
+                    <input class="hidden" id="shoe-size_input" type="text" value="" name="shoe_size" />
+
+
                     <div class="sec-1">
                         <h3>Shipping & Billing</h3>
                         <p>The billing information you provide below must match the exact billing information on
                             your credit card or your order will fail.</p>
                         <div class="shipping-form">
-                            <input class="email-inpt" type="text" name="email" placeholder="Notification Email" />
+                            <input class="email-inpt form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" type="email" value="" name="email" placeholder="Notification Email" />
+                            @include('alerts.feedback', ['field' => 'email'])
                             <div class="full-name">
-                                <input class="fname-inpt" type="text" name="f-name" placeholder="First Name" />
-                                <input class="lname-inpt" type="text" name="l-name" placeholder="Last Name" />
+                                <input class="fname-inpt" type="text" name="first_name" value="" placeholder="First Name" />
+                                @include('alerts.feedback', ['field' => 'first_name'])
+                                <input class="lname-inpt" type="text" name="last_name" value="" placeholder="Last Name" />
+                                @include('alerts.feedback', ['field' => 'last_name'])
                             </div>
-                            <input class="add1-inpt" type="text" name="Address1" placeholder="Address Line 1" />
-                            <input class="add2-inpt" type="text" name="Address2" placeholder="Address Line 2" />
+                            <input class="add1-inpt" type="text" name="address_1" value="" placeholder="Address Line 1" />
+                            @include('alerts.feedback', ['field' => 'address_1'])
+                            <input class="add2-inpt" type="text" name="address_2" value="" placeholder="Address Line 2" />
+                            @include('alerts.feedback', ['field' => 'address_2'])
                             <div class="phone-city">
-                                <input class="phone-inpt" type="text" name="phone" placeholder="Phone" />
-                                <input class="city-inpt" type="text" name="city" placeholder="City" />
+                                <input class="phone-inpt" type="text" name="phone" value="" placeholder="Phone" />
+                                @include('alerts.feedback', ['field' => 'phone'])
+                                <input class="city-inpt" type="text" name="city" value="" placeholder="City" />
+                                @include('alerts.feedback', ['field' => 'city'])
                             </div>
                             <div class="state-cntry">
-                                <select class="state-select">
+                                <select class="state-select" name="state" >
                                     <option>State</option>
-                                    <option>Pindi</option>
-                                    <option>Islamabad</option>
-                                    <option>Gujranwala</option>
+                                    <option value="pindi">Pindi</option>
+                                    <option value="Islamabad">Islamabad</option>
+                                    <option value="Gujranwala">Gujranwala</option>
                                 </select>
-                                <select class="country-select">
+                                @include('alerts.feedback', ['field' => 'state'])
+                                <select class="country-select" name="country" >
                                     <option>Country</option>
-                                    <option>Pakistan</option>
-                                    <option>Dubai</option>
-                                    <option>America</option>
+                                    <option value="Pakistan">Pakistan</option>
+                                    <option value="Dubai">Dubai</option>
+                                    <option value="America">America</option>
                                 </select>
+                                @include('alerts.feedback', ['field' => 'country'])
                             </div>
                             <div class="zip-wrapper">
-                                <input class="zip-inpt" type="text" name="zip" placeholder="ZIP" />
+                                <input class="zip-inpt" type="text" name="zip" value="" placeholder="ZIP" />
+                                @include('alerts.feedback', ['field' => 'zip'])
                             </div>
                         </div>
                     </div>
@@ -150,30 +171,34 @@
                     <div class="sec-2">
                         <h3>Payment</h3>
                         <div class="payment-form">
-                            <select class="cardType-select">
+                            <select class="cardType-select" name="card_type" >
                                 <option>Card Type</option>
-                                <option>B</option>
-                                <option>C</option>
-                                <option>D</option>
+                                <option value="America">B</option>
+                                <option value="America">C</option>
+                                <option value="America">D</option>
                             </select>
-                            <input class="cardNo-inpt" type="text" name="card-no" placeholder="Card Number (No Spaces)" />
+                            @include('alerts.feedback', ['field' => 'card_type'])
+                            <input class="cardNo-inpt" type="text" name="card_number" value="" placeholder="Card Number (No Spaces)" />
+                            @include('alerts.feedback', ['field' => 'card_number'])
                             <div class="month-year">
-                                <select class="month-select">
+                                <select class="month-select" name="month">
                                     <option>Month</option>
-                                    <option>B</option>
-                                    <option>C</option>
-                                    <option>D</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                    <option value="D">D</option>
                                 </select>
-                                <select class="year-select">
+                                @include('alerts.feedback', ['field' => 'month'])
+                                <select class="year-select" name="year" value="">
                                     <option>Year</option>
-                                    <option>B</option>
-                                    <option>C</option>
-                                    <option>D</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                    <option value="D">D</option>
                                 </select>
+                                @include('alerts.feedback', ['field' => 'year'])
                             </div>
                             <div class="cvv-wrapper">
-                                <input class="cvv-inpt" type="text" name="cvv" placeholder="CVV" />
-
+                                <input class="cvv-inpt" type="text" name="cvv" value="" placeholder="CVV" />
+                                @include('alerts.feedback', ['field' => 'cvv'])
                             </div>
                         </div>
                     </div>
@@ -183,7 +208,7 @@
                             <img src="{!! asset('img/Path 76.png') !!}" />
                             <span>@YourTwitter</span>
                         </a>
-                        <a class="sub-btn" href="#">Submit</a>
+                        <button class="sub-btn" type="submit">Submit</a>
                     </div>
                 </form>
 

@@ -3,14 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\Order;
 
 class HomeController extends Controller
 {
     private $product;
+    private $order;
 
     public function __construct()
     {
         $this->product = new Product();
+        $this->order = new Order();
     }
 
     public function index()
@@ -23,16 +26,35 @@ class HomeController extends Controller
             $product->avatar = json_decode($img);
         }
         
-        return view('home')->with(['products' => $products]);
+        $orders = $this->order->count('id');
+
+        $vars = [
+            'products'  => $products,
+            'orders'   => $orders
+        ];
+
+        return view('home')->with($vars);
     }
 
     public function cart()
     {
-        return view('user/cart');
+        $orders = $this->order->count('id');
+
+        $vars = [
+            'orders'   => $orders
+        ];
+
+        return view('user/cart')->with($vars);
     }
 
     public function checkout()
     {
-        return view('user/checkout');
+        $orders = $this->order->count('id');
+
+        $vars = [
+            'orders'   => $orders
+        ];
+
+        return view('user/checkout')->with($vars);
     }
 }

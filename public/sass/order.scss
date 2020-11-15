@@ -582,6 +582,7 @@
                             }
                         }
                         .sub-btn {
+                            cursor:pointer;
                             background: #D93638;
                             border-radius: 6px;
                             padding: 23px 18px;
@@ -589,6 +590,7 @@
                             font-weight: bold;
                             color: white;
                             text-align: center;
+                            border:none;
                         }
                     }
                 }

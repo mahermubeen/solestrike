@@ -75,7 +75,7 @@
                 </div>
             </div>
             <div class="row3">
-                <button>GO TO CHECKOUT</button>
+                <a href="{{ route('checkout') }}">GO TO CHECKOUT</button>
             </div>
         </div>
     </div>

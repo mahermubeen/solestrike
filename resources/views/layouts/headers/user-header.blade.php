@@ -14,6 +14,7 @@
         
             <div class="options">
                 <a href="{{ route('cart') }}" class="cart-logo">
+                    <span class="orders-notif">{{$orders}}</span>
                     <img src="{!! asset('img/Group 2.png') !!}" />
                 </figure>
                 @guest

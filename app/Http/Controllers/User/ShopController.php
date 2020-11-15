@@ -5,17 +5,20 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Product;
+use App\order;
 use Illuminate\Support\Facades\Response;
 
 class ShopController extends Controller
 {
     private $product;
+    private $order;
 
 
     public function __construct()
     {
         $this->middleware('auth');
         $this->product = new Product();
+        $this->order = new order();
     }
 
     public function index()
@@ -27,7 +30,14 @@ class ShopController extends Controller
             $img = (string)$img;
             $product->avatar = json_decode($img);
         }
+
+        $orders = $this->order->count('id');
+
+        $vars = [
+            'products'  => $products,
+            'orders'   => $orders
+        ];
         
-        return view('user/shop')->with(['products' => $products]);
+        return view('user/shop')->with($vars);
     }
 }

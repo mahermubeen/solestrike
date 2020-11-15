@@ -357,9 +357,12 @@
             figure {
                 text-align: center;
                 margin-bottom: -90px;
-                img {
-                    height: 192px;
+                a{
+                    img {
+                        height: 192px;
+                    }
                 }
+                
             }
             .cell-wrapper {
                 background: linear-gradient(180deg, rgba(41, 41, 43, 1) 50%, rgba(217, 54, 56, 1) 100%);

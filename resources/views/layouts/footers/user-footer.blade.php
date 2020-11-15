@@ -1,4 +1,4 @@
-<div class="footer">
+<div class="user-footer">
     <div class="container">
         <div class="upper-div">
             <figure>

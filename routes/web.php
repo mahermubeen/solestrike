@@ -32,8 +32,7 @@ Route::group([
     Route::get('/shop', 'ShopController@index')->name('shop');
     
     Route::get('/order_product/{id}', 'OrderController@order_product')->name('order_product');
-
-    
+    Route::post('/add_order', 'OrderController@add_order')->name('add_order');
 
 });
 

@@ -5,16 +5,18 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Product;
+use App\Order;
 
 
 class HomeController extends Controller
 {
     private $product;
+    private $order;
 
     public function __construct()
     {
         $this->middleware('auth');
-        $this->product = new Product();
+        $this->order = new Order();
     }
 
 
@@ -27,7 +29,14 @@ class HomeController extends Controller
             $img = (string)$img;
             $product->avatar = json_decode($img);
         }
+
+        $orders = $this->order->count('id');
+
+        $vars = [
+            'products'  => $products,
+            'orders'   => $orders
+        ];
         
-        return view('home')->with(['products' => $products]);
+        return view('home')->with($vars);
     }
 }

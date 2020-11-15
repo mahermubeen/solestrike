@@ -322,8 +322,42 @@ a {
         color: white;
         text-transform: uppercase; }
     .header .options .cart-logo {
-      margin-right: 24px; }
+      margin-right: 24px;
+      position: relative; }
+      .header .options .cart-logo .orders-notif {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        padding: 5px;
+        background: #D93638;
+        color: white;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
       .header .options .cart-logo img {
+        cursor: pointer; }
+    .header .options .cart-logo-home {
+      margin-right: 24px;
+      position: relative; }
+      .header .options .cart-logo-home .orders-notif {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        padding: 5px;
+        background: white;
+        color: black;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+      .header .options .cart-logo-home img {
         cursor: pointer; }
     .header .options .login-btn {
       margin-right: 24px;
@@ -641,7 +675,7 @@ a {
     .wrapper-home .section4 .carousel-cell figure {
       text-align: center;
       margin-bottom: -90px; }
-      .wrapper-home .section4 .carousel-cell figure img {
+      .wrapper-home .section4 .carousel-cell figure a img {
         height: 192px; }
     .wrapper-home .section4 .carousel-cell .cell-wrapper {
       background: linear-gradient(180deg, #29292b 50%, #d93638 100%);
@@ -1437,13 +1471,15 @@ a {
             font-weight: bold;
             color: white; }
         .wrapper-shop-order .section2-order .container .right-div .order-form .submit-btns .sub-btn {
+          cursor: pointer;
           background: #D93638;
           border-radius: 6px;
           padding: 23px 18px;
           font-size: 15px;
           font-weight: bold;
           color: white;
-          text-align: center; }
+          text-align: center;
+          border: none; }
 
 .edit_product_wrapper {
   position: absolute;
@@ -1717,7 +1753,7 @@ a {
 .section1-cart .container .row2 {
   display: grid;
   grid-template-columns: 1fr 1fr max-content;
-  grid-gap: 70px;
+  grid-gap: 50px;
   align-items: center;
   padding-bottom: 50px;
   border-bottom: 1px solid #838383;
@@ -1816,7 +1852,7 @@ a {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 150px; }
-  .section1-cart .container .row3 button {
+  .section1-cart .container .row3 a {
     background: #D93638;
     border: none;
     border-radius: 6px;
@@ -2375,37 +2411,37 @@ a {
         color: white;
         padding: 15px 35px; }
 
-.footer {
+.user-footer {
   padding-bottom: 100px;
   background: #131314; }
-  .footer .container {
+  .user-footer .container {
     padding: 45px 0;
     border-top: 1px solid #838383; }
-    .footer .container .upper-div {
+    .user-footer .container .upper-div {
       margin-bottom: 40px;
       display: flex;
       justify-content: space-between;
       align-items: center; }
-      .footer .container .upper-div .social-links {
+      .user-footer .container .upper-div .social-links {
         display: flex; }
-        .footer .container .upper-div .social-links .twitter {
+        .user-footer .container .upper-div .social-links .twitter {
           margin-right: 18px; }
-    .footer .container .lower-div {
+    .user-footer .container .lower-div {
       display: flex;
       justify-content: space-between;
       align-items: center; }
-      .footer .container .lower-div pre {
+      .user-footer .container .lower-div pre {
         font-family: 'Montserrat', sans-serif;
         font-size: 16px;
         font-weight: 500;
         color: white; }
-      .footer .container .lower-div .right-div a {
+      .user-footer .container .lower-div .right-div a {
         font-family: 'Montserrat', sans-serif;
         font-size: 16px;
         font-weight: 500;
         color: white;
         margin-right: 40px; }
-        .footer .container .lower-div .right-div a:last-child {
+        .user-footer .container .lower-div .right-div a:last-child {
           margin-right: 0px; }
 
 /*# sourceMappingURL=style.css.map */

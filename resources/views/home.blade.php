@@ -44,7 +44,8 @@
                     </div>
 
                     <div class="options">
-                        <a href="{{ route('cart')}}" class="cart-logo">
+                        <a href="{{ route('cart')}}" class="cart-logo-home">
+                        <span class="orders-notif">{{$orders}}</span>
                             <img src="{!! asset('img/Group 2.png') !!}" />
                         </a>
                         @guest
@@ -177,7 +178,9 @@
                 @foreach ($products as $key => $product)
                 <div class="carousel-cell">
                     <figure>
-                        <img src="{{ asset('images/'.$product['avatar']) }}" alt="{{ $product->name }}" />
+                        <a class="cursor-pointer" href="{{ route('order_product', ['id' => $product->id]) }}">
+                            <img src="{{ asset('images/'.$product['avatar']) }}" alt="{{ $product->name }}" />
+                        </a>
                     </figure>
                     <div class="cell-wrapper">
                         <p class="p1">{{ $product->source }}</p>

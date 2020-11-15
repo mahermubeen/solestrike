@@ -3,6 +3,9 @@
 @section('content')
     <div class="section1-shop">
         <div class="container">
+            @include('alerts.success')
+            @include('alerts.danger_alert')
+
             <div class="head-content">
                 <div class="head-left">
                     <h4>Shop</h4>
