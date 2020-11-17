@@ -23,6 +23,12 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    
+    <!-- CSS -->
+    <link href="{!! asset('css/black-dashboard.css') !!}" rel="stylesheet" />
+    <link href="{!! asset('css/theme.css') !!}" rel="stylesheet" />
+
+    <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
@@ -52,22 +58,23 @@
 
                             @endif
                         @else
+                            <a href="/user/cart/{{ Auth::user()->id }}" class="cart-logo-home">
+                                <span class="orders-notif">{{$prod}}</span>
+                                <img src="{!! asset('img/Group 2.png') !!}" />
+                            </a>
+
                             <li class="nav-item dropdown right-span">
-                                <a href="{{ route('cart')}}" class="cart-logo-home">
-                                    <span class="orders-notif">{{$prod}}</span>
-                                    <img src="{!! asset('img/Group 2.png') !!}" />
-                                </a>
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle user-name text-white" href="#"
                                     role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
-
-                                <div class="dropdown-menu dropdown-menu-right logout-p" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                
+                                <div class="dropdown-menu dropdown-menu-new dropdown-menu-right logout-p" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item drop-item1" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-
+                
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
@@ -280,9 +287,16 @@
         @include('layouts.footers.user-footer')
     </div>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="{!! asset('js/main.js') !!}"></script>
+     <!-- Scripts -->
+     <script src="{!! asset('js/core/jquery.min.js') !!}"></script>
+     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+     <script src="{!! asset('js/core/popper.min.js') !!}"></script>
+     <script src="{!! asset('js/core/bootstrap.min.js') !!}"></script>
+     <script src="{!! asset('js/plugins/perfect-scrollbar.jquery.min.js') !!}"></script>
+     <script src="{!! asset('js/plugins/bootstrap-notify.js') !!}"></script>
+     <script src="{!! asset('js/black-dashboard.min.js?v=1.0.0') !!}"></script>
+     <script src="{!! asset('js/theme.js') !!}"></script>
+     <script src="{!! asset('js/main.js') !!}"></script>
 </body>
 
 </html>

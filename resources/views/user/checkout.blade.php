@@ -32,16 +32,18 @@
                 </div>
             </div>
             <div class="right-div">
+
+                
                 <div class="row1">
                     <div class="head">
                         <h4>Shipping Information</h4>
                         <figure>
-                            <img id="shipping-btn" src="{{ asset('img/edit-btn.png')}}"/>
+                            <img id="shipping-btn" data-id="{{ $user->id }}" src="{{ asset('img/edit-btn.png')}}"/>
                         </figure>
                     </div>
-                    <p>Hayden Carter</p>
-                    <p>120 London Road, Sheifield, South Yorkshire, S118UH</p>
-                    <p>3473943498728</p>
+                    <p>{{ $user->first_name }} {{ $user->last_name }}</p>
+                    <p>{{ $user->address_1 }}, {{ $user->city }}, {{ $user->country }}</p>
+                    <p>{{ $user->phone }}</p>
                 </div>
                 <div class="row2">
                     <div class="head">
@@ -51,23 +53,29 @@
                         </figure>
                     </div>
                     <div class="card-details">
-                        <p>1224 2345 8784 9837</p>
-                        <p>12/21 123</p>
+                        <p>{{ $user->card_number }}</p>
+                        <p>{{ $user->month }}/{{ $user->year }}  {{ $user->cvv }}</p>
                     </div>
-                    <p class="add-p">120 London Road, Sheifield, South Yorkshire, S118UH</p>
+                    <p class="add-p">{{ $user->address_1 }}, {{ $user->city }}, {{ $user->country }}</p>
                 </div>
+
+
                 <div class="row-3">
                     <div class="sub-total">
-                        <span>Subtotal:</span>
-                        <span>$100</span>
+
+                        @foreach($bills as $prods)
+                            <span>{{ $prods->name }}:</span>
+                            <span>${{ $prods->retail_price }}</span>
+                        @endforeach
+
                     </div>
                     <div class="taxes">
                         <span>Taxes:</span>
-                        <span>Free</span>
+                        <span>2% per item</span>
                     </div>
                     <div class="total-price">
                         <span>Total Price:</span>
-                        <span>$100</span>
+                        <span>${{ $total }}</span>
                     </div>
                 </div>
                 <div class="row-4">

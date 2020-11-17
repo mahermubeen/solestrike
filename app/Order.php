@@ -10,7 +10,7 @@ class Order extends Model
     use HasFactory;
 
     protected $fillable = [
-        'shoe_size', 'email', 'first_name', 'last_name', 'address_1', 'address_2', 'phone', 'city', 'state', 'country', 'zip', 'card_type', 'card_number', 'month', 'year', 'cvv', 'product_id'
+        'shoe_size', 'email', 'full_name', 'address_1', 'address_2', 'phone', 'city', 'state', 'country', 'zip', 'card_type', 'card_number', 'month', 'year', 'cvv', 'product_id', 'user_id'
     ];
 
     public function add($data) {
@@ -23,6 +23,10 @@ class Order extends Model
     }
 
     public function get_order($id) {
+        return Order::where('user_id', $id);
+    }
+
+    public function get_info($id) {
         return Order::find($id);
     }
 
@@ -34,8 +38,8 @@ class Order extends Model
         return Order::where('id', $id)->update($data);
     }
     
-    public function delete_order($id) {
-        Order::where('id', $id) -> delete();
+    public function delete_order($prod_id, $user_id) {
+        Order::where([['product_id', '=',  $prod_id],['user_id', '=', $user_id],])->delete();
     }
 
 
@@ -44,4 +48,8 @@ class Order extends Model
         return $this->belongsTo(Product::class, 'product_id', 'id');
     }
 
+    public function users()
+    {
+        return $this->belongsTo(User::class, 'user_id', 'id');
+    }
 }

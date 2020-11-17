@@ -3,6 +3,9 @@
 @section('content')
     <div class="section1-cart">
         <div class="container">
+            @include('alerts.success')
+            @include('alerts.danger_alert')
+
             <div class="row1">
                 <h1>Cart</h1>
             </div>
@@ -38,7 +41,7 @@
                     </div>
                 </div>
                 <div class="col3">
-                    <button id="delete-order-btn" class="minus-btn">
+                    <button id="delete-order-btn" prod-id="{{ $product->id }}" user-id="{{ Auth::user()->id }}" class="minus-btn">
                         <span></span>
                     </button>
                 </div>
@@ -46,7 +49,7 @@
             @endforeach
 
             <div class="row3">
-                <a href="{{ route('checkout') }}">GO TO CHECKOUT</button>
+                <a href="checkout/{{ Auth::user()->id }}">GO TO CHECKOUT</button>
             </div>
         </div>
     </div>

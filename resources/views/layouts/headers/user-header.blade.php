@@ -21,8 +21,8 @@
         
                     @endif
                 @else
-                    <a href="{{ route('cart') }}" class="cart-logo">
-                        <span class="orders-notif">{{$prod}}</span>
+                    <a href="/user/cart/{{ Auth::user()->id }}" class="cart-logo">
+                        <span class="orders-notif">{{ $prod }}</span>
                         <img src="{!! asset('img/Group 2.png') !!}" />
                     </a>
                     <li class="nav-item dropdown right-span">

@@ -18,8 +18,7 @@ Auth::routes();
 
 
 Route::get('/', 'HomeController@index');
-Route::get('/cart', 'HomeController@cart')->name('cart');
-Route::get('/checkout', 'HomeController@checkout')->name('checkout');
+
 
 
 Route::group([
@@ -33,7 +32,13 @@ Route::group([
     
     Route::get('/order_product/{id}', 'OrderController@order_product')->name('order_product');
     Route::post('/add_order', 'OrderController@add_order')->name('add_order');
-    Route::post('/delete_order/{id}', 'OrderController@delete_order')->name('delete_order');
+
+    Route::get('/cart/{id}', 'OrderController@cart')->name('cart');
+    Route::post('/cart/delete_order/{user}/{prod}', 'OrderController@delete_order')->name('delete_order');
+    Route::get('/cart/checkout/{id}', 'OrderController@checkout')->name('checkout');
+
+    Route::post('/cart/checkout/show_shipping/{id}', 'OrderController@show_shipping')->name('show_shipping');
+
 
 });
 

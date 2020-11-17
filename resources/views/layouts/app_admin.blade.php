@@ -10,17 +10,16 @@
 
     <title>{{ config('app.name', 'SoleStrike Dashboard') }}</title>
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="76x76" href="../img/apple-icon.png">
-    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <link rel="icon" type="image/png" href="{!! asset('img/favicon.png') !!}">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <!-- Icons -->
-    <link href="../css/nucleo-icons.css" rel="stylesheet" />
+    <link href="{!! asset('css/nucleo-icons.css') !!}" rel="stylesheet" />
     <!-- CSS -->
-    <link href="../css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
-    <link href="../css/theme.css" rel="stylesheet" />
-    <link href="../css/style.css" rel="stylesheet" />
+    <link href="{!! asset('css/black-dashboard.css?v=1.0.0') !!}" rel="stylesheet" />
+    <link href="{!! asset('css/theme.css') !!}" rel="stylesheet" />
+    <link href="{!! asset('css/style.css') !!}" rel="stylesheet" />
 
 </head>
 
@@ -71,108 +70,6 @@
     <script src="{!! asset('js/black-dashboard.min.js?v=1.0.0') !!}"></script>
     <script src="{!! asset('js/theme.js') !!}"></script>
     <script src="{!! asset('js/main.js') !!}"></script>
-
-    <script>
-        $(document).ready(function() {
-            $().ready(function() {
-                $sidebar = $('.sidebar');
-                $navbar = $('.navbar');
-                $main_panel = $('.main-panel');
-
-                $full_page = $('.full-page');
-
-                $sidebar_responsive = $('body > .navbar-collapse');
-                sidebar_mini_active = true;
-                white_color = false;
-
-                window_width = $(window).width();
-
-                fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
-
-                $('.fixed-plugin a').click(function(event) {
-                    if ($(this).hasClass('switch-trigger')) {
-                        if (event.stopPropagation) {
-                            event.stopPropagation();
-                        } else if (window.event) {
-                            window.event.cancelBubble = true;
-                        }
-                    }
-                });
-
-                $('.fixed-plugin .background-color span').click(function() {
-                    $(this).siblings().removeClass('active');
-                    $(this).addClass('active');
-
-                    var new_color = $(this).data('color');
-
-                    if ($sidebar.length != 0) {
-                        $sidebar.attr('data', new_color);
-                    }
-
-                    if ($main_panel.length != 0) {
-                        $main_panel.attr('data', new_color);
-                    }
-
-                    if ($full_page.length != 0) {
-                        $full_page.attr('filter-color', new_color);
-                    }
-
-                    if ($sidebar_responsive.length != 0) {
-                        $sidebar_responsive.attr('data', new_color);
-                    }
-                });
-
-                $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function() {
-                    var $btn = $(this);
-
-                    if (sidebar_mini_active == true) {
-                        $('body').removeClass('sidebar-mini');
-                        sidebar_mini_active = false;
-                        blackDashboard.showSidebarMessage('Sidebar mini deactivated...');
-                    } else {
-                        $('body').addClass('sidebar-mini');
-                        sidebar_mini_active = true;
-                        blackDashboard.showSidebarMessage('Sidebar mini activated...');
-                    }
-
-                    // we simulate the window Resize so the charts will get updated in realtime.
-                    var simulateWindowResize = setInterval(function() {
-                        window.dispatchEvent(new Event('resize'));
-                    }, 180);
-
-                    // we stop the simulation of Window Resize after the animations are completed
-                    setTimeout(function() {
-                        clearInterval(simulateWindowResize);
-                    }, 1000);
-                });
-
-                $('.switch-change-color input').on("switchChange.bootstrapSwitch", function() {
-                    var $btn = $(this);
-
-                    if (white_color == true) {
-                        $('body').addClass('change-background');
-                        setTimeout(function() {
-                            $('body').removeClass('change-background');
-                            $('body').removeClass('white-content');
-                        }, 900);
-                        white_color = false;
-                    } else {
-                        $('body').addClass('change-background');
-                        setTimeout(function() {
-                            $('body').removeClass('change-background');
-                            $('body').addClass('white-content');
-                        }, 900);
-
-                        white_color = true;
-                    }
-                });
-            });
-        });
-
-    </script>
-
-
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 
     <!--AJAX Script -->
     <script type='text/javascript'>
@@ -310,10 +207,6 @@
                         $('#delete-form')[0].attributes[3].nodeValue = path;
             });
 
-
-
-
-
             // edit user
              $(document).on("click", "#edit-user-btnn", function() {
                 var aa = $(this);
@@ -359,7 +252,6 @@
                 });
             });
 
-
              //delete user
              $(document).on("click", "#delete-user-btn", function() {
                 var aa = $(this);
@@ -380,6 +272,105 @@
 
                         $('#delete-user-form')[0].attributes[3].nodeValue = path;
             });
+
+
+
+
+            /// app_black script
+            $().ready(function() {
+                $sidebar = $('.sidebar');
+                $navbar = $('.navbar');
+                $main_panel = $('.main-panel');
+
+                $full_page = $('.full-page');
+
+                $sidebar_responsive = $('body > .navbar-collapse');
+                sidebar_mini_active = true;
+                white_color = false;
+
+                window_width = $(window).width();
+
+                fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+                $('.fixed-plugin a').click(function(event) {
+                    if ($(this).hasClass('switch-trigger')) {
+                        if (event.stopPropagation) {
+                            event.stopPropagation();
+                        } else if (window.event) {
+                            window.event.cancelBubble = true;
+                        }
+                    }
+                });
+
+                $('.fixed-plugin .background-color span').click(function() {
+                    $(this).siblings().removeClass('active');
+                    $(this).addClass('active');
+
+                    var new_color = $(this).data('color');
+
+                    if ($sidebar.length != 0) {
+                        $sidebar.attr('data', new_color);
+                    }
+
+                    if ($main_panel.length != 0) {
+                        $main_panel.attr('data', new_color);
+                    }
+
+                    if ($full_page.length != 0) {
+                        $full_page.attr('filter-color', new_color);
+                    }
+
+                    if ($sidebar_responsive.length != 0) {
+                        $sidebar_responsive.attr('data', new_color);
+                    }
+                });
+
+                $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function() {
+                    var $btn = $(this);
+
+                    if (sidebar_mini_active == true) {
+                        $('body').removeClass('sidebar-mini');
+                        sidebar_mini_active = false;
+                        blackDashboard.showSidebarMessage('Sidebar mini deactivated...');
+                    } else {
+                        $('body').addClass('sidebar-mini');
+                        sidebar_mini_active = true;
+                        blackDashboard.showSidebarMessage('Sidebar mini activated...');
+                    }
+
+                    // we simulate the window Resize so the charts will get updated in realtime.
+                    var simulateWindowResize = setInterval(function() {
+                        window.dispatchEvent(new Event('resize'));
+                    }, 180);
+
+                    // we stop the simulation of Window Resize after the animations are completed
+                    setTimeout(function() {
+                        clearInterval(simulateWindowResize);
+                    }, 1000);
+                });
+
+                $('.switch-change-color input').on("switchChange.bootstrapSwitch", function() {
+                    var $btn = $(this);
+
+                    if (white_color == true) {
+                        $('body').addClass('change-background');
+                        setTimeout(function() {
+                            $('body').removeClass('change-background');
+                            $('body').removeClass('white-content');
+                        }, 900);
+                        white_color = false;
+                    } else {
+                        $('body').addClass('change-background');
+                        setTimeout(function() {
+                            $('body').removeClass('change-background');
+                            $('body').addClass('white-content');
+                        }, 900);
+
+                        white_color = true;
+                    }
+                });
+            });
+            
         })
 
     </script>

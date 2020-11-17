@@ -11,41 +11,43 @@
             </div>
         </div>
 
-        <form class="shipping-form">
+        <form id="edit-shipping-form" class="shipping-form" method="POST" action="{{ url('/cart/checkout/show_shipping/')  }}" autocomplete="off">
+            @csrf
+
             <div class="full_name-inpt ">
                 <label for="full_name">Full Name</label>
-                <input id="full_name" type="text" name="full_name" value="" />
+                <input id="full_name-inpt" type="text" name="full_name" value="" />
             </div>
 
             <div class="inputs-wrapper">
                 <div class="address-zip-inpts">
                     <div class="address-inpt">
                         <label for="address">Address Line 1</label>
-                        <input id="address" type="text" name="address" value="" />
+                        <input id="address_1-inpt" type="text" name="address" value="" />
                     </div>
     
                     <div class="zip-inpt">
                         <label for="zip">ZIP Code</label>
-                        <input id="zip" type="text" name="zip" value="" />
+                        <input id="zip-inpt" type="text" name="zip" value="" />
                     </div>
                 </div>
 
                 <div class="city-state-inpts">
                     <div class="city-inpt">
                         <label for="city">City</label>
-                        <input id="city" type="text" name="city" value="" />
+                        <input id="city-inpt" type="text" name="city" value="" />
                     </div>
     
                     <div class="state-inpt">
                         <label for="state">State</label>
-                        <input id="state" type="text" name="state" value="" />
+                        <input id="state-inpt" type="text" name="state" value="" />
                     </div>
                 </div>
             </div>
 
             <div class="phone-inpt">
                 <label for="phone">Phone Number</label>
-                <input id="phone" type="text" name="phone" value="" />
+                <input id="phone-inpt" type="text" name="phone" value="" />
             </div>
 
             <div class="last-row">

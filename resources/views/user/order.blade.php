@@ -42,7 +42,7 @@
                     </div>
                     <div class="drop-wrapper">
                         <select id="shoe-size" class="size-select" name="shoe_size">
-                            <option value="15">Size 15</option>
+                            <option>Size</option>
                             <option value="14">Size 14</option>
                             <option value="11">Size 11</option>
                             <option value="9">Size 9</option>
@@ -121,6 +121,9 @@
 
                     <input class="hidden" id="shoe-size_input" type="text" value="" name="shoe_size" />
                     <input class="hidden" type="number" value="{{ $product->id }}" name="product_id" />
+                    @if(auth()->check())
+                        <input class="hidden" type="number" value="{{ Auth::user()->id }}" name="user_id" />
+                    @endif
 
 
                     <div class="sec-1">
@@ -209,7 +212,7 @@
                             <img src="{!! asset('img/Path 76.png') !!}" />
                             <span>@YourTwitter</span>
                         </a>
-                        <button class="sub-btn" type="submit">Submit</a>
+                        <button class="sub-btn" type="submit">Add to Cart</a>
                     </div>
                 </form>
 

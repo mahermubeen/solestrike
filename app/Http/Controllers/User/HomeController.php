@@ -23,39 +23,22 @@ class HomeController extends Controller
 
     public function index()
     {
-        $products = Product::count();
+        $products = $this->product->get_products();
 
-        if($products == 0){
-            $prod = $this->order->count('id');
-
-            $vars = [
-                'prod'   => $prod
-            ];
-
-            return view('home')->with($vars);
+        foreach($products as $product){
+            $img = $product->avatar;
+            $img = (string)$img;
+            $product->avatar = json_decode($img);
         }
-        else{
-            $products = $this->product->get_products();
-
-            foreach($products as $product){
-                $img = $product->avatar;
-                $img = (string)$img;
-                $product->avatar = json_decode($img);
-            }
-    
-            $prod = $this->order->count('id');
-            
-    
-            $vars = [
-                'products'  => $products,
-                'prod'   => $prod
-            ];
-            
-            return view('home')->with($vars);
-        }
-
+        
+        $prod = $this->order->count('id');
         
 
-        
+        $vars = [
+            'products'  => $products,
+            'prod'  => $prod,
+        ];
+
+        return view('home')->with($vars);
     }
 }

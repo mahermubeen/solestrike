@@ -16,9 +16,8 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('shoe_size')->nullable();
-            $table->string('email')->unique();
-            $table->string('first_name')->nullable();
-            $table->string('last_name')->nullable();
+            $table->string('email')->nullable();
+            $table->string('full_name')->nullable();
             $table->string('address_1')->nullable();
             $table->string('address_2')->nullable();
             $table->string('phone')->nullable();
@@ -32,10 +31,13 @@ class CreateOrdersTable extends Migration
             $table->string('year')->nullable();
             $table->string('cvv')->nullable();
             $table->unsignedBigInteger('product_id')->nullable();
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->timestamps();
 
             $table->foreign('product_id')
             ->references('id')->on('products')->onDelete('cascade');
+            $table->foreign('user_id')
+            ->references('id')->on('users')->onDelete('cascade');
         });
     }
 

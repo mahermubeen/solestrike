@@ -376,8 +376,7 @@ a {
       border-radius: 6px;
       font-weight: bold; }
       .header .options .login-btn:hover {
-        background-color: #D93638;
-        border: 2px solid #D93638; }
+        background-color: #29292B; }
     .header .options .signup-btn {
       border: 2px solid #29292B;
       padding: 13px 25px;
@@ -385,8 +384,7 @@ a {
       border-radius: 6px;
       font-weight: bold; }
       .header .options .signup-btn:hover {
-        background-color: #D93638;
-        border: 2px solid #D93638; }
+        background-color: #29292B; }
 
 .wrapper-home {
   background-color: #131314;
@@ -1086,8 +1084,7 @@ a {
           grid-template-columns: repeat(3, 1fr);
           grid-gap: 25px;
           align-items: center;
-          justify-items: center;
-          margin-left: 90px; }
+          justify-items: center; }
           .wrapper-shop-order .section1-order .container .head-content .head-right .up-box .box-3 .span1 {
             text-align: center; }
             .wrapper-shop-order .section1-order .container .head-content .head-right .up-box .box-3 .span1 .p-1 {
