@@ -160,6 +160,15 @@
                     font-weight: 600;
                     span {}
                 }
+                .sub-total1 {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 25px;
+                    color: #525252;
+                    font-weight: 600;
+                    border-top: 1px solid #525252;
+                    span {}
+                }
                 .taxes {
                     display: flex;
                     justify-content: space-between;

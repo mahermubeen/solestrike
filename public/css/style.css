@@ -1995,6 +1995,13 @@ a {
         margin-bottom: 25px;
         color: #525252;
         font-weight: 600; }
+      .section1-checkout .container .right-div .row-3 .sub-total1 {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        color: #525252;
+        font-weight: 600;
+        border-top: 1px solid #525252; }
       .section1-checkout .container .right-div .row-3 .taxes {
         display: flex;
         justify-content: space-between;

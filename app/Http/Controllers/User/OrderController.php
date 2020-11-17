@@ -140,31 +140,30 @@ class OrderController extends Controller
         }
 
 
-
+        
         $user = DB::table('orders')->where('user_id', $id)->get();
         $user = $user[0];
 
-
-
-        $bill_prod = DB::table('products')->where('id', $product_id)->get();
-        // dd($bill_prod);
         
+        $subtotal = Product::find($product_id)->sum('retail_price');
 
-        $bills = DB::table('products')->where('id', $product_id)->pluck('retail_price');
+
+        $bills = Product::find($product_id)->pluck('retail_price');
         foreach($bills as $key => $bill){
+            // dd($bill);
             $item_price = $bill;
             $tax = ($item_price * 2) / 100;
             $total = $item_price - $tax;
         }
+        // dd($total);
 
 
         $prod = $this->order->count('id');
 
-
         $vars = [
             'products' => $products,
             'user' => $user,
-            'bills' => $bill_prod,      
+            'subtotal' => $subtotal,      
             'total' => $total,
             'prod' => $prod,
         ];

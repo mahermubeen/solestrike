@@ -41,7 +41,7 @@
                             <img id="shipping-btn" data-id="{{ $user->id }}" src="{{ asset('img/edit-btn.png')}}"/>
                         </figure>
                     </div>
-                    <p>{{ $user->first_name }} {{ $user->last_name }}</p>
+                    <p>{{ $user->full_name }}</p>
                     <p>{{ $user->address_1 }}, {{ $user->city }}, {{ $user->country }}</p>
                     <p>{{ $user->phone }}</p>
                 </div>
@@ -61,14 +61,19 @@
 
 
                 <div class="row-3">
-                    <div class="sub-total">
 
-                        @foreach($bills as $prods)
+                    @foreach($products as $prods)
+                        <div class="sub-total">
                             <span>{{ $prods->name }}:</span>
                             <span>${{ $prods->retail_price }}</span>
-                        @endforeach
+                        </div>
+                    @endforeach
 
+                    <div class="sub-total1">
+                        <span>Subtotal:</span>
+                        <span>${{ $subtotal }}</span>
                     </div>
+
                     <div class="taxes">
                         <span>Taxes:</span>
                         <span>2% per item</span>
