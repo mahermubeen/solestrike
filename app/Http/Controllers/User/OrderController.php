@@ -30,7 +30,13 @@ class OrderController extends Controller
         $img = (string)$img;
         $product->avatar = json_decode($img);
 
-        $prod = $this->order->count('id');
+        if(auth()->check()){
+            $user_id = auth()->user()->id;
+            $prod = $this->order->where('user_id', $user_id)->count('id');
+        }
+        else{
+            $prod = '0';
+        }
 
         $vars = [
             'product'  => $product,
@@ -118,7 +124,13 @@ class OrderController extends Controller
         }
 
 
-        $prod = $this->order->count('id');
+        if(auth()->check()){
+            $user_id = auth()->user()->id;
+            $prod = $this->order->where('user_id', $user_id)->count('id');
+        }
+        else{
+            $prod = '0';
+        }
 
         $vars = [
             'products' => $products,
@@ -149,16 +161,22 @@ class OrderController extends Controller
 
 
         $bills = Product::find($product_id)->pluck('retail_price');
+        $total = 0;
         foreach($bills as $key => $bill){
-            // dd($bill);
             $item_price = $bill;
             $tax = ($item_price * 2) / 100;
-            $total = $item_price - $tax;
+            $total += $item_price - $tax;
         }
         // dd($total);
 
 
-        $prod = $this->order->count('id');
+        if(auth()->check()){
+            $user_id = auth()->user()->id;
+            $prod = $this->order->where('user_id', $user_id)->count('id');
+        }
+        else{
+            $prod = '0';
+        }
 
         $vars = [
             'products' => $products,

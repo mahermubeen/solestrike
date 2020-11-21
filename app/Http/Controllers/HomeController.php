@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use App\Order;
+use Auth;
 
 use Illuminate\Support\Facades\DB;
 
@@ -29,9 +30,17 @@ class HomeController extends Controller
             $product->avatar = json_decode($img);
         }
 
+        if(auth()->check()){
+            $user_id = auth()->user()->id;
+            $prod = $this->order->where('user_id', $user_id)->count('id');
+        }
+        else{
+            $prod = '0';
+        }
         
         $vars = [
             'products'  => $products,
+            'prod'  => $prod,
         ];
 
         return view('home')->with($vars);

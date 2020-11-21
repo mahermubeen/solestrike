@@ -32,7 +32,13 @@ class ShopController extends Controller
         }
 
 
-        $prod = $this->order->count('id');
+        if(auth()->check()){
+            $user_id = auth()->user()->id;
+            $prod = $this->order->where('user_id', $user_id)->count('id');
+        }
+        else{
+            $prod = '0';
+        }
 
         $vars = [
             'products'  => $products,
