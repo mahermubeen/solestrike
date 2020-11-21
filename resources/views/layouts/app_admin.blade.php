@@ -32,6 +32,8 @@
              @include('admin.users.edit_user')
             @include('admin.users.delete_user')
             @include('admin.users.add_user')
+            @include('admin.orders.delete_order')
+
 
             @include('layouts.navbars.sidebar')
             <div class="main-panel">
@@ -271,6 +273,28 @@
                         console.log( "path",path);
 
                         $('#delete-user-form')[0].attributes[3].nodeValue = path;
+            });
+
+
+            //delete order
+            $(document).on("click", "#delete-order-btn", function() {
+                var aa = $(this);
+                var id = aa[0].attributes[1].nodeValue;
+                console.log("product_id", id);
+
+                //changing form path
+                var path = $('#delete-order-form')[0].attributes[3].nodeValue;
+                        string = path.toString();
+                        path = string.slice(0 , 47); // for localhost=47, for server = 59
+
+                        var eventstring1 = new String();
+                        eventstring1 = id.toString().replace(/"/g, "");
+
+                        path = path+'/'+eventstring1;
+
+                        console.log( "path",path);
+
+                        $('#delete-order-form')[0].attributes[3].nodeValue = path;
             });
 
 

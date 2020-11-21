@@ -5,18 +5,18 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Product;
-use App\Order;
+use App\Cart;
 
 
 class HomeController extends Controller
 {
     private $product;
-    private $order;
+    private $cart;
 
     public function __construct()
     {
         $this->middleware('auth');
-        $this->order = new Order();
+        $this->cart = new Cart();
         $this->product = new Product();
     }
 
@@ -33,7 +33,7 @@ class HomeController extends Controller
         
         if(auth()->check()){
             $user_id = auth()->user()->id;
-            $prod = $this->order->where('user_id', $user_id)->count('id');
+            $prod = $this->cart->where('user_id', $user_id)->count('id');
         }
         else{
             $prod = '0';

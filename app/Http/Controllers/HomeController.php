@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Product;
-use App\Order;
+use App\Cart;
 use Auth;
 
 use Illuminate\Support\Facades\DB;
@@ -11,13 +11,13 @@ use Illuminate\Support\Facades\DB;
 class HomeController extends Controller
 {
     private $product;
-    private $order;
+    private $cart;
 
 
     public function __construct()
     {
         $this->product = new Product();
-        $this->order = new Order();
+        $this->cart = new Cart();
     }
 
     public function index()
@@ -32,7 +32,7 @@ class HomeController extends Controller
 
         if(auth()->check()){
             $user_id = auth()->user()->id;
-            $prod = $this->order->where('user_id', $user_id)->count('id');
+            $prod = $this->cart->where('user_id', $user_id)->count('id');
         }
         else{
             $prod = '0';

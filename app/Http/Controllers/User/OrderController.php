@@ -4,8 +4,11 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+
 use App\Product;
 use App\Order;
+use App\Cart;
+
 use Illuminate\Support\Facades\DB;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -13,6 +16,7 @@ class OrderController extends Controller
 {
     private $product;
     private $order;
+    private $cart;
 
 
     public function __construct()
@@ -20,6 +24,7 @@ class OrderController extends Controller
         $this->middleware('auth');
         $this->product = new Product();
         $this->order = new Order();
+        $this->cart = new Cart();
     }
 
     public function order_product($id)
@@ -32,7 +37,7 @@ class OrderController extends Controller
 
         if(auth()->check()){
             $user_id = auth()->user()->id;
-            $prod = $this->order->where('user_id', $user_id)->count('id');
+            $prod = $this->cart->where('user_id', $user_id)->count('id');
         }
         else{
             $prod = '0';
@@ -94,7 +99,7 @@ class OrderController extends Controller
             'user_id' => $request['user_id'],
         );
 
-        $id = $this->order->add($data);
+        $id = $this->cart->add($data);
 
         if ($id > 0)
             return redirect()->route('shop')->with('message', 'Order Added to Cart successfully.');
@@ -105,17 +110,16 @@ class OrderController extends Controller
 
     public function delete_order($user_id, $prod_id){
 
-        $this->order->delete_order($prod_id, $user_id);
+        $this->cart->delete_cart($prod_id, $user_id);
 
-        return response()->json(['message'=>'Order Deleted Successfully.']);
+        return response()->json(['message'=>'Product Deleted from Cart Successfully.']);
     }
 
 
 
     public function cart($id)
     {
-
-        $product_id = DB::table('orders')->where('user_id', $id)->pluck('product_id');
+        $product_id = DB::table('carts')->where('user_id', $id)->pluck('product_id');
         $products = Product::find($product_id);
         foreach($products as $product){
             $img = $product->avatar;
@@ -126,7 +130,7 @@ class OrderController extends Controller
 
         if(auth()->check()){
             $user_id = auth()->user()->id;
-            $prod = $this->order->where('user_id', $user_id)->count('id');
+            $prod = $this->cart->where('user_id', $user_id)->count('id');
         }
         else{
             $prod = '0';
@@ -143,7 +147,7 @@ class OrderController extends Controller
     public function checkout($id)
     {
 
-        $product_id = DB::table('orders')->where('user_id', $id)->pluck('product_id');
+        $product_id = DB::table('carts')->where('user_id', $id)->pluck('product_id');
         $products = Product::find($product_id);
         foreach($products as $product){
             $img = $product->avatar;
@@ -152,8 +156,16 @@ class OrderController extends Controller
         }
 
 
+        $orders_detail = DB::table('carts')->where('user_id', $id)->get();
+        foreach($orders_detail as $order){
+            $order_id = $order->id;
+            // dd($order_id);
+        }
         
-        $user = DB::table('orders')->where('user_id', $id)->get();
+
+
+        
+        $user = DB::table('carts')->where('user_id', $id)->get();
         $user = $user[0];
 
         
@@ -172,7 +184,7 @@ class OrderController extends Controller
 
         if(auth()->check()){
             $user_id = auth()->user()->id;
-            $prod = $this->order->where('user_id', $user_id)->count('id');
+            $prod = $this->cart->where('user_id', $user_id)->count('id');
         }
         else{
             $prod = '0';
@@ -184,6 +196,7 @@ class OrderController extends Controller
             'subtotal' => $subtotal,      
             'total' => $total,
             'prod' => $prod,
+            'order_id' => $order_id,
         ];
 
         return view('user/checkout')->with($vars);
@@ -194,5 +207,46 @@ class OrderController extends Controller
         $order = $this->order->get_info($id);
 
         return response()->json($order);
+    }
+
+
+    public function place_order(Request $request){
+        $this->validate($request, [
+            'total_price' => 'required',
+        ]);
+
+        $id_user = auth()->user()->id;
+        $order_detail =  DB::table('carts')->where('user_id', $id_user)->get();
+        $order = $order_detail[0];
+        $data = array(
+            'shoe_size'  => $order->shoe_size,
+            'email'  => $order->email,
+            'full_name'  => $order->full_name,
+            'address_1'  => $order->address_1,
+            'address_2'  => $order->address_2,
+            'phone'  => $order->phone,
+            'city'  => $order->city,
+            'state' => $order->state,
+            'country' => $order->country,
+            'zip' => $order->zip,
+            'card_type' => $order->card_type,
+            'card_number' => $order->card_number,
+            'month' => $order->month,
+            'year' => $order->year,
+            'cvv' => $order->cvv,
+            'total_price' => $request['total_price'],
+            'product_id' => $order->product_id,
+            'user_id' => $order->user_id,
+        );
+        $id = $this->order->add($data);
+
+
+        $user_id = auth()->user()->id;
+        $this->cart->delete_carts($user_id);
+
+        if ($id > 0)
+            return redirect()->route('shop')->with('message', 'Order has been Placed Successfully.');
+        else
+            return redirect()->back()->withInputs()->withErrors();
     }
 }

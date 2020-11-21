@@ -109,9 +109,10 @@
                     "_token": CSRF_TOKEN
                 },
                 success: function(response) {
-                    console.log("response order", response);
-                    console.log("deleted prod_id", prod_id);
-                    console.log("deleted user_id", user_id);
+                    // console.log("response order", response);
+                    // console.log("deleted prod_id", prod_id);
+                    // console.log("deleted user_id", user_id);
+                    location.reload();
                 }
             });
         });

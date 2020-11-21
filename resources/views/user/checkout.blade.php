@@ -31,9 +31,11 @@
 
                 </div>
             </div>
-            <div class="right-div">
-
+            <form class="right-div deliver_orders_form" method="POST" action="{{ route('place_order') }}" autocomplete="off">
+                @csrf
                 
+                <input class="hidden" id="total_price-inpt" type="number" value="{{$total}}" name="total_price" />
+
                 <div class="row1">
                     <div class="head">
                         <h4>Shipping Information</h4>
@@ -45,6 +47,7 @@
                     <p>{{ $user->address_1 }}, {{ $user->city }}, {{ $user->country }}</p>
                     <p>{{ $user->phone }}</p>
                 </div>
+
                 <div class="row2">
                     <div class="head">
                         <h4>Payment</h4>
@@ -58,7 +61,6 @@
                     </div>
                     <p class="add-p">{{ $user->address_1 }}, {{ $user->city }}, {{ $user->country }}</p>
                 </div>
-
 
                 <div class="row-3">
 
@@ -83,10 +85,12 @@
                         <span>${{ $total }}</span>
                     </div>
                 </div>
+
                 <div class="row-4">
                     <button type="submit">Place Order</button>
                 </div>
-            </div>
+
+            </form>
         </div>
     </div>
 @endsection

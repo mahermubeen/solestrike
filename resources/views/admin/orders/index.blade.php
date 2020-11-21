@@ -2,6 +2,8 @@
 
 @section('content')
     <div class="row">
+     @include('alerts.success')
+        @include('alerts.danger_alert')
         <div class="col-md-12">
             <div class="card ">
                 <div class="card-header">
@@ -20,21 +22,35 @@
                         <table class="table tablesorter " id="">
                             <thead class=" text-primary">
                                 <tr>
-                                    <th scope="col">id</th>
+                                    <th scope="col">ID</th>
                                     <th scope="col">Name</th>
-                                    <th scope="col">price</th>
-                                    <th scope="col">Creation Date</th>
+                                    <th scope="col">Address</th>
+                                    <th scope="col">Total Price</th>
+                                    <th scope="col">Delivery</th>
                                     <th scope="col"></th>
                                 </tr>
                             </thead>
                             <tbody>
+
+                                @foreach($orders as $key => $order)
                                 <tr>
-                                    <td>1</td>
-                                    <td>yeezy</td>
+                                    <td>{{ $key+1 }}</td>
+                                    <td>{{ $order->full_name }}</td>
+                                    <td>{{ $order->address_1 }}, {{ $order->city }}, {{ $order->country }}</td>
+                                    <td>${{ $order->total_price }}</td>
                                     <td>
-                                        $699
+
+                                        <div class="switches">
+                                            <li>
+                                                <input id="{{ $key }}" data-id="{{ $order->id }}" class="hidden active-btn toggle-class"
+                                            name="status" type="checkbox" {{ $order->status ? 'checked' : '' }}>
+                                                <label for="{{ $key }}">
+                                                  <span class="cursor-pointer"></span>
+                                                </label>
+                                              </li>
+                                        </div>
+
                                     </td>
-                                    <td>24/02/2020 16:47</td>
                                     <td class="text-right">
                                         <div class="dropdown">
                                             <a class="btn btn-sm btn-icon-only text-light" href="#" role="button"
@@ -42,11 +58,12 @@
                                                 <i class="fas fa-ellipsis-v"></i>
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                <a class="dropdown-item" href="#">Edit</a>
+                                                <span id="delete-order-btn" data-id="{{ $order->id }}" class="delete-order-btn dropdown-item">Delete</span>
                                             </div>
                                         </div>
                                     </td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

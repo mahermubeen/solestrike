@@ -5,6 +5,8 @@ use App\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\User as ModelsUser;
+use App\Order;
+
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -17,12 +19,13 @@ class HomeController extends Controller
 {
 
     private $user;
-
+    private $order;
 
     public function __construct()
     {
         $this->middleware('admin');
         $this->user = new ModelsUser();
+        $this->order = new Order();
     }
 
 
@@ -33,7 +36,19 @@ class HomeController extends Controller
 
     public function orders()
     {
-        return view('/admin/orders/index');
+        $orders = $this->order->get_orders();
+
+        $vars = [
+            'orders'  => $orders,
+        ];
+
+        return view('/admin/orders/index')->with($vars);
+    }
+
+    public function delete_order($id){
+        $this->order->delete_orderr($id);
+
+        return redirect()->back()->with('message', 'Order Deleted successfully.');
     }
 
     // public function icons()

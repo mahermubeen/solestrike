@@ -39,6 +39,7 @@ Route::group([
 
     Route::post('/cart/checkout/show_shipping/{id}', 'OrderController@show_shipping')->name('show_shipping');
 
+    Route::post('/place_order', 'OrderController@place_order')->name('place_order');
 
 });
 
@@ -50,6 +51,8 @@ Route::group([
     Route::get('/', 'HomeController@index')->name('admin');
 
     Route::get('/orders', 'HomeController@orders')->name('orders');
+    Route::post('/orders/delete_order/{id}', 'HomeController@delete_order')->name('delete_order');
+
 
     Route::get('/profile', 'ProfileController@index')->name('profile');
     Route::post('/change-password', 'ProfileController@updatePassword')->name('change_password');

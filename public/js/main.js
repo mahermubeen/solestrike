@@ -100,6 +100,24 @@ $(document).ready(function() {
         $('.sidebar').removeClass('blur1');
     });
 
+
+    //delete order box
+    $('.delete-order-btn').click(function() {
+        $('#delete-order-box').removeClass('hidden');
+        $('#delete-order-box').addClass('flex');
+
+        $('.main-panel').addClass('blur1');
+        $('.sidebar').addClass('blur1');
+    });
+
+    $('#delete-order-cancel').click(function() {
+        $('#delete-order-box').removeClass('flex');
+        $('#delete-order-box').addClass('hidden');
+
+        $('.main-panel').removeClass('blur1');
+        $('.sidebar').removeClass('blur1');
+    });
+
     //add user box
     $('#add-user-btn').click(function() {
         $('#add-user-box').removeClass('hidden');

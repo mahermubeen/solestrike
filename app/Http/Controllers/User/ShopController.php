@@ -5,20 +5,20 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Product;
-use App\Order;
+use App\Cart;
 use Illuminate\Support\Facades\Response;
 
 class ShopController extends Controller
 {
     private $product;
-    private $order;
+    private $cart;
 
 
     public function __construct()
     {
         $this->middleware('auth');
         $this->product = new Product();
-        $this->order = new Order();
+        $this->cart = new Cart();
     }
 
     public function index()
@@ -34,7 +34,7 @@ class ShopController extends Controller
 
         if(auth()->check()){
             $user_id = auth()->user()->id;
-            $prod = $this->order->where('user_id', $user_id)->count('id');
+            $prod = $this->cart->where('user_id', $user_id)->count('id');
         }
         else{
             $prod = '0';
