@@ -17754,11 +17754,6 @@ Copyright (c) 2015 Daniel Eden
     background: radial-gradient(#131314, #131314);
 }
 
-.full-page>.content {
-    padding-bottom: 150px;
-    padding-top: 150px;
-}
-
 .full-page .footer {
     position: absolute;
     width: 100%;

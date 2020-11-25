@@ -1,0 +1,341 @@
+.register-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .left-box {
+        display: flex;
+        flex-direction: column;
+        padding: 155px 100px 300px;
+        .figure-head {
+            margin-bottom: 95px;
+            display: flex;
+            justify-content: center;
+            img {}
+        }
+        .login-form {
+            .row-1 {
+                h3 {
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 36px;
+                    font-weight: 400;
+                    color: white;
+                    margin-bottom: 10px;
+                }
+                .sign-up-row {
+                    margin-bottom: 30px;
+                    span {
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 16px;
+                        color: #838383;
+                    }
+                    a {
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: #D93638;
+                    }
+                }
+            }
+            .row-2 {
+                .email-wrapper {
+                    display: flex;
+                    background: #29292B;
+                    border-radius: 6px;
+                    padding: 12px 15px;
+                    align-items: center;
+                    margin-bottom: 15px;
+                    border: 1px solid #4B4B50;
+                    .input-box {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        label {
+                            font-size: 12px;
+                            font-weight: normal;
+                            color: #6F6F75;
+                            margin-bottom: 2px;
+                        }
+                        input {
+                            background: none;
+                            border: none;
+                            color: white;
+                            font-size: 15px;
+                            font-weight: bold;
+                            &::placeholder {
+                                color: #838383;
+                            }
+                        }
+                    }
+                }
+                .password-wrapper {
+                    display: flex;
+                    background: #29292B;
+                    border-radius: 6px;
+                    padding: 12px 15px;
+                    align-items: center;
+                    margin-bottom: 15px;
+                    border: 1px solid #4B4B50;
+                    .input-box {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        label {
+                            font-size: 12px;
+                            font-weight: normal;
+                            color: #6F6F75;
+                            margin-bottom: 2px;
+                        }
+                        input {
+                            background: none;
+                            border: none;
+                            color: white;
+                            font-size: 15px;
+                            font-weight: bold;
+                            &::placeholder {
+                                color: #838383;
+                            }
+                        }
+                    }
+                }
+                .confirm-pass-wrapper {
+                    display: flex;
+                    background: #29292B;
+                    border-radius: 6px;
+                    padding: 12px 15px;
+                    align-items: center;
+                    margin-bottom: 15px;
+                    border: 1px solid #4B4B50;
+                    .input-box {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        label {
+                            font-size: 12px;
+                            font-weight: normal;
+                            color: #6F6F75;
+                            margin-bottom: 2px;
+                        }
+                        input {
+                            background: none;
+                            border: none;
+                            color: white;
+                            font-size: 15px;
+                            font-weight: bold;
+                            &::placeholder {
+                                color: #838383;
+                            }
+                        }
+                    }
+                }
+                .name-wrapper {
+                    display: flex;
+                    background: #29292B;
+                    border-radius: 6px;
+                    padding: 12px 15px;
+                    align-items: center;
+                    margin-bottom: 15px;
+                    border: 1px solid #4B4B50;
+                    .input-box {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        label {
+                            font-size: 12px;
+                            font-weight: normal;
+                            color: #6F6F75;
+                            margin-bottom: 2px;
+                        }
+                        input {
+                            background: none;
+                            border: none;
+                            color: white;
+                            font-size: 15px;
+                            font-weight: bold;
+                            &::placeholder {
+                                color: #838383;
+                            }
+                        }
+                    }
+                }
+                .address-zip-wrap {
+                    display: flex;
+                    margin-bottom: 15px;
+                    .address-wrapper {
+                        display: flex;
+                        background: #29292B;
+                        border-radius: 6px;
+                        padding: 12px 15px;
+                        align-items: center;
+                        margin-right: 15px;
+                        border: 1px solid #4B4B50;
+                        .input-box {
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+                            label {
+                                font-size: 12px;
+                                font-weight: normal;
+                                color: #6F6F75;
+                                margin-bottom: 2px;
+                            }
+                            input {
+                                background: none;
+                                border: none;
+                                color: white;
+                                font-size: 15px;
+                                font-weight: bold;
+                                &::placeholder {
+                                    color: #838383;
+                                }
+                            }
+                        }
+                    }
+                    .zip-wrapper {
+                        display: flex;
+                        background: #29292B;
+                        border-radius: 6px;
+                        padding: 12px 15px;
+                        align-items: center;
+                        border: 1px solid #4B4B50;
+                        .input-box {
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+                            label {
+                                font-size: 12px;
+                                font-weight: normal;
+                                color: #6F6F75;
+                                margin-bottom: 2px;
+                            }
+                            input {
+                                background: none;
+                                border: none;
+                                color: white;
+                                font-size: 15px;
+                                font-weight: bold;
+                                &::placeholder {
+                                    color: #838383;
+                                }
+                            }
+                        }
+                    }
+                }
+                .city-state-wrap {
+                    display: flex;
+                    margin-bottom: 15px;
+                    .city-wrapper {
+                        display: flex;
+                        background: #29292B;
+                        border-radius: 6px;
+                        padding: 12px 15px;
+                        align-items: center;
+                        margin-right: 15px;
+                        border: 1px solid #4B4B50;
+                        .input-box {
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+                            label {
+                                font-size: 12px;
+                                font-weight: normal;
+                                color: #6F6F75;
+                                margin-bottom: 2px;
+                            }
+                            input {
+                                background: none;
+                                border: none;
+                                color: white;
+                                font-size: 15px;
+                                font-weight: bold;
+                                &::placeholder {
+                                    color: #838383;
+                                }
+                            }
+                        }
+                    }
+                    .state-wrapper {
+                        display: flex;
+                        background: #29292B;
+                        border-radius: 6px;
+                        padding: 12px 15px;
+                        align-items: center;
+                        border: 1px solid #4B4B50;
+                        .input-box {
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+                            label {
+                                font-size: 12px;
+                                font-weight: normal;
+                                color: #6F6F75;
+                                margin-bottom: 2px;
+                            }
+                            input {
+                                background: none;
+                                border: none;
+                                color: white;
+                                font-size: 15px;
+                                font-weight: bold;
+                                &::placeholder {
+                                    color: #838383;
+                                }
+                            }
+                        }
+                    }
+                }
+                .phone-wrapper {
+                    display: flex;
+                    background: #29292B;
+                    border-radius: 6px;
+                    padding: 12px 15px;
+                    align-items: center;
+                    margin-bottom: 25px;
+                    border: 1px solid #4B4B50;
+                    .input-box {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        label {
+                            font-size: 12px;
+                            font-weight: normal;
+                            color: #6F6F75;
+                            margin-bottom: 2px;
+                        }
+                        input {
+                            background: none;
+                            border: none;
+                            color: white;
+                            font-size: 15px;
+                            font-weight: bold;
+                            &::placeholder {
+                                color: #838383;
+                            }
+                        }
+                    }
+                }
+            }
+            .row-3 {
+                button {
+                    width: 100%;
+                    border: none;
+                    background: #D93638;
+                    border-radius: 6px;
+                    padding: 14px;
+                    color: white;
+                    font-size: 18px;
+                    font-weight: 500;
+                    cursor: pointer;
+                    outline: none;
+                }
+            }
+        }
+    }
+    .right-box {
+        .figure {
+            width: 100%;
+            height: 100%;
+            background-image: url("../img/Group 786.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}

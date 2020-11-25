@@ -50,16 +50,8 @@
             @csrf
         </form>
     @else
-        @include('layouts.navbars.navbar')
-        <div class="wrapper wrapper-full-page">
-            <div class="full-page {{ $contentClass ?? '' }}">
-                <div class="content">
-                    <div class="container">
-                        @yield('content')
-                    </div>
-                </div>
-                @include('layouts.footers.admin-footer')
-            </div>
+        <div class="content">
+            @yield('content')
         </div>
     @endauth
 

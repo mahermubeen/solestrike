@@ -2425,6 +2425,424 @@ a {
         color: white;
         padding: 15px 35px; }
 
+.login-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  .login-wrapper .left-box {
+    display: flex;
+    flex-direction: column;
+    padding: 155px 100px 300px;
+    z-index: 10; }
+    .login-wrapper .left-box .figure-head {
+      margin-bottom: 95px;
+      display: flex;
+      justify-content: center; }
+    .login-wrapper .left-box .login-form .row-1 h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 36px;
+      font-weight: 400;
+      color: white;
+      margin-bottom: 10px; }
+    .login-wrapper .left-box .login-form .row-1 .sign-up-row {
+      margin-bottom: 30px; }
+      .login-wrapper .left-box .login-form .row-1 .sign-up-row span {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        color: #838383; }
+      .login-wrapper .left-box .login-form .row-1 .sign-up-row a {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: #D93638; }
+    .login-wrapper .left-box .login-form .row-2 .email-wrapper {
+      display: flex;
+      background: #29292B;
+      border-radius: 6px;
+      padding: 15px 20px;
+      align-items: center;
+      margin-bottom: 15px; }
+      .login-wrapper .left-box .login-form .row-2 .email-wrapper .figure {
+        margin-right: 20px;
+        margin-top: 10px; }
+      .login-wrapper .left-box .login-form .row-2 .email-wrapper .input-box {
+        display: flex;
+        flex-direction: column;
+        width: 100%; }
+        .login-wrapper .left-box .login-form .row-2 .email-wrapper .input-box input:-internal-autofill-selected {
+          background-color: #29292B !important;
+          color: white !important; }
+        .login-wrapper .left-box .login-form .row-2 .email-wrapper .input-box label {
+          font-size: 13px;
+          font-weight: normal;
+          color: white;
+          margin-bottom: 2px; }
+        .login-wrapper .left-box .login-form .row-2 .email-wrapper .input-box input {
+          background: none;
+          border: none;
+          color: white;
+          font-size: 19px;
+          font-weight: bold; }
+          .login-wrapper .left-box .login-form .row-2 .email-wrapper .input-box input::placeholder {
+            color: #838383; }
+    .login-wrapper .left-box .login-form .row-2 .password-wrapper {
+      display: flex;
+      background: #29292B;
+      border-radius: 6px;
+      padding: 15px 20px;
+      align-items: center;
+      margin-bottom: 25px; }
+      .login-wrapper .left-box .login-form .row-2 .password-wrapper .figure {
+        margin-right: 20px;
+        margin-top: 10px; }
+      .login-wrapper .left-box .login-form .row-2 .password-wrapper .input-box {
+        display: flex;
+        flex-direction: column;
+        width: 100%; }
+        .login-wrapper .left-box .login-form .row-2 .password-wrapper .input-box label {
+          font-size: 13px;
+          font-weight: normal;
+          color: white;
+          margin-bottom: 2px; }
+        .login-wrapper .left-box .login-form .row-2 .password-wrapper .input-box input {
+          background: none;
+          border: none;
+          color: white;
+          font-size: 19px;
+          font-weight: bold; }
+          .login-wrapper .left-box .login-form .row-2 .password-wrapper .input-box input::placeholder {
+            color: #838383; }
+    .login-wrapper .left-box .login-form .row-2 .forgot-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 45px; }
+      .login-wrapper .left-box .login-form .row-2 .forgot-wrapper .remember-div {
+        display: flex;
+        align-items: center; }
+        .login-wrapper .left-box .login-form .row-2 .forgot-wrapper .remember-div .checkbox {
+          background: #29292B;
+          border: 1px solid #46464A;
+          border-radius: 6px;
+          width: 25px;
+          height: 25px;
+          margin-right: 10px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          .login-wrapper .left-box .login-form .row-2 .forgot-wrapper .remember-div .checkbox .remember-tick-img {
+            position: absolute;
+            width: 13px; }
+        .login-wrapper .left-box .login-form .row-2 .forgot-wrapper .remember-div label {
+          color: #838383;
+          font-size: 16px;
+          font-weight: normal;
+          font-family: 'Montserrat', sans-serif;
+          margin-bottom: 0;
+          cursor: pointer; }
+      .login-wrapper .left-box .login-form .row-2 .forgot-wrapper a {
+        color: #838383;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: normal; }
+        .login-wrapper .left-box .login-form .row-2 .forgot-wrapper a:hover {
+          color: #D93638; }
+    .login-wrapper .left-box .login-form .row-3 button {
+      width: 100%;
+      border: none;
+      background: #D93638;
+      border-radius: 6px;
+      padding: 14px;
+      color: white;
+      font-size: 18px;
+      font-weight: 500;
+      cursor: pointer;
+      outline: none; }
+  .login-wrapper .right-box {
+    z-index: -1; }
+    .login-wrapper .right-box .figure {
+      width: 127%;
+      height: 100%;
+      margin-left: -185px;
+      background-image: url("../img/Group 785.png");
+      background-repeat: no-repeat;
+      background-position: 0 -44px; }
+
+.register-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  .register-wrapper .left-box {
+    display: flex;
+    flex-direction: column;
+    padding: 155px 100px 300px; }
+    .register-wrapper .left-box .figure-head {
+      margin-bottom: 95px;
+      display: flex;
+      justify-content: center; }
+    .register-wrapper .left-box .login-form .row-1 h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 36px;
+      font-weight: 400;
+      color: white;
+      margin-bottom: 10px; }
+    .register-wrapper .left-box .login-form .row-1 .sign-up-row {
+      margin-bottom: 30px; }
+      .register-wrapper .left-box .login-form .row-1 .sign-up-row span {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        color: #838383; }
+      .register-wrapper .left-box .login-form .row-1 .sign-up-row a {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: #D93638; }
+    .register-wrapper .left-box .login-form .row-2 .email-wrapper {
+      display: flex;
+      background: #29292B;
+      border-radius: 6px;
+      padding: 12px 15px;
+      align-items: center;
+      margin-bottom: 15px;
+      border: 1px solid #4B4B50; }
+      .register-wrapper .left-box .login-form .row-2 .email-wrapper .input-box {
+        display: flex;
+        flex-direction: column;
+        width: 100%; }
+        .register-wrapper .left-box .login-form .row-2 .email-wrapper .input-box label {
+          font-size: 12px;
+          font-weight: normal;
+          color: #6F6F75;
+          margin-bottom: 2px; }
+        .register-wrapper .left-box .login-form .row-2 .email-wrapper .input-box input {
+          background: none;
+          border: none;
+          color: white;
+          font-size: 15px;
+          font-weight: bold; }
+          .register-wrapper .left-box .login-form .row-2 .email-wrapper .input-box input::placeholder {
+            color: #838383; }
+    .register-wrapper .left-box .login-form .row-2 .password-wrapper {
+      display: flex;
+      background: #29292B;
+      border-radius: 6px;
+      padding: 12px 15px;
+      align-items: center;
+      margin-bottom: 15px;
+      border: 1px solid #4B4B50; }
+      .register-wrapper .left-box .login-form .row-2 .password-wrapper .input-box {
+        display: flex;
+        flex-direction: column;
+        width: 100%; }
+        .register-wrapper .left-box .login-form .row-2 .password-wrapper .input-box label {
+          font-size: 12px;
+          font-weight: normal;
+          color: #6F6F75;
+          margin-bottom: 2px; }
+        .register-wrapper .left-box .login-form .row-2 .password-wrapper .input-box input {
+          background: none;
+          border: none;
+          color: white;
+          font-size: 15px;
+          font-weight: bold; }
+          .register-wrapper .left-box .login-form .row-2 .password-wrapper .input-box input::placeholder {
+            color: #838383; }
+    .register-wrapper .left-box .login-form .row-2 .confirm-pass-wrapper {
+      display: flex;
+      background: #29292B;
+      border-radius: 6px;
+      padding: 12px 15px;
+      align-items: center;
+      margin-bottom: 15px;
+      border: 1px solid #4B4B50; }
+      .register-wrapper .left-box .login-form .row-2 .confirm-pass-wrapper .input-box {
+        display: flex;
+        flex-direction: column;
+        width: 100%; }
+        .register-wrapper .left-box .login-form .row-2 .confirm-pass-wrapper .input-box label {
+          font-size: 12px;
+          font-weight: normal;
+          color: #6F6F75;
+          margin-bottom: 2px; }
+        .register-wrapper .left-box .login-form .row-2 .confirm-pass-wrapper .input-box input {
+          background: none;
+          border: none;
+          color: white;
+          font-size: 15px;
+          font-weight: bold; }
+          .register-wrapper .left-box .login-form .row-2 .confirm-pass-wrapper .input-box input::placeholder {
+            color: #838383; }
+    .register-wrapper .left-box .login-form .row-2 .name-wrapper {
+      display: flex;
+      background: #29292B;
+      border-radius: 6px;
+      padding: 12px 15px;
+      align-items: center;
+      margin-bottom: 15px;
+      border: 1px solid #4B4B50; }
+      .register-wrapper .left-box .login-form .row-2 .name-wrapper .input-box {
+        display: flex;
+        flex-direction: column;
+        width: 100%; }
+        .register-wrapper .left-box .login-form .row-2 .name-wrapper .input-box label {
+          font-size: 12px;
+          font-weight: normal;
+          color: #6F6F75;
+          margin-bottom: 2px; }
+        .register-wrapper .left-box .login-form .row-2 .name-wrapper .input-box input {
+          background: none;
+          border: none;
+          color: white;
+          font-size: 15px;
+          font-weight: bold; }
+          .register-wrapper .left-box .login-form .row-2 .name-wrapper .input-box input::placeholder {
+            color: #838383; }
+    .register-wrapper .left-box .login-form .row-2 .address-zip-wrap {
+      display: flex;
+      margin-bottom: 15px; }
+      .register-wrapper .left-box .login-form .row-2 .address-zip-wrap .address-wrapper {
+        display: flex;
+        background: #29292B;
+        border-radius: 6px;
+        padding: 12px 15px;
+        align-items: center;
+        margin-right: 15px;
+        border: 1px solid #4B4B50; }
+        .register-wrapper .left-box .login-form .row-2 .address-zip-wrap .address-wrapper .input-box {
+          display: flex;
+          flex-direction: column;
+          width: 100%; }
+          .register-wrapper .left-box .login-form .row-2 .address-zip-wrap .address-wrapper .input-box label {
+            font-size: 12px;
+            font-weight: normal;
+            color: #6F6F75;
+            margin-bottom: 2px; }
+          .register-wrapper .left-box .login-form .row-2 .address-zip-wrap .address-wrapper .input-box input {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 15px;
+            font-weight: bold; }
+            .register-wrapper .left-box .login-form .row-2 .address-zip-wrap .address-wrapper .input-box input::placeholder {
+              color: #838383; }
+      .register-wrapper .left-box .login-form .row-2 .address-zip-wrap .zip-wrapper {
+        display: flex;
+        background: #29292B;
+        border-radius: 6px;
+        padding: 12px 15px;
+        align-items: center;
+        border: 1px solid #4B4B50; }
+        .register-wrapper .left-box .login-form .row-2 .address-zip-wrap .zip-wrapper .input-box {
+          display: flex;
+          flex-direction: column;
+          width: 100%; }
+          .register-wrapper .left-box .login-form .row-2 .address-zip-wrap .zip-wrapper .input-box label {
+            font-size: 12px;
+            font-weight: normal;
+            color: #6F6F75;
+            margin-bottom: 2px; }
+          .register-wrapper .left-box .login-form .row-2 .address-zip-wrap .zip-wrapper .input-box input {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 15px;
+            font-weight: bold; }
+            .register-wrapper .left-box .login-form .row-2 .address-zip-wrap .zip-wrapper .input-box input::placeholder {
+              color: #838383; }
+    .register-wrapper .left-box .login-form .row-2 .city-state-wrap {
+      display: flex;
+      margin-bottom: 15px; }
+      .register-wrapper .left-box .login-form .row-2 .city-state-wrap .city-wrapper {
+        display: flex;
+        background: #29292B;
+        border-radius: 6px;
+        padding: 12px 15px;
+        align-items: center;
+        margin-right: 15px;
+        border: 1px solid #4B4B50; }
+        .register-wrapper .left-box .login-form .row-2 .city-state-wrap .city-wrapper .input-box {
+          display: flex;
+          flex-direction: column;
+          width: 100%; }
+          .register-wrapper .left-box .login-form .row-2 .city-state-wrap .city-wrapper .input-box label {
+            font-size: 12px;
+            font-weight: normal;
+            color: #6F6F75;
+            margin-bottom: 2px; }
+          .register-wrapper .left-box .login-form .row-2 .city-state-wrap .city-wrapper .input-box input {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 15px;
+            font-weight: bold; }
+            .register-wrapper .left-box .login-form .row-2 .city-state-wrap .city-wrapper .input-box input::placeholder {
+              color: #838383; }
+      .register-wrapper .left-box .login-form .row-2 .city-state-wrap .state-wrapper {
+        display: flex;
+        background: #29292B;
+        border-radius: 6px;
+        padding: 12px 15px;
+        align-items: center;
+        border: 1px solid #4B4B50; }
+        .register-wrapper .left-box .login-form .row-2 .city-state-wrap .state-wrapper .input-box {
+          display: flex;
+          flex-direction: column;
+          width: 100%; }
+          .register-wrapper .left-box .login-form .row-2 .city-state-wrap .state-wrapper .input-box label {
+            font-size: 12px;
+            font-weight: normal;
+            color: #6F6F75;
+            margin-bottom: 2px; }
+          .register-wrapper .left-box .login-form .row-2 .city-state-wrap .state-wrapper .input-box input {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 15px;
+            font-weight: bold; }
+            .register-wrapper .left-box .login-form .row-2 .city-state-wrap .state-wrapper .input-box input::placeholder {
+              color: #838383; }
+    .register-wrapper .left-box .login-form .row-2 .phone-wrapper {
+      display: flex;
+      background: #29292B;
+      border-radius: 6px;
+      padding: 12px 15px;
+      align-items: center;
+      margin-bottom: 25px;
+      border: 1px solid #4B4B50; }
+      .register-wrapper .left-box .login-form .row-2 .phone-wrapper .input-box {
+        display: flex;
+        flex-direction: column;
+        width: 100%; }
+        .register-wrapper .left-box .login-form .row-2 .phone-wrapper .input-box label {
+          font-size: 12px;
+          font-weight: normal;
+          color: #6F6F75;
+          margin-bottom: 2px; }
+        .register-wrapper .left-box .login-form .row-2 .phone-wrapper .input-box input {
+          background: none;
+          border: none;
+          color: white;
+          font-size: 15px;
+          font-weight: bold; }
+          .register-wrapper .left-box .login-form .row-2 .phone-wrapper .input-box input::placeholder {
+            color: #838383; }
+    .register-wrapper .left-box .login-form .row-3 button {
+      width: 100%;
+      border: none;
+      background: #D93638;
+      border-radius: 6px;
+      padding: 14px;
+      color: white;
+      font-size: 18px;
+      font-weight: 500;
+      cursor: pointer;
+      outline: none; }
+  .register-wrapper .right-box .figure {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/Group 786.png");
+    background-repeat: no-repeat;
+    background-size: cover; }
+
 .user-footer {
   padding-bottom: 100px;
   background: #131314; }

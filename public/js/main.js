@@ -155,10 +155,21 @@ $(document).ready(function() {
     });
 
 
+
     //img show btn
-    
     $('#img-btn').click(function() {
         $('#img-btn img').toggleClass('hidden');
+    });
+
+
+
+
+    //login remember check tick
+    $('#remember-chckbox').click(function() {
+        $('.remember-tick-img').toggleClass('hidden');
+    });
+    $('#remember-chckbox1').click(function() {
+        $('.remember-tick-img').toggleClass('hidden');
     });
 
 
